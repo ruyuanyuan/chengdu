@@ -62,9 +62,9 @@ export default {
   padding:0 30px;
   height:40px;
   line-height:40px;
-  display: flex;
-  justify-content:space-between;
+  background-color:rgba(244, 255, 255, 1);
   .WeatHer_box{
+    float: left;
     .weather_img{
       height:20px;
       width:20px;
@@ -85,10 +85,9 @@ export default {
     }
   }
   .WeatHer_potal{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+     float: right;
     .potal_item{
+      display: inline-block;
       height:16px;
       line-height:16px;
       padding:0 20px;

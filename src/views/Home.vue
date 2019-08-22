@@ -1,6 +1,6 @@
 <template>
   <div class="system_home">
-   
+   qwertyuiop
   </div>
 </template>
 <script>
