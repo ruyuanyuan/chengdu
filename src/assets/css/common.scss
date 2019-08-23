@@ -48,6 +48,7 @@ body {
 .content_item{
   width:1250px;
   margin:20px auto 0;
+  overflow: hidden;
 }
 .news_item{
   width:100%;
@@ -120,6 +121,8 @@ body {
       color: $mainColor;
       font-weight: bold;
     }
-    
+  }
+  .pad_card_content{
+    width:100%;
   }
 }

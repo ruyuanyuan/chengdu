@@ -23,5 +23,10 @@ export default new Router({
       name: 'park',
       component: () => import(/* webpackChunkName: "news" */ './views/Park.vue'),
     },
+    {
+      path: '/investment',
+      name: 'investment',
+      component: () => import(/* webpackChunkName: "news" */ './views/Investment.vue'),
+    },
   ],
 });

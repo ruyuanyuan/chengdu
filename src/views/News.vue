@@ -165,7 +165,7 @@ export default {
       },
       tvDataList:{
         mainTv:{
-          img_url:'http://img4.imgtn.bdimg.com/it/u=332114246,2109333098&fm=26&gp=0.jpg',
+          img_url:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1461836175,2413247160&fm=26&gp=0.jpg',
           img_href:'https://www.baidu.com'
         },
         tvlist:[
