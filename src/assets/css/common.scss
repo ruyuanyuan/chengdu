@@ -45,7 +45,10 @@ body {
 .el-tabs__active-bar{
   background:$mainColor;
 }
-
+.content_item{
+  width:1250px;
+  margin:20px auto 0;
+}
 .news_item{
   width:100%;
   display:flex;
@@ -99,5 +102,24 @@ body {
       margin-right:15px;
       border-radius: 2px;
     }
+  }
+}
+.pad_card{
+  width:100%;
+  padding:20px;
+  border:1px solid #ededed;
+  background-color:#fff;
+  .pad_card_title{
+    width:100%;
+    padding-bottom:20px;
+    .pad_name{
+      display: inline-block;
+      padding-left:20px;
+      border-left:4px solid $mainColor;
+      font-size: 20px;
+      color: $mainColor;
+      font-weight: bold;
+    }
+    
   }
 }

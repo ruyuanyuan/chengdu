@@ -8,7 +8,7 @@
     >
       <el-menu-item index="1">首页</el-menu-item>
       <el-menu-item index="/news">新闻中心</el-menu-item>
-      <el-menu-item index="3">走进园区</el-menu-item>
+      <el-menu-item index="/park">走进园区</el-menu-item>
       <el-menu-item index="4">投资大英</el-menu-item>
       <el-menu-item index="5">政府公开</el-menu-item>
       <el-menu-item index="6">企服通</el-menu-item>

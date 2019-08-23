@@ -242,6 +242,7 @@ export default {
         float: right;
         margin-left:10px;
         width:1040px;
+        padding-top:5px;
         .hold_title{
           font-size: 24px;
           font-weight: bold;
