@@ -47,7 +47,7 @@
       <div class='card_block daying_block'>
         <div class='card_header'>
           <div class='card_name'>大英电子报</div>
-          <a href="http://www.baidu.com" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
+          <a href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
             <div class='news_cont'>
@@ -66,7 +66,7 @@
       <div class='card_block policy_block'>
         <div class='card_header'>
           <div class='card_name'>政策文件</div>
-          <a href="http://www.baidu.com" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
+          <a href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
             <div class='policy_img'>
@@ -79,7 +79,7 @@
       <div class='card_block'>
         <div class='card_header'>
           <div class='card_name'>大英电视台</div>
-          <a href="http://www.baidu.com" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
+          <a href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
             <div class='tv_contnet'>
@@ -115,83 +115,83 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
         departmentNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
         townshipNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ]
       },
       tvDataList:{
         mainTv:{
           img_url:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1461836175,2413247160&fm=26&gp=0.jpg',
-          img_href:'https://www.baidu.com'
+          img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         tvlist:[
           {
             img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-            img_href:'https://www.baidu.com'
+            img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-            img_href:'https://www.baidu.com'
+            img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-            img_href:'https://www.baidu.com'
+            img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-            img_href:'https://www.baidu.com'
+            img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-            img_href:'https://www.baidu.com'
+            img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-            img_href:'https://www.baidu.com'
+            img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ]
       }

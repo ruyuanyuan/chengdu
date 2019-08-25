@@ -135,12 +135,12 @@ export default {
       imggroup:[
         {
           imgurl:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-          imghref:'https://www.baidu.com',
+          imghref:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           imgtitle:'胡道军带队赴成都开展招商考察'
         },
         {
           imgurl:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1461836175,2413247160&fm=26&gp=0.jpg',
-          imghref:'https://www.baidu.com',
+          imghref:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           imgtitle:'胡道军督导项目建设和运行情况'
         }
         
@@ -151,51 +151,51 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
         investmentProject:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
         townshipNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ]
       },
@@ -204,87 +204,87 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
         investmentProject:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
         townshipNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ]
       },
       guidelist:[
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1744.png',
           title:'投资向导'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1745.png',
           title:'优惠政策'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1746.png',
           title:'企业入园'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1747.png',
           title:'投资问答'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1748.png',
           title:'投资环境'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1749.png',
           title:'投资成本'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1750.png',
           title:'投资办事服务'
         }
@@ -292,28 +292,28 @@ export default {
       parkDataList:{
           mainPark:{
             img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1723.jpg',
-            img_href:'https://www.baidu.com',
+            img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
             title:'成都天府国际空港新城'
           },
           parklist:[
             {
               img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1726.png',
-              img_href:'https://www.baidu.com',
+              img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
               title:'成都天府国际生物城'
             },
             {
               img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1729.jpg',
-              img_href:'https://www.baidu.com',
+              img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
               title:'新川创新科技园'
             },
             {
               img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1732.jpg',
-              img_href:'https://www.baidu.com',
+              img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
               title:'成都高新孵化园'
             },
             {
               img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1735.jpg',
-              img_href:'https://www.baidu.com',
+              img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
               title:'菁蓉汇'
             }
           ]

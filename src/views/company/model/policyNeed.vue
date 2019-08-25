@@ -1,7 +1,7 @@
 <template>
   <div class='policyNeed_template'>
     <div class='enterprise_head'>
-      <a class='joinBtn' href="https://www.baidu.com">企业申请入驻</a>
+      <a class='joinBtn' href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml">企业申请入驻</a>
     </div>
     <el-tabs tab-position="left" >
       <el-tab-pane v-for='(item,index) in listData' :key='index'>

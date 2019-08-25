@@ -73,24 +73,24 @@ export default {
        parkDataList:{
           mainPark:{
             img_url:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1461836175,2413247160&fm=26&gp=0.jpg',
-            img_href:'https://www.baidu.com'
+            img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           parklist:[
             {
               img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href:'https://www.baidu.com'
+              img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href:'https://www.baidu.com'
+              img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href:'https://www.baidu.com'
+              img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               img_url:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href:'https://www.baidu.com'
+              img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
           ]
       },

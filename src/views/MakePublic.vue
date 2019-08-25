@@ -212,51 +212,51 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
         departmentNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
         townshipNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ]
       },
@@ -264,213 +264,213 @@ export default {
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
           title:'领导之窗',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
           title:'新闻发布会',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2051.png',
           title:'概况信息',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2056.png',
           title:'政策文件及解读',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
           title:'监督保障制度',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2048.png',
           title:'规划计划',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2052.png',
           title:'认识信息',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2055.png',
           title:'统计信息',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2047.png',
           title:'政府常务会议',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2049.png',
           title:'应急管理',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2053.png',
           title:'监管执行',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2057.png',
           title:'民生工程',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2045.png',
           title:'党建工作',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
           title:'群团及统战',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
          {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2054.png',
           title:'工作动态',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
       ],
       fiveOpenList:[
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2043.png',
           title:'决策公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2042.png',
           title:'行政公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2059.png',
           title:'管理公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2061.png',
           title:'服务公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2060.png',
           title:'结果公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
       ],
       importantOpenList:[
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
           title:'领导之窗',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
           title:'新闻发布会',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2051.png',
           title:'概况信息',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2056.png',
           title:'政策文件及解读',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
           title:'监督保障制度',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2048.png',
           title:'规划计划',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2052.png',
           title:'认识信息',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2055.png',
           title:'统计信息',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2047.png',
           title:'政府常务会议',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2049.png',
           title:'应急管理',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2053.png',
           title:'监管执行',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2057.png',
           title:'民生工程',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2045.png',
           title:'党建工作',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
           title:'群团及统战',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
          {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2054.png',
           title:'工作动态',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
       ],
       dataOpenList:[
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2043.png',
           title:'决策公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2042.png',
           title:'行政公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2059.png',
           title:'管理公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2061.png',
           title:'服务公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2060.png',
           title:'结果公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2060.png',
           title:'结果公开',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
       ],
     }

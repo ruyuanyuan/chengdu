@@ -301,17 +301,17 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
       ],
       swiperOption: {
@@ -330,60 +330,60 @@ export default {
       },
       guidelist:[
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1744.png',
           title:'投资向导'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1745.png',
           title:'优惠政策'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1746.png',
           title:'企业入园'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1747.png',
           title:'投资问答'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1748.png',
           title:'投资环境'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1749.png',
           title:'投资成本'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1750.png',
           title:'投资办事服务'
         }
       ],
       platformlist:[
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           title:'政府信息公开目录'
         },
         {
-            href:'https://www.baidu.com',
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
             title:'政府信息公开年报'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           title:'政府信息公开要点'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           title:'政府信息公开指南'
         },
         {
-          href:'https://www.baidu.com',
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
           title:'政府信息依审公开'
         },
       ],
@@ -393,34 +393,34 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
         departmentNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ]
       },
@@ -448,12 +448,13 @@ export default {
   .system_home{
     .banner_img{
       margin-top:0;
+      width:100%;
       img{
         width:100%;
       }
     }
     .newsAndInfo{
-      margin-top:80px;
+      margin-top:40px;
       .w_tap{
         width:100%;
         text-align: center;
@@ -511,7 +512,7 @@ export default {
       
     }
     .promote{
-      margin-top:80px;
+      margin-top:40px;
       .promote_header{
         text-align: center;
         line-height: 30px;
@@ -542,7 +543,7 @@ export default {
       }
     }
     .loveScene{
-      margin-top:80px;
+      margin-top:40px;
       background:rgba(249, 249, 249, 1);
       .el-tabs__nav{
         width:100%;

@@ -124,256 +124,256 @@ export default {
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
           title:'职业资格',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
           title:'证件办理',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2051.png',
           title:'公共安全',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2056.png',
           title:'公用事业',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
           title:'设立变更',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2048.png',
           title:'准营准办',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2052.png',
           title:'投资审批',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2055.png',
           title:'资质认证',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2047.png',
           title:'人力资源',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2049.png',
           title:'医疗卫生',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2053.png',
           title:'质量技术',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2057.png',
           title:'检验检疫',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2045.png',
           title:'安全生产',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
           title:'司法公证',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
          {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2054.png',
           title:'法人注销',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
       ],
       worklist:{
         personal:[
             {
               title:'户籍办理',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'准营准办',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'资质认证',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'证件办理',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'旅游观光',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'社会保障',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'公共安全',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'商务贸易',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'农林牧渔',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'国土和规划建设',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },
             {
               title:'交通运输',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             },{
               title:'环保绿化',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'水务气象',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'医疗卫生',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'文体教育',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'质量技术',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'检验检疫',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'安全生产',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'公安消防',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'司法公证',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'公用事业',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
             ,{
               title:'法人注销',
-              href:'https://www.baidu.com'
+              href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
             }
         ],
         legalperson:[
           {
             title:'设立变更',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'准营准办',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'资质认证',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'年检年审',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'人力资源',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'社会保障',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'投资审批',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'商务贸易',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'农林牧渔',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'国土和规划建设',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'交通运输',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },{
             title:'环保绿化',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'水务气象',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'医疗卫生',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'文体教育',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'质量技术',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'检验检疫',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'安全生产',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'公安消防',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'司法公证',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'公用事业',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
           ,{
             title:'法人注销',
-            href:'https://www.baidu.com'
+            href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ]
       },
@@ -381,49 +381,49 @@ export default {
         {
           icon:'http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2374.png',
           title:'公交路线',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2376.png',
           title:'电子警察',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2378.png',
           title:'地图服务',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2380.png',
           title:'公积金查询',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2382.png',
           title:'航班查询',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2384.png',
           title:'社保查询',
-          href:'https://www.baidu.com'
+          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
         }
       ],
       focusNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'https://www.baidu.com'
+            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ],
     }
