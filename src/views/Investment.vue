@@ -1,1 +1,529 @@
-<te
+<template>
+  <div class='investement_template'>
+    <div class='content_item'>
+      <div class='focus_news_img'>
+        <el-carousel height="350px">
+          <el-carousel-item v-for="(item,index) in imggroup" :key="index" loop='true' arrow='never'>
+            <a :href="item.imghref" target="_blank" rel="noopener noreferrer">
+              <img :src="item.imgurl" alt="">
+            </a>
+            <div class="imgtitle">{{item.imgtitle}}</div>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div class='focus_news_tab'>
+        <el-tabs v-model="newsActive" >
+          <el-tab-pane label="招商信息" name="investmentInfo" >
+            <div class='news_item' v-for="(item,index) in newsList.investmentInfo" :key='index'>
+              <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
+              <div class='new_date'>{{item.date}}</div></a>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane label="招商项目" name="investmentProject">
+            <div class='news_item' v-for="(item,index) in newsList.investmentProject" :key='index'>
+              <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
+              <div class='new_date'>{{item.date}}</div></a>
+            </div>
+          </el-tab-pane>          
+        </el-tabs>
+      </div>
+    </div>
+    <div class='content_item'>
+      <a class='mewant_item item_green' href="https://baidu.com">我有投资意向</a>
+      <a class='mewant_item item_hgreen' href="https://baidu.com">我想入区</a>
+      <a class='mewant_item item_hblue' href="https://baidu.com">我想咨询</a>
+      <a class='mewant_item item_blue' href="https://baidu.com">主要合作伙伴</a>
+    </div>
+    <div class='content_item'>
+      <div class='guide_box'>
+        <div class='guide_title'>
+          <p>投资</p>
+          <p>指南</p>
+        </div>
+        <div class='guide_item' v-for='(item,index) in guidelist' :key='index'>
+          <a :href="item.href">
+          <img :src="item.icon" alt="">
+          <p class='title'>{{item.title}}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class='content_item'>
+       <div class='pad_card'>
+        <div class='pad_card_title'>
+          <span class='pad_name'>产业园区</span>
+        </div>
+        <div class='pad_card_content'>
+          <div class='park_contnet'>
+              <div class='park_main_img'>
+                  <a :href="parkDataList.mainPark.img_href">
+                    <img :src="parkDataList.mainPark.img_url" alt="">
+                  </a>
+                  <div class='park_main_img_title'>{{parkDataList.mainPark.title}}</div>
+                </div>
+                <div class='park_img_item_list'>
+                  <div class='park_img_item' v-for="(item,index) in parkDataList.parklist" :key='index'>
+                    <a :href="item.img_href">
+                      <img :src="item.img_url" alt="">
+                    </a>
+                    <div class='park_img_item_title'>{{item.title}}</div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='content_item'>
+      <div class='pad_card daying_block'>
+        <!-- <div class='pad_card_title'>
+          <div class='pad_name'>大英电子报</div>
+          <a href="http://www.baidu.com" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
+        </div> -->
+        <div class='pad_card_content'>
+            <div class='news_cont'>
+              <div class='news_cont_img'>
+                <img src="http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1739.png" alt="">
+              </div>
+              <div class='news_cont_list'>
+                <el-tabs v-model="newsActive" >
+                  <el-tab-pane label="投资指南" name="investmentInfo" >
+                    <div class='news_item' v-for="(item,index) in newsList2.investmentInfo" :key='index'>
+                      <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
+                      <div class='new_date'>{{item.date}}</div></a>
+                    </div>
+                  </el-tab-pane>
+                  <el-tab-pane label="投资环境" name="investmentProject">
+                    <div class='news_item' v-for="(item,index) in newsList2.investmentProject" :key='index'>
+                      <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
+                      <div class='new_date'>{{item.date}}</div></a>
+                    </div>
+                  </el-tab-pane>
+                  <el-tab-pane label="主导产业" name="townshipNews">
+                    <div class='news_item' v-for="(item,index) in newsList2.townshipNews" :key='index'>
+                      <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
+                      <div class='new_date'>{{item.date}}</div></a>
+                    </div>
+                  </el-tab-pane>                
+                </el-tabs>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class='pad_card policy_block'>
+        <div class='pad_card_title'>
+          <div class='pad_name'>国际合作和投资服务局</div>
+        </div>
+        <div class='pad_card_content'>
+            <div class='policy_img'>
+              <img src="http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1818.png" alt="">
+            </div>
+            <div class='pack_bth'>
+              <a class='boder_bth' href="https//www.baidu.com">发展计划</a>
+              <a class='boder_bth' href="https//www.baidu.com">产业环境</a>
+              <a class='boder_bth' href="https//www.baidu.com">地貌特征</a>
+              <a class='boder_bth' href="https//www.baidu.com">园区产业</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  data(){
+    return {
+      imggroup:[
+        {
+          imgurl:'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
+          imghref:'https://www.baidu.com',
+          imgtitle:'胡道军带队赴成都开展招商考察'
+        },
+        {
+          imgurl:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1461836175,2413247160&fm=26&gp=0.jpg',
+          imghref:'https://www.baidu.com',
+          imgtitle:'胡道军督导项目建设和运行情况'
+        }
+        
+      ],
+      newsActive:'investmentInfo',
+      newsList:{
+        investmentInfo:[
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-07',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
+            date:'2019-08-01',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
+            date:'2019-08-04',
+            url:'https://www.baidu.com'
+          }
+        ],
+        investmentProject:[
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-07',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
+            date:'2019-08-01',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-04',
+            url:'https://www.baidu.com'
+          }
+        ],
+        townshipNews:[
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-07',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-01',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落推进会暨两纲',
+            date:'2019-08-04',
+            url:'https://www.baidu.com'
+          }
+        ]
+      },
+      newsList2:{
+        investmentInfo:[
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-07',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
+            date:'2019-08-01',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
+            date:'2019-08-04',
+            url:'https://www.baidu.com'
+          }
+        ],
+        investmentProject:[
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-07',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
+            date:'2019-08-01',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-04',
+            url:'https://www.baidu.com'
+          }
+        ],
+        townshipNews:[
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-07',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
+            date:'2019-08-01',
+            url:'https://www.baidu.com'
+          },
+          {
+            title:'大英县召开落推进会暨两纲',
+            date:'2019-08-04',
+            url:'https://www.baidu.com'
+          }
+        ]
+      },
+      guidelist:[
+        {
+          href:'https://www.baidu.com',
+          icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1744.png',
+          title:'投资向导'
+        },
+        {
+          href:'https://www.baidu.com',
+          icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1745.png',
+          title:'优惠政策'
+        },
+        {
+          href:'https://www.baidu.com',
+          icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1746.png',
+          title:'企业入园'
+        },
+        {
+          href:'https://www.baidu.com',
+          icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1747.png',
+          title:'投资问答'
+        },
+        {
+          href:'https://www.baidu.com',
+          icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1748.png',
+          title:'投资环境'
+        },
+        {
+          href:'https://www.baidu.com',
+          icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1749.png',
+          title:'投资成本'
+        },
+        {
+          href:'https://www.baidu.com',
+          icon:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1750.png',
+          title:'投资办事服务'
+        }
+      ],
+      parkDataList:{
+          mainPark:{
+            img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1723.jpg',
+            img_href:'https://www.baidu.com',
+            title:'成都天府国际空港新城'
+          },
+          parklist:[
+            {
+              img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1726.png',
+              img_href:'https://www.baidu.com',
+              title:'成都天府国际生物城'
+            },
+            {
+              img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1729.jpg',
+              img_href:'https://www.baidu.com',
+              title:'新川创新科技园'
+            },
+            {
+              img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1732.jpg',
+              img_href:'https://www.baidu.com',
+              title:'成都高新孵化园'
+            },
+            {
+              img_url:'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1735.jpg',
+              img_href:'https://www.baidu.com',
+              title:'菁蓉汇'
+            }
+          ]
+      },
+    }
+  }
+}
+</script>
+<style lang="scss">
+.investement_template{
+  .content_item{
+      .focus_news_img{
+        float: left;
+        width:524px;
+        height:350px;
+        .el-carousel{
+          height:100%;
+          .el-carousel__item{
+            .imgtitle{
+              position: absolute;
+              bottom:0;
+              width:100%;
+              height:40px;
+              line-height: 40px;
+              padding:0 10px;
+              background:rgba(0,0,0,0.4);
+              color:#fff;
+            }
+          }
+          .el-carousel__indicators--horizontal {
+            bottom: 0;
+            left:84%;
+          }
+        }
+        img{
+          width:100%;
+          height:100%;
+        }
+      }
+      .focus_news_tab{
+        float: right;
+        width:700px;
+      }
+  }
+  .mewant_item{
+      display: inline-block;
+      width:304px;
+      height:56px;
+      margin-right:10px;
+      text-align: center;
+      line-height:54px;
+      font-size:16px;
+      color:#fff;
+      &.item_green{
+        background-color:rgba(109, 191, 109, 1);
+      }
+      &.item_hgreen{
+        background-color:rgba(84, 189, 48, 1);
+      }
+       &.item_blue{
+        background-color:rgba(89, 191, 222, 1);
+      }
+       &.item_hblue{
+        background-color:rgba(45, 128, 217, 1);
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+  }
+  .guide_box{
+    width:100%;
+    height:96px;
+    overflow: hidden;
+    background:rgba(249, 249, 249, 1);
+    .guide_title{
+      width:99px;
+      height:100%;
+      background:$mainColor;
+      padding:20px;
+      float: left;
+      p{
+        font-size:20px;
+        font-weight: bold;
+        color:#fff;
+        text-align: center;
+      }
+    }
+    .guide_item{
+      float: left;
+      padding:18px 30px;
+      text-align: center;
+      .title{
+        margin-top:4px;
+        color:#333;
+        font-size:14px;
+      }
+    }
+  }
+  .park_contnet{
+    width:100%;
+    height:318px;      
+    .park_main_img{
+      width:45%;
+      height: 100%;
+      float: left;
+      padding-bottom:4px;
+      position: relative;
+      img{
+        width:100%;
+        height:100%;
+      }
+      .park_main_img_title{
+        width:100%;
+        position: absolute;
+        bottom:10px;
+        height:40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        color:#fff;
+      }
+    }
+    .park_img_item_list{
+      float: left;
+      width:55%;
+      height:100%;
+      .park_img_item{
+        width:50%;
+        height:50%;
+        padding-left:4px;
+        padding-bottom:4px;
+        float: left;
+        position: relative;
+        img{
+          width:100%;
+          height:100%;
+        }
+       .park_img_item_title{
+          width:100%;
+          position: absolute;
+          bottom:4px;
+          height:40px;
+          line-height: 40px;
+          text-align: center;
+          font-size: 14px;
+          color:#fff;
+        }
+      }
+    }
+  }
+  .content_item{
+    .daying_block{
+      float: left;
+      width:700px;
+      height:440px;
+      .news_cont{
+        height:100%;
+        .news_cont_img{
+          float: left;
+          height:100%;
+          width:240px;
+          img{
+            width:100%;
+            height:100%;
+          }
+        }
+        .news_cont_list{
+          float: right;
+          width:400px;
+          height:100%;
+        }
+      }
+    }
+    .policy_block{
+      float: right;
+       width:530px;
+       height:440px;
+      .policy_img{
+        width:100%;
+        // padding-top:10px;
+        text-align: center;
+        img{
+          width:60%;
+        }
+      }
+      .pack_bth{
+        margin-top:20px;
+        .boder_bth{
+          display: inline-block;
+          width:228px;
+          height:40px;
+          margin-right:30px;
+          margin-bottom:20px;
+          &:nth-child(2n){
+            margin-right:0;
+          }
+          border:1px solid $mainColor;
+          color:$mainColor;
+          text-align: center;
+          line-height: 38px;
+          background-color:#fff;
+          font-size:14px;
+          &:hover{
+            background-color:$mainHColor;
+            color:#fff;
+          }
+        }
+      }
+    }
+  }
+}
+  
+</style>

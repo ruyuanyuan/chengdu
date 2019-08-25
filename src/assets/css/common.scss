@@ -7,6 +7,7 @@ body {
     #app {
         height: 100%;
     }
+    font-size:12px;
 }
 
 * {
@@ -15,10 +16,10 @@ body {
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-size: 12px;
-    color: #333;
 }
-
+a{
+  color:#333;
+}
 .el-menu-item {
     width:120px;
     text-align: center;
@@ -45,6 +46,26 @@ body {
 .el-tabs__active-bar{
   background:$mainColor;
 }
+.el-tabs--card{
+  .el-tabs__item{
+    border:0;
+    font-weight:bold;
+    &.is-active{
+      background:$mainColor;
+      color:#fff;
+      font-weight:bold;
+    }
+  }
+}
+.el-tabs--card>.el-tabs__header .el-tabs__nav{
+  border:0;
+}
+.el-tabs--card>.el-tabs__header .el-tabs__item{
+  border:0;
+}
+.el-tabs--card>.el-tabs__header{
+  border:0;
+}
 .content_item{
   width:1250px;
   margin:20px auto 0;
@@ -52,14 +73,13 @@ body {
 }
 .news_item{
   width:100%;
-  display:flex;
- 
+  overflow: hidden;
   line-height: 30px;
   font-size: 14px;
   color: #333333;
   cursor: pointer;
   &:hover .new_title, &:hover .new_date{
-    color: rgb(78,146,235);
+    color: $mainHColor;
   }
   .news_href{
     display:flex;
@@ -73,7 +93,7 @@ body {
     white-space: nowrap;
   }
   .new_date{
-    width:90px;
+    width:100px;
   }
 }
 .card_block{
@@ -107,12 +127,11 @@ body {
 }
 .pad_card{
   width:100%;
-  padding:20px;
   border:1px solid #ededed;
   background-color:#fff;
   .pad_card_title{
     width:100%;
-    padding-bottom:20px;
+    padding:20px;
     .pad_name{
       display: inline-block;
       padding-left:20px;
@@ -124,5 +143,23 @@ body {
   }
   .pad_card_content{
     width:100%;
+    padding:0 20px 20px;
+    overflow: hidden;
+  }
+}
+
+.icon_title_item{
+  width:25%;
+  float: left;
+  padding-left:20px;
+  line-height: 40px;
+  a{
+    display: block;
+    height:40px;
+    line-height: 40px;
+  }
+  img{
+    vertical-align: middle;
+    margin-right:10px;
   }
 }

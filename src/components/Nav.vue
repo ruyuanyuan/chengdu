@@ -9,9 +9,10 @@
       <el-menu-item index="1">首页</el-menu-item>
       <el-menu-item index="/news">新闻中心</el-menu-item>
       <el-menu-item index="/park">走进园区</el-menu-item>
-      <el-menu-item index="4">投资大英</el-menu-item>
-      <el-menu-item index="5">政府公开</el-menu-item>
-      <el-menu-item index="6">企服通</el-menu-item>
+      <el-menu-item index="/investment">投资大英</el-menu-item>
+      <el-menu-item index="/makepblic">政府公开</el-menu-item>
+      <el-menu-item index="/service">办事服务</el-menu-item>
+      <el-menu-item index="/company">企服通</el-menu-item>
       <el-menu-item index="7">党群党建</el-menu-item>
     </el-menu>
   </div>

@@ -28,5 +28,20 @@ export default new Router({
       name: 'investment',
       component: () => import(/* webpackChunkName: "news" */ './views/Investment.vue'),
     },
+    {
+      path: '/makepblic',
+      name: 'makepblic',
+      component: () => import(/* webpackChunkName: "news" */ './views/MakePublic.vue'),
+    },
+    {
+      path: '/service',
+      name: 'service',
+      component: () => import(/* webpackChunkName: "news" */ './views/Service.vue'),
+    },
+    {
+      path: '/company',
+      name: 'company',
+      component: () => import(/* webpackChunkName: "news" */ './views/company/Company.vue'),
+    },
   ],
 });
