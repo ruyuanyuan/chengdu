@@ -2,11 +2,11 @@
   <div class="nav_templater">
     <el-menu :default-active="activeIndex" 
       class="nav_menu" mode="horizontal" 
-      text-color="#fff"
-      active-text-color="#fff"
+      text-color="rgba(204, 0, 0, 1)"
+      active-text-color="rgba(204, 0, 0, 1)"
       router
     >
-      <el-menu-item index="1">首页</el-menu-item>
+      <el-menu-item index="/home">首页</el-menu-item>
       <el-menu-item index="/news">新闻中心</el-menu-item>
       <el-menu-item index="/park">走进园区</el-menu-item>
       <el-menu-item index="/investment">投资大英</el-menu-item>
@@ -21,8 +21,13 @@
 export default {
   data: function() {
     return {
-      activeIndex:'1'
+      activeIndex:'/home'
     };
+  },
+  watch:{
+    $route() {
+			this.activeIndex= this.$route.path;
+		}
   }
 };
 </script>
@@ -31,11 +36,27 @@ export default {
   width:100%;
   height:60px;
   line-height:60px;
-  
   .nav_menu{
     display:flex;
     justify-content:center;
-    background:$mainColor;
+    background:rgba(249, 249, 249, 1);
+    border:0;
+  }
+  .el-menu-item {
+      width:120px;
+      text-align: center;
+      font-size: 16px;
+      background:rgba(249, 249, 249, 1)!important;
+      color:$mainColor;
+      &:hover{
+        background:rgba(249, 249, 249, 1)!important;
+      }
+      &.is-active{
+        font-weight: bold;
+        border-bottom: 4px solid $mainColor!important;
+      }
+  }
+  .el-menu.el-menu--horizontal{
     border:0;
   }
 }

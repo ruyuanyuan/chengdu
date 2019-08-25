@@ -20,20 +20,7 @@ body {
 a{
   color:#333;
 }
-.el-menu-item {
-    width:120px;
-    text-align: center;
-    background:$mainColor!important;
-    &:hover{
-      background:$mainHColor!important;
-    }
-    &.is-active{
-      border-bottom-color:$mainColor!important;
-    }
-}
-.el-menu.el-menu--horizontal{
-  border:0;
-}
+
 .el-tabs__item{
   color:#333;
   &.is-active{

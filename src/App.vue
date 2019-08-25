@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Weather></Weather>
+    <!-- <Weather></Weather> -->
     <Header></Header>
     <Nav></Nav>
     <div class='contnet'>
