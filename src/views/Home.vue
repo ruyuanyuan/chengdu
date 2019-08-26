@@ -490,6 +490,7 @@ export default {
           position: relative;
           float: left;
           width:400px;
+          min-height:200px;
           img{
             width:100%;
           }
