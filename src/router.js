@@ -23,6 +23,7 @@ export default new Router({
       name: 'news',
       component: () => import(/* webpackChunkName: "news" */ './views/News.vue'),
     },
+    //新闻详情
     {
       path: '/newDetails',
       name: 'newDetails',
