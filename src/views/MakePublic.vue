@@ -28,12 +28,6 @@
               <div class='new_date'>{{item.date}}</div></a>
             </div>
           </el-tab-pane>
-          <el-tab-pane label="气象预报" name="scene">
-            <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
-              <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-              <div class='new_date'>{{item.date}}</div></a>
-            </div>
-          </el-tab-pane>
           <el-tab-pane label="通知公告" name="notice">
             <div class='news_item' v-for="(item,index) in newsList.townshipNews" :key='index'>
               <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
@@ -81,12 +75,6 @@
               <el-tabs v-model="noticeActive3">
                 <el-tab-pane label="规划计划" name="publicinfo">
                   <div class='news_item' v-for="(item,index) in newsList.focusNews" :key='index'>
-                    <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-                    <div class='new_date'>{{item.date}}</div></a>
-                  </div>
-                </el-tab-pane>
-                <el-tab-pane label="本月计划" name="scene">
-                  <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
                     <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
                     <div class='new_date'>{{item.date}}</div></a>
                   </div>

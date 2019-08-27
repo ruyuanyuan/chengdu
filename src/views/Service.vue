@@ -46,7 +46,7 @@
           </el-tab-pane>
         </el-tabs>
     </div>
-    <!-- <div class='content_item'>
+    <div class='content_item'>
       <a class='mewant_item item_green' href="https://baidu.com">
         <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2337.png" alt="">
         我要看
@@ -63,7 +63,7 @@
       <a class='mewant_item item_dblue' href="https://baidu.com">
         <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2341.png" alt="">
         我要评</a>
-    </div> -->
+    </div>
     <div class='content_item problembox'>
       <div class='problem_left'>
         <div class='pad_card problem_card'>
