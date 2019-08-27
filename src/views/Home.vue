@@ -78,7 +78,7 @@
     </div>
     <div class='content_item loveScene'>
       <el-tabs v-model="noticeActive1" type="card" >
-        <el-tab-pane label="公开信息" name="publicinfo">
+        <el-tab-pane label="看政务" name="publicinfo">
           <div class='tab_content'>
              <div class='love_left'>
                 <div class='love_card'>
@@ -141,7 +141,7 @@
               五公开</a>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="气象预报" name="scene">
+        <el-tab-pane label="爱问政" name="scene">
           <div class='tab_content'>
             <div class='love_left'>
                 <div class='love_card'>
@@ -203,68 +203,6 @@
                 <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2340.png" alt="">
               五公开</a>
           </div>
-        </el-tab-pane>
-        <el-tab-pane label="通知公告" name="notice">
-            <div class='tab_content'>
-                <div class='love_left'>
-                    <div class='love_card'>
-                      <div class='love_card_head'>
-                        重点领域信息通知
-                      </div>
-                      <div class='love_card_content'>
-                        <a :href="item.href" v-for='(item,index) in guidelist' :key='index'>
-                          <div class='love_item'>
-                            <img :src="item.icon" alt="">
-                            <div class='title'>{{item.title}}</div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class='love_card'>
-                      <div class='love_card_head'>
-                        政府信息公开发布平台
-                      </div>
-                      <div class='love_card_content'>
-                        <div class='platform_item' v-for='(item,index) in platformlist' :key='index'>
-                          <a :href="item.href"> {{item.title}}
-                          <i class='el-icon-arrow-right'></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <div class='love_right'>
-                    <el-tabs v-model="newsActive" >
-                      <el-tab-pane label="政府要闻" name="focusNews" >
-                        <div class='news_item' v-for="(item,index) in newsList.focusNews" :key='index'>
-                          <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-                          <div class='new_date'>{{item.date}}</div></a>
-                        </div>
-                      </el-tab-pane>
-                      <el-tab-pane label="部门动态" name="departmentNews">
-                        <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
-                          <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-                          <div class='new_date'>{{item.date}}</div></a>
-                        </div>
-                      </el-tab-pane>
-                    </el-tabs>
-                </div>
-            </div>
-            <div class='bottom_five'>
-              <a class='mewant_item item_green' href="https://baidu.com">
-                <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2337.png" alt="">
-                领导之窗
-                </a>
-                <a class='mewant_item item_hgreen' href="https://baidu.com">
-                  <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2338.png" alt="">
-                机构设置</a>
-                <a class='mewant_item item_hblue' href="https://baidu.com">
-                  <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2339.png" alt="">
-                专题专栏</a>
-                <a class='mewant_item item_blue' href="https://baidu.com">
-                  <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2340.png" alt="">
-                五公开</a>
-            </div>
         </el-tab-pane>
       </el-tabs>
     </div>
@@ -374,34 +312,34 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ],
         departmentNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ]
       },
@@ -531,7 +469,7 @@ export default {
       .el-tabs__nav{
         width:100%;
         .el-tabs__item{
-          width: 33%;
+          width: 50%;
           background:#fff;
           text-align: center;
           &.is-active{

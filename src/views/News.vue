@@ -21,32 +21,24 @@
         <img src="@/assets/img/dome.jpg" alt="">
       </div>
       <div class='focus_news_tab'>
-        <el-tabs v-model="newsActive" >
-          <el-tab-pane label="政府要闻" name="focusNews" >
-            <div class='news_item' v-for="(item,index) in newsList.focusNews" :key='index'>
-              <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-              <div class='new_date'>{{item.date}}</div></a>
+          <div class='card_block daying_block'>
+            <div class='card_header'>
+              <div class='card_name'>政府要闻</div>
+              <a href="/newlist" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
             </div>
-          </el-tab-pane>
-          <el-tab-pane label="部门动态" name="departmentNews">
-            <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
-              <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-              <div class='new_date'>{{item.date}}</div></a>
+            <div class='card_content'>
+                <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
+                  <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
+                  <div class='new_date'>{{item.date}}</div></a>
+                </div>
             </div>
-          </el-tab-pane>
-          <el-tab-pane label="乡镇动态" name="townshipNews">
-            <div class='news_item' v-for="(item,index) in newsList.townshipNews" :key='index'>
-              <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-              <div class='new_date'>{{item.date}}</div></a>
-            </div>
-          </el-tab-pane>
-        </el-tabs>
+          </div>
       </div>
     </div>
     <div class='news_block'>
       <div class='card_block daying_block'>
         <div class='card_header'>
-          <div class='card_name'>大英电子报</div>
+          <div class='card_name'>部门动态</div>
           <a href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
@@ -65,7 +57,7 @@
       </div>
       <div class='card_block policy_block'>
         <div class='card_header'>
-          <div class='card_name'>政策文件</div>
+          <div class='card_name'>乡镇动态</div>
           <a href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
@@ -78,7 +70,7 @@
     <div class='news_tv'>
       <div class='card_block'>
         <div class='card_header'>
-          <div class='card_name'>大英电视台</div>
+          <div class='card_name'>大英图集</div>
           <a href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
