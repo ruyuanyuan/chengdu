@@ -51,13 +51,13 @@ export default {
   .header_logo{
     float: left;
     .header_name{
-      font-size:18px;
+      font-size:$font18;
       color:#333;
       line-height:20px;
       font-weight:bold;
     }
     .header_en{
-      font-size:14px;
+      font-size:$font14;
       color:#666;
       line-height:20px;
       font-weight:bold;
@@ -69,7 +69,7 @@ export default {
     .header_seach{
       float: left;
       .hold_word{
-        font-size:14px;
+        font-size:$font14;
         color:#333;
         font-weight:bold;
         line-height: 30px;
@@ -85,6 +85,7 @@ export default {
     .potal_item{
       display: inline-block;
       height:16px;
+      font-size:$font14;
       line-height:16px;
       padding:0 20px;
       margin-top:10px;

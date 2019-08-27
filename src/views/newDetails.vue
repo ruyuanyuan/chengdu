@@ -79,7 +79,7 @@ export default {
       height: 40px;
       line-height:40px;
       border-bottom:1px solid #ddd;
-      font-size: 14px;
+      font-size: $font14;
     }
     .newsbox{
       width:100%;
@@ -98,7 +98,7 @@ export default {
           color: #333333;
         }
         .newsTag{
-          font-size: 14px;
+          font-size: $font14;
           color:#333;
           padding-bottom: 20px;
           border-bottom:1px solid #ddd;

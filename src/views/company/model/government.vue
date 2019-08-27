@@ -207,7 +207,7 @@ export default {
       width:100%;
       .g_card_title{
         line-height:40px;
-        font-size:16px;
+        font-size:$font16;
         color:#333;
         font-weight: bold;
         position: relative;
@@ -233,10 +233,10 @@ export default {
     .el-tab-pane{
       h6{
         line-height: 40px;
-        font-size:16px;
+        font-size:$font16;
       }
       p{
-        font-size:14px;
+        font-size:$font14;
         line-height: 30px;
       }
     }
@@ -250,14 +250,14 @@ export default {
         height:54px;
         line-height: 54px;
         text-align: left;
-        font-size:20px;
+        font-size:$font20;
         color:#fff;
         padding:8px 10px;
       }
       tr td{
         height:40pxpx;
         line-height: 40px;
-        font-size:14px;
+        font-size:$font14;
         border-bottom:1px solid #ddd;
         padding:8px 10px;
       }
@@ -274,7 +274,7 @@ export default {
         margin-right:0;
       }
       p{
-        font-size:16px;
+        font-size:$font16;
         font-weight: bold;
         color:#fff;
         line-height: 20px;

@@ -58,12 +58,6 @@
         </div>
       </div>
     </div>
-    <div class='content_item'>
-      <a class='mewant_item item_green' href="https://baidu.com">我有投资意向</a>
-      <a class='mewant_item item_hgreen' href="https://baidu.com">我想入区</a>
-      <a class='mewant_item item_hblue' href="https://baidu.com">我想咨询</a>
-      <a class='mewant_item item_blue' href="https://baidu.com">大英地方志</a>
-    </div>
   </div>
 </template>
 <script>
@@ -169,7 +163,7 @@ export default {
         .park_doc{
           float: left;
           width:600px;
-          font-size:14px;
+          font-size:$font14;
           line-height:32px;
           color:#1E1E1E;
         }
@@ -185,7 +179,7 @@ export default {
             text-align: center;
             line-height: 38px;
             background-color:#fff;
-            font-size:14px;
+            font-size:$font14;
             &:hover{
               background-color:$mainHColor;
               color:#fff;
@@ -204,7 +198,7 @@ export default {
       margin-right:96.67px;
       text-align: center;
       line-height:54px;
-      font-size:14px;
+      font-size:$font14;
       color:#fff;
       &.item_green{
         background-color:rgba(109, 191, 109, 1);

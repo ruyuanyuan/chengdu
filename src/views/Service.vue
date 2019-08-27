@@ -23,7 +23,6 @@
     </div>
 
     <div class='content_item workbox'>
-      <div class='work_left'>
         <el-tabs v-model="workActive1">
           <el-tab-pane label="个人办事" name="publicinfo">
             <div class='work_item' v-for='(item,index) in worklist.personal' :key='index'>
@@ -46,29 +45,8 @@
             </div>
           </el-tab-pane>
         </el-tabs>
-      </div>
-      <div class='work_right'>
-        <div class='pad_card'>
-          <div class='pad_card_title'>
-            <span class='pad_name'>服务预约</span>
-          </div>
-          <div class='pad_card_content'>
-            <div class='work_car_item'>
-              <img src="http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1745.png" alt="">
-              公共服务清单
-            </div>
-            <div class='work_car_item marginb'>
-              <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2330.png" alt="">
-              权利清单
-            </div>
-          </div>
-        </div>
-        <div class='bottom_img'>
-          <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2331.png" alt="">
-        </div>
-      </div>
     </div>
-    <div class='content_item'>
+    <!-- <div class='content_item'>
       <a class='mewant_item item_green' href="https://baidu.com">
         <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2337.png" alt="">
         我要看
@@ -85,17 +63,9 @@
       <a class='mewant_item item_dblue' href="https://baidu.com">
         <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2341.png" alt="">
         我要评</a>
-    </div>
+    </div> -->
     <div class='content_item problembox'>
       <div class='problem_left'>
-        <div class='problem_left_header'>
-          <div class='head_item'>
-            <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2347.png" alt="">
-          </div>
-          <div class='head_item'>
-            <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2348.png" alt="">
-          </div>
-        </div>
         <div class='pad_card problem_card'>
           <div class='pad_card_title'>
             <span class='pad_name'>常见问题</span>
@@ -124,9 +94,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class='img_box'>
-        <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2421.png" alt="">
       </div>
     </div>
   </div>
@@ -434,17 +401,17 @@
           {
             title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date: '2019-08-07',
-            url: ''
+            url: '/newDetails'
           },
           {
             title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date: '2019-08-01',
-            url: ''
+            url: '/newDetails'
           },
           {
             title: '大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date: '2019-08-04',
-            url: ''
+            url: '/newDetails'
           }
         ],
       }
@@ -459,18 +426,12 @@
         margin: 0;
         text-align: center;
         width: 20%;
-        font-size: 14px;
+        font-size: $font14;
       }
     }
 
     .workbox {
-      .work_left {
-        width: 750px;
-        float: left;
-        border: 1px solid #ddd;
-        padding-bottom: 20px;
-
-        .el-tabs__header {
+      .el-tabs__header {
           background: rgba(249, 249, 249, 1);
           border: #dedede;
           padding-left: 20px;
@@ -503,55 +464,14 @@
               color: skyblue;
             }
 
-            font-size: 14px;
+            font-size: $font14;
           }
         }
-      }
-
-      .work_right {
-        width: 480px;
-        float: right;
-
-        .pad_card_title {
-          background: rgba(249, 249, 249, 1);
-        }
-
-        .pad_card_content {
-          padding-top: 20px;
-        }
-
-        .work_car_item {
-          width: 100%;
-          height: 60px;
-          border: 1px solid $mainColor;
-          line-height: 40px;
-          font-size: 16px;
-          padding: 5px 10px;
-          margin-bottom: 10px;
-
-          img {
-            vertical-align: middle;
-            margin-right: 10px;
-          }
-
-          &.marginb {
-            margin-bottom: 0;
-          }
-        }
-
-        .bottom_img {
-          width: 100%;
-
-          img {
-            width: 100%;
-          }
-        }
-      }
     }
 
     .problembox {
       .problem_left {
-        width: 760px;
+        width: 860px;
         float: left;
 
         .problem_left_header {
@@ -570,10 +490,11 @@
         }
 
         .problem_card {
-          margin-top: 20px;
-
           .news_item {
             line-height: 40px;
+          }
+          .pad_card_content{
+            height:236px;
           }
         }
       }

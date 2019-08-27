@@ -173,7 +173,7 @@ export default {
       height: 40px;
       line-height:40px;
       border-bottom:1px solid #ddd;
-      font-size: 14px;
+      font-size: $font14;
     }
     .new_list{
       width:100%;

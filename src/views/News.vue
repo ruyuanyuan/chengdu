@@ -21,7 +21,7 @@
         <img src="@/assets/img/dome.jpg" alt="">
       </div>
       <div class='focus_news_tab'>
-          <div class='card_block daying_block'>
+          <div class='card_block'>
             <div class='card_header'>
               <div class='card_name'>政府要闻</div>
               <a href="/newlist" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
@@ -36,10 +36,10 @@
       </div>
     </div>
     <div class='news_block'>
-      <div class='card_block daying_block'>
+      <div class='card_block department_block'>
         <div class='card_header'>
           <div class='card_name'>部门动态</div>
-          <a href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
+          <a href="/newlist" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
             <div class='news_cont'>
@@ -55,14 +55,22 @@
             </div>
         </div>
       </div>
-      <div class='card_block policy_block'>
+      <div class='card_block township_block'>
         <div class='card_header'>
           <div class='card_name'>乡镇动态</div>
-          <a href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
+          <a href="/newlist" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
-            <div class='policy_img'>
-              <img src="@/assets/img/policy.png" alt="">
+            <div class='news_cont'>
+              <div class='news_cont_img'>
+                <img src="@/assets/img/dome.jpg" alt="">
+              </div>
+              <div class='news_cont_list'>
+                <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
+                  <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
+                  <div class='new_date'>{{item.date}}</div></a>
+                </div>
+              </div>
             </div>
         </div>
       </div>
@@ -71,89 +79,80 @@
       <div class='card_block'>
         <div class='card_header'>
           <div class='card_name'>大英图集</div>
-          <a href="http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
+          <a href="/newlist" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
-            <div class='tv_contnet'>
-              <div class='tv_main_img'>
-                <a :href="tvDataList.mainTv.img_href">
-                  <img :src="tvDataList.mainTv.img_url" alt="">
-                </a>
-              </div>
-              <div class='tv_img_item_list'>
-                <div class='tv_img_item' v-for="(item,index) in tvDataList.tvlist" :key='index'>
-                  <a :href="item.img_href">
-                     <img :src="item.img_url" alt="">
-                  </a>
+             <swiper :options="swiperOption" ref="mySwiper" style="width:100%">
+              <swiper-slide >
+                <div class='tv_contnet'>
+                  <div class='tv_main_img'>
+                    <a :href="tvDataList.mainTv.img_href">
+                      <img :src="tvDataList.mainTv.img_url" alt="">
+                    </a>
+                  </div>
+                  <div class='tv_img_item_list'>
+                    <div class='tv_img_item' v-for="(item,index) in tvDataList.tvlist" :key='index'>
+                      <a :href="item.img_href">
+                        <img :src="item.img_url" alt="">
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class='tv_contnet'>
+                  <div class='tv_main_img'>
+                    <a :href="tvDataList.mainTv.img_href">
+                      <img :src="tvDataList.mainTv.img_url" alt="">
+                    </a>
+                  </div>
+                  <div class='tv_img_item_list'>
+                    <div class='tv_img_item' v-for="(item,index) in tvDataList.tvlist" :key='index'>
+                      <a :href="item.img_href">
+                        <img :src="item.img_url" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </swiper-slide>
+            </swiper>
         </div>
       </div> 
     </div>
   </div>
 </template>
 <script>
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
+  components: {
+    swiper,
+    swiperSlide
+  },
   data(){
     return {
       holdNew:{
         title:'大英县代表遂宁市参加2019年四川省青少年射击锦标赛 获男子10米气手枪个人、团体金牌',
-        doc:'7月31日，2019年四川省青少年射击锦标赛在四川省陆上运动学校开赛。来自成都、遂宁、巴中等四川省十五个市州的450名10 - 19岁青少年选手参赛 ， 比赛分为男女50米步枪 、10米气步枪、飞碟多项等44个项目。本次比赛大英县代表遂宁市参加比赛，在男子10米气手枪比赛中，杨术强获得个人金牌...'
+        doc:'7月31日，2019年四川省青少年射击锦标赛在四川省陆上遂宁、巴中等四川省十五个市州的450名10 - 19岁青少年选手参赛 ， 比赛分为男女50米步枪 、10米气步枪、飞碟多项等44个项目。本次比赛大英县代表遂宁市参加比赛，在男子10米气手枪比赛中，杨术强获得个人金牌...'
       },
       newsActive:'focusNews',
       newsList:{
-        focusNews:[
-          {
-            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-            date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-          },
-          {
-            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
-            date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-          },
-          {
-            title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
-            date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-          }
-        ],
         departmentNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ],
-        townshipNews:[
-          {
-            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-            date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-          },
-          {
-            title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-            date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-          },
-          {
-            title:'大英县召开落推进会暨两纲',
-            date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-          }
-        ]
       },
       tvDataList:{
         mainTv:{
@@ -186,8 +185,25 @@ export default {
             img_href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
           }
         ]
-      }
+      },
+      swiperOption: {
+      autoplay: true,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    },
     }
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper
+    }
+  },
+   mounted() {
+      this.swiper.slideTo(1, 1000, false)
   },
   methods:{
     
@@ -220,7 +236,7 @@ export default {
             line-height: 42px;
             color:#fff;
             font-weight: bold;
-            font-size:14px;
+            font-size:$font14;
             img{
               width: 18px;
               height: 18px;
@@ -242,7 +258,7 @@ export default {
         }
         .hold_doc{
           margin-top:10px;
-          font-size:14px;
+          font-size:$font14;
           line-height: 24px;
         }
       }
@@ -271,37 +287,43 @@ export default {
       margin:20px auto 0;
       height:auto;
       overflow: hidden;
-      .daying_block{
+      .department_block{
         float: left;
-        width:700px;
+        width:615px;
         .news_cont{
           padding-top:10px;
           .news_cont_img{
             float: left;
-            height:210px;
-            width:300px;
+            width:250px;
+            height:195px;
             img{
               width:100%;
-              height:210px;
+              height:100%;
             }
           }
           .news_cont_list{
             float: right;
-            width:390px;
+            width:355px;
           }
         }
       }
-      .policy_block{
+      .township_block{
         float: right;
-        width:530px;
-        .policy_img{
-          height:210px;
-          width:100%;
+        width:615px;
+        .news_cont{
           padding-top:10px;
-          text-align: center;
-          line-height: 210px;
-          img{
-            height:170px;
+          .news_cont_img{
+            float: left;
+            height:195px;
+            width:250px;
+            img{
+              width:100%;
+              height:195px;
+            }
+          }
+          .news_cont_list{
+            float: right;
+            width:355px;
           }
         }
       }

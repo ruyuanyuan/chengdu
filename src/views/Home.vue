@@ -386,7 +386,7 @@ export default {
           margin-right:15px;
           text-align: center;
           line-height: 48px;
-          font-size:16px;
+          font-size:$font16;
           &:last-child{
             margin-right:0;
           }
@@ -421,7 +421,7 @@ export default {
             padding:10px;
             background:rgba(0,0,0,0.3);
             color:#fff;
-            font-size:16px;
+            font-size:$font16;
             font-weight: bold;
           }
         }
@@ -439,7 +439,7 @@ export default {
         line-height: 30px;
         span{
           font-weight: bold;
-          font-size:24px;
+          font-size:$font24;
           color:#333;
           padding:0 5px;
         }
@@ -472,6 +472,7 @@ export default {
           width: 50%;
           background:#fff;
           text-align: center;
+          font-size:$font16;
           &.is-active{
             color:$mainColor;
             background:rgba(249, 249, 249, 1);
@@ -493,7 +494,7 @@ export default {
               line-height:40px;
               text-align: center;
               color:$mainColor;
-              font-size:14px;
+              font-size:$font14;
               font-weight: bold;
               border-bottom: 2px solid $mainColor;
             }
@@ -503,9 +504,10 @@ export default {
               padding-top:0;
               .love_item{
                 display: inline-block;
-                width:80px;
+                width:90px;
                 text-align: center;
                 padding:20px 0;
+                font-size:$font12;
               }
               .platform_item{
                 width:232px;
@@ -515,7 +517,7 @@ export default {
                 margin-right:10px;
                 background: rgba(249, 249, 249, 1);
                 padding:5px 10px;
-                font-size:14px;
+                font-size:$font14;
                 margin-top:10px;
                 border:1px solid #ddd;
                 a{
@@ -560,7 +562,7 @@ export default {
         width:297.5px;
         float: left;
         line-height: 48px;
-        font-size:20px;
+        font-size:$font20;
         font-weight: bold;
         color:#fff;
         background:$mainColor;
