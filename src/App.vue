@@ -3,7 +3,7 @@
     <!-- <Weather></Weather> -->
     <Header></Header>
     <Nav></Nav>
-    <div class='contnet'>
+    <div class='contnet' :style='"min-height:"+minheight+"px"'>
       <router-view></router-view>
     </div>
     <Footer></Footer>
@@ -20,6 +20,15 @@ export default {
     Header,
     Nav,
     Footer
+  },
+  data(){
+    return {
+      minheight:500
+    }
+  },
+  mounted(){
+    let winH=document.body.clientHeight;
+    this.minheight=winH-300
   }
 }
 </script>
