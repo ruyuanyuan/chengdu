@@ -31,6 +31,7 @@ export default {
   color: #333;
   .contnet{
     width:100%;
+    min-height:500px;
   }
 }
 </style>

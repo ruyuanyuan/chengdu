@@ -195,7 +195,7 @@ export default {
         background:$mainColor;
         color:#fff;
         font-weight: bold;
-        font-size:16px;
+        font-size:$font16;
         border-radius: 20px;
       }
     }
@@ -215,7 +215,7 @@ export default {
         width:100%;
         text-align: left;
         padding-left:30px;
-        font-size:16px;
+        font-size:$font16;
       }
       img{
         width: 40px;
@@ -232,7 +232,7 @@ export default {
       background:#fff;
       margin-bottom:20px;
       .policy_card_name{
-        font-size:20px;
+        font-size:$font20;
         color:#333;
         font-weight: bold;
         line-height: 40px;
@@ -257,7 +257,7 @@ export default {
         }
         .policy_phone{
           float: right;
-          font-size:18px;
+          font-size:$font18;
           color:#333;
           font-weight: bold;
           line-height: 30px;
@@ -268,7 +268,7 @@ export default {
       }
       .policy_main{
         color:#333;
-        font-size:14px;
+        font-size:$font14;
         line-height: 30px;
         .label{
           color:#999;
@@ -276,7 +276,7 @@ export default {
       }
       .policy_address{
         color:#333;
-        font-size:14px;
+        font-size:$font14;
         line-height: 30px;
         .label{
           color:#999;

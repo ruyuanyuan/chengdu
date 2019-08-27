@@ -140,7 +140,7 @@ export default {
           }
           .title{
             display: inline-block;
-            font-size:16px;
+            font-size:$font16;
             color: rgba(255,255,255,0.8);
             font-weight: bold;
             margin-left:5px;
@@ -161,7 +161,7 @@ export default {
             line-height: 40px;
             border-radius: 20px;
             background:#fff;
-            font-size:14px;
+            font-size:$font14;
             position: absolute;
             right:20%;
             top:0;
@@ -202,7 +202,7 @@ export default {
         background:rgba(242, 242, 242, 0.568627450980392);
         .policy_card_head{
           line-height:40px;
-          font-size:16px;
+          font-size:$font16;
           color:#333;
           font-weight: bold;
           position: relative;
@@ -224,7 +224,7 @@ export default {
             padding-bottom:20px;
             border-bottom:1px solid #ddd;
             .policy_card_item_title{
-              font-size:14px;
+              font-size:$font14;
               font-weight: bold;
               line-height: 30px;
             }

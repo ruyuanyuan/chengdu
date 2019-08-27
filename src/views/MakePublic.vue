@@ -13,11 +13,11 @@
           </div>
         </div>
         <div class='pack_bth'>
-            <a class='boder_bth' href="https//www.baidu.com"><i class='el-icon-arrow-right'></i>政府信息公开目录</a>
-            <a class='boder_bth' href="https//www.baidu.com"><i class='el-icon-arrow-right'></i>政府信息公开指南</a>
-            <a class='boder_bth' href="https//www.baidu.com"><i class='el-icon-arrow-right'></i>政府信息公开年报</a>
-            <a class='boder_bth' href="https//www.baidu.com"><i class='el-icon-arrow-right'></i>政府信息依申请公开</a>
-            <a class='boder_bth' href="https//www.baidu.com"><i class='el-icon-arrow-right'></i>政府信息公开意见箱</a>
+            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息公开目录</a>
+            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息公开指南</a>
+            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息公开年报</a>
+            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息依申请公开</a>
+            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息公开意见箱</a>
         </div>
       </div>
       <div class='card_box card_middle'>
@@ -79,13 +79,13 @@
         <div class='pad_card park_right'>
           <div class='pad_card_content'>
               <el-tabs v-model="noticeActive3">
-                <el-tab-pane label="政策文件" name="publicinfo">
+                <el-tab-pane label="规划计划" name="publicinfo">
                   <div class='news_item' v-for="(item,index) in newsList.focusNews" :key='index'>
                     <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
                     <div class='new_date'>{{item.date}}</div></a>
                   </div>
                 </el-tab-pane>
-                <el-tab-pane label="文件解读" name="scene">
+                <el-tab-pane label="本月计划" name="scene">
                   <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
                     <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
                     <div class='new_date'>{{item.date}}</div></a>
@@ -95,11 +95,6 @@
           </div>
         </div>
     </div>
-    <div class='content_item'>
-      <a class='mewant_item item_red' href="https://baidu.com">政务舆情回应</a>
-      <a class='mewant_item item_hgreen' href="https://baidu.com">行政职权目录</a>
-    </div>
-
     <div class='content_item'>   
         <div class='pad_card five_open'>
           <div class='pad_card_title'>
@@ -116,84 +111,6 @@
             </div>
           </div>
         </div>
-    </div>
-
-     <div class='content_item publicItem'>
-    
-        <div class='pad_card park_left'>
-          <div class='pad_card_title'>
-            <span class='pad_name'>重要信息公开</span>
-          </div>
-          <div class='pad_card_content'>
-            <div class='park_contnet'>
-                <div class='icon_title_item' v-for='(item,index) in importantOpenList' :key='index'>
-                  <a :href="item.href">
-                    <img :src="item.icon" alt="">
-                    {{item.title}}
-                  </a>
-                </div>    
-            </div>
-          </div>
-        </div>
-        <div class='pad_card park_right'>
-          <div class='pad_card_title'>
-            <span class='pad_name'>数据公开</span>
-          </div>
-          <div class='pad_card_content'>
-              <div class='icon_title_item data_title_item' v-for='(item,index) in dataOpenList' :key='index'>
-                <a :href="item.href">
-                  <img :src="item.icon" alt="">
-                  {{item.title}}
-                </a>
-              </div>    
-          </div>
-        </div>
-    </div>
-    
-    <div class='content_item opendata'>
-      <div class='pad_card opendata_left'>
-          <div class='pad_card_title'>
-            <span class='pad_name'>重要信息公开</span>
-          </div>
-          <div class='pad_card_content'>
-            <el-tabs v-model="noticeActive4">
-              <el-tab-pane label="规划计划" name="publicinfo">
-                <div class='news_item' v-for="(item,index) in newsList.focusNews" :key='index'>
-                  <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-                  <div class='new_date'>{{item.date}}</div></a>
-                </div>
-              </el-tab-pane>
-              <el-tab-pane label="本月统计" name="scene">
-                <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
-                  <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-                  <div class='new_date'>{{item.date}}</div></a>
-                </div>
-              </el-tab-pane>
-            </el-tabs>
-        </div>
-      </div>
-      <div class='opendata_right'>
-          <el-tabs v-model="noticeActive5">
-            <el-tab-pane label="财政资金" name="publicinfo">
-              <div class='news_item' v-for="(item,index) in newsList.focusNews" :key='index'>
-                <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-                <div class='new_date'>{{item.date}}</div></a>
-              </div>
-            </el-tab-pane>
-            <el-tab-pane label="政府采购" name="scene">
-              <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
-                <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-                <div class='new_date'>{{item.date}}</div></a>
-              </div>
-            </el-tab-pane>
-              <el-tab-pane label="应急预案" name="notice">
-              <div class='news_item' v-for="(item,index) in newsList.townshipNews" :key='index'>
-                <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"><div class='new_title'>{{item.title}}</div>
-                <div class='new_date'>{{item.date}}</div></a>
-              </div>
-            </el-tab-pane>
-          </el-tabs>
-      </div>
     </div>
     
   </div>
@@ -212,51 +129,51 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ],
         departmentNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ],
         townshipNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落推进会暨两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ]
       },
@@ -264,215 +181,108 @@ export default {
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
           title:'领导之窗',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
           title:'新闻发布会',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2051.png',
           title:'概况信息',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2056.png',
           title:'政策文件及解读',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
           title:'监督保障制度',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2048.png',
           title:'规划计划',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2052.png',
           title:'认识信息',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2055.png',
           title:'统计信息',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         }
         ,{
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2047.png',
           title:'政府常务会议',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2049.png',
           title:'应急管理',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2053.png',
           title:'监管执行',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2057.png',
           title:'民生工程',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2045.png',
           title:'党建工作',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
           title:'群团及统战',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
          {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2054.png',
           title:'工作动态',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
       ],
       fiveOpenList:[
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2043.png',
           title:'决策公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2042.png',
           title:'行政公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2059.png',
           title:'管理公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2061.png',
           title:'服务公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
         {
           icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2060.png',
           title:'结果公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+          href:'/newDetails'
         },
       ],
-      importantOpenList:[
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
-          title:'领导之窗',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
-          title:'新闻发布会',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2051.png',
-          title:'概况信息',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2056.png',
-          title:'政策文件及解读',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        }
-        ,{
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',
-          title:'监督保障制度',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        }
-        ,{
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2048.png',
-          title:'规划计划',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        }
-        ,{
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2052.png',
-          title:'认识信息',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        }
-        ,{
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2055.png',
-          title:'统计信息',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        }
-        ,{
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2047.png',
-          title:'政府常务会议',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2049.png',
-          title:'应急管理',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2053.png',
-          title:'监管执行',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2057.png',
-          title:'民生工程',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2045.png',
-          title:'党建工作',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
-          title:'群团及统战',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-         {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2054.png',
-          title:'工作动态',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-      ],
-      dataOpenList:[
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2043.png',
-          title:'决策公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2042.png',
-          title:'行政公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2059.png',
-          title:'管理公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2061.png',
-          title:'服务公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2060.png',
-          title:'结果公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-        {
-          icon:'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2060.png',
-          title:'结果公开',
-          href:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-        },
-      ],
+     
+    
     }
   }
 }
@@ -524,7 +334,7 @@ export default {
             text-align: left;
             line-height: 38px;
             background-color:#fff;
-            font-size:14px;
+            font-size:$font14;
             i{
               padding-right:10px;
             }
@@ -569,7 +379,7 @@ export default {
       margin-right:10px;
       text-align: center;
       line-height:54px;
-      font-size:14px;
+      font-size:$font14;
       color:#fff;
       font-weight: bold;
       font-size: 20px;
@@ -641,7 +451,7 @@ export default {
           .el-tabs__item{
             height:auto;
             font-weight: bold;
-            font-size:18px;
+            font-size:$font18;
             padding:15px 20px;
           }
         }

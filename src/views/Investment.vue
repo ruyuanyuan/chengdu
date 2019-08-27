@@ -29,10 +29,10 @@
       </div>
     </div>
     <div class='content_item'>
-      <a class='mewant_item item_green' href="https://baidu.com">我有投资意向</a>
-      <a class='mewant_item item_hgreen' href="https://baidu.com">我想入区</a>
-      <a class='mewant_item item_hblue' href="https://baidu.com">我想咨询</a>
-      <a class='mewant_item item_blue' href="https://baidu.com">主要合作伙伴</a>
+      <a class='mewant_item item_green' href="javascript:;">我有投资意向</a>
+      <a class='mewant_item item_hgreen' href="javascript:;">我想入区</a>
+      <a class='mewant_item item_hblue' href="javascript:;">我想咨询</a>
+      <a class='mewant_item item_blue' href="javascript:;">成为合作伙伴</a>
     </div>
     <div class='content_item'>
       <div class='guide_box'>
@@ -151,51 +151,51 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ],
         investmentProject:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ],
         townshipNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落推进会暨两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ]
       },
@@ -204,51 +204,51 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ],
         investmentProject:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ],
         townshipNews:[
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落推进会暨两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
         ]
       },
@@ -365,7 +365,7 @@ export default {
       margin-right:10px;
       text-align: center;
       line-height:54px;
-      font-size:16px;
+      font-size:$font16;
       color:#fff;
       &.item_green{
         background-color:rgba(109, 191, 109, 1);
@@ -395,7 +395,7 @@ export default {
       padding:20px;
       float: left;
       p{
-        font-size:20px;
+        font-size:$font20;
         font-weight: bold;
         color:#fff;
         text-align: center;
@@ -408,7 +408,7 @@ export default {
       .title{
         margin-top:4px;
         color:#333;
-        font-size:14px;
+        font-size:$font14;
       }
     }
   }
@@ -432,7 +432,7 @@ export default {
         height:40px;
         line-height: 40px;
         text-align: center;
-        font-size: 14px;
+        font-size: $font14;
         color:#fff;
       }
     }
@@ -458,7 +458,7 @@ export default {
           height:40px;
           line-height: 40px;
           text-align: center;
-          font-size: 14px;
+          font-size: $font14;
           color:#fff;
         }
       }
@@ -515,7 +515,7 @@ export default {
           text-align: center;
           line-height: 38px;
           background-color:#fff;
-          font-size:14px;
+          font-size:$font14;
           &:hover{
             background-color:$mainHColor;
             color:#fff;

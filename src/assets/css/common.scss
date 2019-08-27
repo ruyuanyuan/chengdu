@@ -23,6 +23,7 @@ a{
 
 .el-tabs__item{
   color:#333;
+  font-size:$font14;
   &.is-active{
     color:$mainColor;
   }
@@ -37,6 +38,7 @@ a{
   .el-tabs__item{
     border:0;
     font-weight:bold;
+    font-size:$font14;
     &.is-active{
       background:$mainColor;
       color:#fff;
@@ -63,7 +65,7 @@ a{
   padding-left:10px;
   overflow: hidden;
   line-height: 30px;
-  font-size: 14px;
+  font-size: $font14;
   color: #333333;
   cursor: pointer;
   &:hover .new_title, &:hover .new_date{
@@ -81,7 +83,7 @@ a{
     white-space: nowrap;
   }
   .new_date{
-    width:100px;
+    width:110px;
   }
 }
 .card_block{
@@ -95,7 +97,7 @@ a{
     justify-content: space-between;
     align-items: center;
     .card_name{
-      font-size: 14px;
+      font-size: $font14;
       color:$mainColor;
       font-weight: bold;
       padding-right:15px;
@@ -110,6 +112,7 @@ a{
       padding:4px 15px;
       margin-right:15px;
       border-radius: 2px;
+      font-size:$font14;
     }
   }
 }
@@ -141,6 +144,7 @@ a{
   float: left;
   padding-left:20px;
   line-height: 40px;
+  font-size:$font14;
   a{
     display: block;
     height:40px;
