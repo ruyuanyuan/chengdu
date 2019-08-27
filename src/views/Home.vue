@@ -1,7 +1,16 @@
 <template>
   <div class="system_home">
     <div class='content_item banner_img'>
-      <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u342.png" alt="">
+      <swiper :options="swiperOption" ref="mySwiper" style="width:100%">
+         <swiper-slide >
+           <a href="http://www.xinhuanet.com/world/2019-08/26/c_1210255777.htm"><img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u342.png" alt=""></a>
+         </swiper-slide>
+         <swiper-slide >
+           <a href="https://3w.huanqiu.com/a/ec157d/7PtTAfAgQs8?agt=8"><img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u342.png" alt=""></a>
+         </swiper-slide>
+        <div class="swiper-pagination"  slot="pagination"></div>
+      </swiper>
+     
     </div>
     <div class='content_item newsAndInfo'>
       <div class='w_tap'>
@@ -65,29 +74,6 @@
             <div class='new_date'>{{item.date}}</div></a>
           </div>
         </div>
-      </div>
-    </div>
-    <div class='content_item promote'>
-      <div class='promote_header'>
-        <div> ———  <span>产业促进</span>  ———</div>
-      </div>
-      <div class='promote_content'>
-         <swiper :options="swiperOption" ref="mySwiper" style="width:100%">
-            <!-- slides -->
-            <swiper-slide v-for='(item,index) in guidelist' :key='index'>
-              <a :href="item.href">
-                <div class='swiper_card'>
-                  <img :src="item.icon" alt="">
-                  <div class='title'>{{item.title}}</div>
-                </div>
-              </a>
-            </swiper-slide>
-            <!-- Optional controls -->
-            <div class="swiper-pagination"  slot="pagination"></div>
-            
-          </swiper> 
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
       </div>
     </div>
     <div class='content_item loveScene'>
@@ -301,31 +287,26 @@ export default {
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
             date:'2019-08-07',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
             date:'2019-08-01',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           },
           {
             title:'大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
             date:'2019-08-04',
-            url:'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
+            url:'/newDetails'
           }
       ],
       swiperOption: {
-        slidesPerView:6,
-        spaceBetween: 30,
+        autoplay: true,
         centeredSlides: true,
         loop: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
         },
       },
       guidelist:[
@@ -432,7 +413,7 @@ export default {
     }
   },
   mounted() {
-      this.swiper.slideTo(3, 1000, false)
+      this.swiper.slideTo(1, 1000, false)
   },
   methods:{
     selecedTab(name){
@@ -447,6 +428,7 @@ export default {
   }
   .system_home{
     .banner_img{
+      position: relative;
       margin-top:0;
       width:100%;
       img{

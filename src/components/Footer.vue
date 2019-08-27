@@ -1,6 +1,5 @@
 <template>
   <div class='footer_template'>
-    <p class='website_title'>网站导航： 国家级科技园区  国务院各部委局  省级政府  国内重要城市  市政府  区(市)县政府  新闻媒体</p>
     <div class='footer_content_box'>
       <div class='footer_content'>
           <div class='wx_img'>
@@ -28,13 +27,7 @@ export default {
   .footer_template{
     width:100%;
     height:auto;
-    .website_title{
-      width:100%;
-      text-align: center;
-      line-height: 60px;
-      font-size:14px;
-      color:#333;
-    }
+    margin-top:20px;
     .footer_content_box{
       width:100%;
       background-color: rgba(242, 242, 242, 1);
