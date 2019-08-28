@@ -15,7 +15,7 @@
         </div>
       <div class="WeatHer_potal">
         <div class='potal_item' v-for="item in potalList" :key='item.name'>
-          <a :href="item.href">{{item.name}}</a>
+          <a :href="item.href" target="_blank">{{item.name}}</a>
         </div>
       </div>
     </div>

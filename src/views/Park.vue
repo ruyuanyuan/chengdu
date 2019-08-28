@@ -24,7 +24,7 @@
       </div>
       <div class='pad_card park_right'>
         <div class='pad_card_title'>
-          <span class='pad_name'>大英风采</span>
+          <span class='pad_name'>大英经开区宣传片</span>
         </div>
         <div class='pad_card_content'>
           <div class='park_contnet'>

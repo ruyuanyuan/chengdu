@@ -13,11 +13,11 @@
           </div>
         </div>
         <div class='pack_bth'>
-            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息公开目录</a>
-            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息公开指南</a>
-            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息公开年报</a>
-            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息依申请公开</a>
-            <a class='boder_bth' href="javascript:;"><i class='el-icon-arrow-right'></i>政府信息公开意见箱</a>
+            <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i class='el-icon-arrow-right'></i>政府信息公开目录</a>
+            <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i class='el-icon-arrow-right'></i>政府信息公开指南</a>
+            <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i class='el-icon-arrow-right'></i>政府信息公开年报</a>
+            <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i class='el-icon-arrow-right'></i>政府信息依申请公开</a>
+            <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i class='el-icon-arrow-right'></i>政府信息公开意见箱</a>
         </div>
       </div>
       <div class='card_box card_middle'>

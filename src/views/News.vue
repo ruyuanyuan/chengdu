@@ -78,7 +78,7 @@
     <div class='news_tv'>
       <div class='card_block'>
         <div class='card_header'>
-          <div class='card_name'>大英图集</div>
+          <div class='card_name'>图集</div>
           <a href="/newlist" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
         </div>
         <div class='card_content'>
