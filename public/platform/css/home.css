@@ -314,3 +314,135 @@
 .gray_box{
   background: #F7F7F7;
 }
+.recommend_block{
+  width:100%;
+}
+.recommend_show{
+  width:100%;
+  display: flex;
+}
+.recommend_show_img{
+  width:50%;
+}
+.recommend_show_img img{
+  width:100%;
+  height:425px;
+}
+.recommend_show_info{
+  width:50%;
+  background: #fff;
+  padding:30px 72px 20px;
+}
+.recommend_show_title{
+  font-family: PingFangSC-Medium;
+  font-size: 30px;
+  color: #007EFF;
+}
+.recommend_show_tags{
+  width:100%;
+  margin-top:10px;
+}
+.tag_item{
+  padding:4px 10px;
+  border-radius: 20px;
+  border: 1px solid #007EFF;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #007EFF;
+  margin-right:20px;
+}
+.recommend_show_list{
+  margin-top:40px;
+  margin-bottom:40px;
+  width:498px;
+  font-family: PingFangSC-Regular;
+  font-size: 20px;
+  color: #3C3C3C;
+  line-height: 40px;
+}
+.knowMore{
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #007EFF;
+}
+.recommend_swiper{
+  width:1200px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  padding:0 60px;
+}
+.swiper-content1{
+  width:100%;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+.recommend_swiper_item{
+  width:100%;
+  height:auto;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.swiper_item_img{
+  width: 100%;
+  position: relative;
+}
+.swiper_item_img{
+  width:100%;
+}
+.swiper_item_img img{
+  width:100%;
+}
+.swiper_item_tag{
+  width:100%;
+  position: absolute;
+  bottom:0;
+  left:0;
+  padding:10px;
+  text-align: center;
+  background:rgba(0,0,0,0.4)
+}
+.swiper_item_tag a{
+  display: inline-block;
+  border: 1px solid #FFFFFF;
+  border-radius: 12px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #FFFFFF;
+  width:40%;
+  height:30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+}
+.swiper_item_info{
+  background:#fff;
+  width:100%;
+  padding:15px;
+}
+.swiper_item_info h5{
+  font-family: PingFangSC-Medium;
+  font-size: 18px;
+  color: #3C3C3C;
+  margin-bottom:10px;
+}
+.swiper_item_info p{
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #3C3C3C;
+  line-height: 30px;
+}
+.recommend_swiper_item .knowMore{
+  display: inline-block;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #007EFF;
+  padding:15px;
+}
