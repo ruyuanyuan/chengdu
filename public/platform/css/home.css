@@ -324,9 +324,9 @@
 .recommend_show_img{
   width:50%;
 }
-.recommend_show_img img{
+.recommend_show_img>img{
   width:100%;
-  height:425px;
+  height:450px;
 }
 .recommend_show_info{
   width:50%;
@@ -445,4 +445,134 @@
   font-size: 14px;
   color: #007EFF;
   padding:15px;
+}
+
+.service{
+  width:100%;
+}
+.service_info{
+  width:100%;
+  display: flex;
+}
+.service_info_left{
+  width:50%;
+  position: relative;
+}
+.service_info_left>img{
+  display: block;
+  width:100%;
+  height:700px;
+}
+.service_info_left_content{
+  position: absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+  background: rgba(22, 129, 243, 0.4);
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+.l_content_content{
+  width:600px;
+  height:100%;
+  padding:150px 80px 150px 40px;
+}
+.service_info_head{
+  width:100%;
+  font-family: PingFangSC-Medium;
+  font-size: 36px;
+  color: #FFFFFF;
+  line-height: 64px;
+  display: flex;
+  align-items: center;
+}
+.service_info_head img{
+  width:64px;
+  vertical-align: center;
+  margin-right:20px;
+}
+  .span_line{
+  width:100%;
+  height:1px;
+  background:#FFFFFF;
+  margin:45px 0;
+}
+.service_info_doc{
+  font-family: PingFangSC-Regular;
+  font-size: 20px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+.l_content_content .watch_more{
+  display: inline-block;
+  font-family: PingFangSC-Regular;
+  font-size: 24px;
+  margin-top:60px;
+  color: #FFFFFF;
+}
+.service_info_right{
+  width:50%;
+  position: relative;
+}
+.service_info_right>img{
+  display: block;
+  width:100%;
+  height:700px;
+}
+.service_info_right_content{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,0.5);
+}
+.r_content_content{
+  width:600px;
+  height:auto;
+  position:absolute;
+  top:50%;
+  left:-40px;
+  transform: translate(0,-50%);
+}
+.service_info_item{
+  width:600px;
+  height:auto;
+  background:#fff;
+  padding:30px 40px;
+}
+.service_info_item_head{
+  font-family: PingFangSC-Medium;
+  font-size: 24px;
+  color: #383838;
+}
+.r_content_content .span_line{
+  width:80px;
+  height:2px;
+  display:block;
+  margin:10px 0 0;
+  background:#007AFF;
+}
+.service_info_item_doc{
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #626262;
+  margin-top:15px;
+}
+.service_item_bule{
+  background-image: url(../img/demo.jpg);
+  background-size:cover;
+
+}
+.service_item_bule .service_info_item_head{
+  color:#fff;
+}
+.service_item_bule .service_info_item_doc{
+  color:#fff;
+}
+.service_item_bule .span_line{
+  background:#fff;
 }
