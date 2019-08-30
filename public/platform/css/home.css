@@ -594,6 +594,7 @@
   height:40px;
   text-align: center;
   line-height: 40px;
+  cursor: pointer;
 }
 .tab_nav_item.is_active{
   color:#007EFF;
@@ -604,9 +605,13 @@
 }
 .tab_content_item{
   width:100%;
-  display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  display: none;
+  transition: all linear 0.3;
+}
+.tab_content_item.is_active{
+  display: flex;
 }
 .content_card{
   margin-top:20px;
@@ -713,15 +718,17 @@
   line-height: 36px;
   margin-top:20px;
 }
-.swiper-button-next2, .swiper-button-prev2 ,.swiper-button-next3, .swiper-button-prev3 {
+.swiper-button-next, .swiper-button-prev, .swiper-button-next2, .swiper-button-prev2 ,.swiper-button-next3, .swiper-button-prev3 {
   position: absolute;
   top: 50%;
-  width: 27px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
+  border:1px solid #007EFF;
+  border-radius:50%;
   margin-top: -22px;
   z-index: 10;
   cursor: pointer;
-  background-size: 27px 44px;
+  background-size: 30px 30px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -730,7 +737,7 @@
   left: 10px;
   right: auto;
 }
-.swiper-button-next3, .swiper-container-rtl .swiper-button-prev2 {
+.swiper-button-next2, .swiper-container-rtl .swiper-button-prev2 {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
   right: 10px;
   left: auto;
@@ -744,4 +751,22 @@
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
   right: 10px;
   left: auto;
+}
+.cooperation{
+  width: 1000px;
+  margin:0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cooperation_card{
+  width:182px;
+  height:64px;
+  background: #D8D8D8;
+  border: 1px solid #979797;
+  margin-bottom:20px;
+  margin-right:20px;
+}
+.cooperation_card:nth-child(5n){
+  margin-right:0;
 }
