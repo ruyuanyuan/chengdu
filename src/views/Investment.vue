@@ -45,7 +45,7 @@
           <p>指南</p>
         </div>
         <div class='guide_item' v-for='(item,index) in guidelist' :key='index'>
-          <a :href="item.href">
+          <a href="#">
             <img :src="item.icon" alt="">
             <p class='title'>{{item.title}}</p>
           </a>
@@ -128,10 +128,10 @@
             <img src="http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1818.png" alt="">
           </div>
           <div class='pack_bth'>
-            <a class='boder_bth' href="https//www.baidu.com">发展计划</a>
-            <a class='boder_bth' href="https//www.baidu.com">产业环境</a>
-            <a class='boder_bth' href="https//www.baidu.com">地貌特征</a>
-            <a class='boder_bth' href="https//www.baidu.com">园区产业</a>
+            <a class='boder_bth' href="#">发展计划</a>
+            <a class='boder_bth' href="#">产业环境</a>
+            <a class='boder_bth' href="#">地貌特征</a>
+            <a class='boder_bth' href="#">园区产业</a>
           </div>
         </div>
       </div>

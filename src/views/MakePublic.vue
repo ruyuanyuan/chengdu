@@ -13,15 +13,15 @@
           </div>
         </div>
         <div class='pack_bth'>
-          <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i
+          <a class='boder_bth' href="#"><i
             class='el-icon-arrow-right'></i>政府信息公开目录</a>
-          <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i
+          <a class='boder_bth' href="#"><i
             class='el-icon-arrow-right'></i>政府信息公开指南</a>
-          <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i
+          <a class='boder_bth' href="#"><i
             class='el-icon-arrow-right'></i>政府信息公开年报</a>
-          <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i
+          <a class='boder_bth' href="#"><i
             class='el-icon-arrow-right'></i>政府信息依申请公开</a>
-          <a class='boder_bth' href="http://www.suining.gov.cn/web/guest/zwgk" target="_blank"><i
+          <a class='boder_bth' href="#"><i
             class='el-icon-arrow-right'></i>政府信息公开意见箱</a>
         </div>
       </div>
@@ -73,7 +73,7 @@
         <div class='pad_card_content'>
           <div class='park_contnet'>
             <div class='icon_title_item' v-for='(item,index) in infoOpenList' :key='index'>
-              <a :href="item.href">
+              <a href="#">
                 <img :src="item.icon" alt="">
                 {{item.title}}
               </a>
@@ -104,7 +104,7 @@
         <div class='pad_card_content'>
           <div class='park_contnet'>
             <div class='icon_title_item five_open_item' v-for='(item,index) in fiveOpenList' :key='index'>
-              <a :href="item.href">
+              <a href="#">
                 <img :src="item.icon" alt="">
                 {{item.title}}
               </a>
@@ -242,10 +242,10 @@
       }
     },
     created() {
-      this.querylist(8,18);
-      this.querylist(8,19);
-      this.querylist(8,20);
-      this.querylist(7,21);
+      this.querylist(8, 18);
+      this.querylist(8, 19);
+      this.querylist(8, 20);
+      this.querylist(7, 21);
     },
     methods: {
       getDetail(item) {
@@ -258,7 +258,7 @@
       dateFormat_YMD(val) {
         return DateFormat.dateFormat_YMD(val)
       },
-      querylist(size,pkNewsTypeId) {
+      querylist(size, pkNewsTypeId) {
         let json = {
           size: size,
           pkId: 238,
