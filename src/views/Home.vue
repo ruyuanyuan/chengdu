@@ -161,7 +161,7 @@
             <div class='love_left'>
               <div class='love_card'>
                 <div class='love_card_content'>
-                  <a :href="item.href" v-for='(item,index) in guidelist' :key='index'>
+                  <a :href="item.href" v-for='(item,index) in guidelistawz' :key='index'>
                     <div class='love_item'>
                       <img :src="item.icon" alt="">
                       <div class='title'>{{item.title}}</div>
@@ -279,6 +279,29 @@
             href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
             icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1747.png',
             title: '五公开'
+          },
+        ],
+
+        guidelistawz: [
+          {
+            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1744.png',
+            title: '我要写信'
+          },
+          {
+            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1745.png',
+            title: '在线访谈'
+          },
+          {
+            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1746.png',
+            title: '常见问题'
+          },
+          {
+            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1747.png',
+            title: '舆情回应'
           },
         ],
         platformlist: [

@@ -28,6 +28,7 @@ export default new Router({
       path: '/newDetails',
       name: 'newDetails',
       component: () => import(/* webpackChunkName: "news" */ './views/newDetails.vue'),
+      props: (route) => (route.query)
     },
     {
       path: '/newlist',

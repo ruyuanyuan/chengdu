@@ -9,8 +9,18 @@ module.exports = {
     port: 9999,
     https: false,
     hotOnly: false,
-    proxy: null,
-    before: (app) => {},
+    proxy: {
+      '/websit': {
+        target: 'http://192.168.0.105:8081',   //代理接口
+        changeOrigin: true,
+        // 如果要代理 websockets
+        ws: true,
+        // 将主机标头的原点更改为目标URL
+        changeOrigin: true
+      }
+    },
+    before: (app) => {
+    },
   },
   css: {
     loaderOptions: {
