@@ -78,10 +78,6 @@
                         <div class='new_title'>【成都高新区】出台国有企业高质量</div>
                         <div class='new_date'>2019-08-28</div>
                       </div>
-                      <div class='focus_news_doc'>
-                          容错纠错机制为干部“立盾” 大英发出首份容错免责决定正权调研督导重点工程建设砂石资源经营管理体制改革、
-                          防汛减灾代永波莅遂调研，大英发出首份容错免责决定正权调研督导重点工程建设。
-                      </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -92,10 +88,6 @@
                       <div class='focus_news_title'>
                         <div class='new_title'>【成都高新区】出台国有企业高质量</div>
                         <div class='new_date'>2019-08-28</div>
-                      </div>
-                      <div class='focus_news_doc'>
-                          容错纠错机制为干部“立盾” 大英发出首份容错免责决定正权调研督导重点工程建设砂石资源经营管理体制改革、
-                          防汛减灾代永波莅遂调研，大英发出首份容错免责决定正权调研督导重点工程建设。
                       </div>
                     </div>
                 </div>
@@ -1084,76 +1076,78 @@
 <script src='./js/jquery-3.3.1.min.js'></script>
 <script>
     //轮播图
-   
-    var banner = new Swiper('.banner-swiper', {
-      autoplay: true,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      }
-    });
-     new Swiper('.new-swiper', {
-      autoplay: true,
-      loop: true,
-    });
+   $(function(){
+      new Swiper('.banner-swiper', {
+        autoplay: true,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        }
+      });
+      new Swiper('.new-swiper', {
+        autoplay: true,
+        loop: true,
+      });
+      
+       new Swiper('.swiper-content1', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup:4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+      
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+      new Swiper('.swiper-content2', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup:3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+      
+        navigation: {
+          nextEl: '.swiper-button-next2',
+          prevEl: '.swiper-button-prev2',
+        },
+      });
+      new Swiper('.swiper-content3', {
+        loop: true,
+        loopFillGroupWithBlank: true,
+      
+        navigation: {
+          nextEl: '.swiper-button-next3',
+          prevEl: '.swiper-button-prev3',
+        },
+      });
+      //选项卡
+      $('.tabs_nav').on('click','.tabs_nav_item',function(){
+        let index=$(this).index()
+        let cont=$(this).parents('.new_tab').find('.tabs_content_groups').find('.tabs_content')
+        $('.tabs_nav_item').removeClass('is_active')
+        $(this).addClass('is_active')
+        cont.removeClass('is_active')
+        cont.eq(index).addClass('is_active')
+      })
+      $('.service_tab_nav').on('click','.tab_nav_item',function(){
+        let index=$(this).index()
+        let cont=$(this).parents('.service_tab').find('.service_tab_content').find('.tab_content_item')
+        $('.tab_nav_item').removeClass('is_active')
+        $(this).addClass('is_active')
+        cont.removeClass('is_active')
+        cont.eq(index).addClass('is_active')
+      })
+      $('.r_content_content').on('click','.service_info_item',function(){
+        let index=$(this).index()
+        let cont=$(this).parents('.service_info').find('.service_info_left').find('.left_item')
+        $('.service_info_item').removeClass('service_item_bule')
+        $(this).addClass('service_item_bule')
+        cont.removeClass('is_active')
+        cont.eq(index).addClass('is_active')
+      })
+   })
     
-    var recommendSwiper = new Swiper('.swiper-content1', {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      slidesPerGroup:4,
-      loop: true,
-      loopFillGroupWithBlank: true,
-     
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-    var recommendSwiper2 = new Swiper('.swiper-content2', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup:3,
-      loop: true,
-      loopFillGroupWithBlank: true,
-     
-      navigation: {
-        nextEl: '.swiper-button-next2',
-        prevEl: '.swiper-button-prev2',
-      },
-    });
-    var recommendSwiper2 = new Swiper('.swiper-content3', {
-      loop: true,
-      loopFillGroupWithBlank: true,
-     
-      navigation: {
-        nextEl: '.swiper-button-next3',
-        prevEl: '.swiper-button-prev3',
-      },
-    });
-    //选项卡
-    $('.tabs_nav').on('click','.tabs_nav_item',function(){
-      let index=$(this).index()
-      let cont=$(this).parents('.new_tab').find('.tabs_content_groups').find('.tabs_content')
-      $('.tabs_nav_item').removeClass('is_active')
-      $(this).addClass('is_active')
-      cont.removeClass('is_active')
-      cont.eq(index).addClass('is_active')
-    })
-    $('.service_tab_nav').on('click','.tab_nav_item',function(){
-      let index=$(this).index()
-      let cont=$(this).parents('.service_tab').find('.service_tab_content').find('.tab_content_item')
-      $('.tab_nav_item').removeClass('is_active')
-      $(this).addClass('is_active')
-      cont.removeClass('is_active')
-      cont.eq(index).addClass('is_active')
-    })
-    $('.r_content_content').on('click','.service_info_item',function(){
-      let index=$(this).index()
-      let cont=$(this).parents('.service_info').find('.service_info_left').find('.left_item')
-      $('.service_info_item').removeClass('service_item_bule')
-      $(this).addClass('service_item_bule')
-      cont.removeClass('is_active')
-      cont.eq(index).addClass('is_active')
-    })
 </script>
