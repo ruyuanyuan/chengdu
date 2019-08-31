@@ -34,6 +34,7 @@ export default new Router({
       path: '/newlist',
       name: 'newlist',
       component: () => import(/* webpackChunkName: "news" */ './views/newList.vue'),
+      props: (route) => (route.query)
     },
     {
       path: '/park',

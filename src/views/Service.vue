@@ -23,28 +23,28 @@
     </div>
 
     <div class='content_item workbox'>
-        <el-tabs v-model="workActive1">
-          <el-tab-pane label="个人办事" name="publicinfo">
-            <div class='work_item' v-for='(item,index) in worklist.personal' :key='index'>
-              <a v-if="item.type==='main'" :href="item.href" target="_blank"><i class='el-icon-arrow-right'></i>
-                {{item.title}}</a>
-              <a v-else
-                 :href="'http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000&iframeUrlLo='+item.href+'?areaCode=510109000000'"
-                 target="_blank">
-                <i class='el-icon-arrow-right'></i> {{item.title}}</a>
-            </div>
-          </el-tab-pane>
-          <el-tab-pane label="法人办事" name="scene">
-            <div class='work_item' v-for='(item,index) in worklist.legalperson' :key='index'>
-              <a v-if="item.type==='main'" :href="item.href" target="_blank"><i class='el-icon-arrow-right'></i>
-                {{item.title}}</a>
-              <a v-else
-                 :href="'http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000&iframeUrlLo='+item.href+'?areaCode=510109000000'"
-                 target="_blank">
-                <i class='el-icon-arrow-right'></i> {{item.title}}</a>
-            </div>
-          </el-tab-pane>
-        </el-tabs>
+      <el-tabs v-model="workActive1">
+        <el-tab-pane label="个人办事" name="publicinfo">
+          <div class='work_item' v-for='(item,index) in worklist.personal' :key='index'>
+            <a v-if="item.type==='main'" :href="item.href" target="_blank"><i class='el-icon-arrow-right'></i>
+              {{item.title}}</a>
+            <a v-else
+               :href="'http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000&iframeUrlLo='+item.href+'?areaCode=510109000000'"
+               target="_blank">
+              <i class='el-icon-arrow-right'></i> {{item.title}}</a>
+          </div>
+        </el-tab-pane>
+        <el-tab-pane label="法人办事" name="scene">
+          <div class='work_item' v-for='(item,index) in worklist.legalperson' :key='index'>
+            <a v-if="item.type==='main'" :href="item.href" target="_blank"><i class='el-icon-arrow-right'></i>
+              {{item.title}}</a>
+            <a v-else
+               :href="'http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000&iframeUrlLo='+item.href+'?areaCode=510109000000'"
+               target="_blank">
+              <i class='el-icon-arrow-right'></i> {{item.title}}</a>
+          </div>
+        </el-tab-pane>
+      </el-tabs>
     </div>
     <div class='content_item'>
       <a class='mewant_item item_green' href="https://baidu.com">
@@ -72,9 +72,9 @@
           </div>
           <div class='pad_card_content'>
             <div class='news_item' v-for="(item,index) in focusNews" :key='index'>
-              <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer">
+              <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
                 <div class='new_title'>{{item.title}}</div>
-                <div class='new_date'>{{item.date}}</div>
+                <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
               </a>
             </div>
           </div>
@@ -99,6 +99,11 @@
   </div>
 </template>
 <script>
+
+  import Axios from '@/utils/axiosWrap'
+  import AjaxApi from '@/service/ajaxApi'
+  import DateFormat from '@/utils/momentWrap'
+
   export default {
     data() {
       return {
@@ -397,24 +402,36 @@
             href: 'http://rsj.suining.gov.cn/'
           }
         ],
-        focusNews: [
-          {
-            title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-            date: '2019-08-07',
-            url: '/newDetails'
-          },
-          {
-            title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
-            date: '2019-08-01',
-            url: '/newDetails'
-          },
-          {
-            title: '大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
-            date: '2019-08-04',
-            url: '/newDetails'
-          }
-        ],
+        focusNews: [],
       }
+    },
+    created() {
+      this.querylist(16);
+    },
+    methods: {
+      getDetail(item) {
+        let json = {
+          id: item.id,
+          mark: item.pkNewsTypeId,
+        };
+        this.$router.push({name: 'newDetails', query: json})
+      },
+      dateFormat_YMD(val) {
+        return DateFormat.dateFormat_YMD(val)
+      },
+      querylist(pkNewsTypeId) {
+        let json = {
+          size: 6,
+          pkId: 238,
+          pkModelId: 6,
+          pkNewsTypeId: pkNewsTypeId,
+        }
+        Axios.get(AjaxApi.querylist, json).then(res => {
+          if (res.status === 200) {
+            this.focusNews = res.data.body.datas;
+          }
+        })
+      },
     }
   }
 </script>
@@ -432,41 +449,41 @@
 
     .workbox {
       .el-tabs__header {
-          background: rgba(249, 249, 249, 1);
-          border: #dedede;
-          padding-left: 20px;
+        background: rgba(249, 249, 249, 1);
+        border: #dedede;
+        padding-left: 20px;
 
-          .el-tabs__item {
-            height: auto;
-            font-weight: bold;
-            font-size: 18px;
-            padding: 15px 20px;
+        .el-tabs__item {
+          height: auto;
+          font-weight: bold;
+          font-size: 18px;
+          padding: 15px 20px;
+        }
+      }
+
+      .el-tabs__content {
+        padding: 0 20px;
+      }
+
+      .work_item {
+        width: 20%;
+        text-align: left;
+        padding-left: 10px;
+        border-bottom: 1px dashed #ddd;
+        float: left;
+        line-height: 40px;
+
+        a {
+          display: block;
+          width: 100%;
+
+          i {
+            color: skyblue;
           }
+
+          font-size: $font14;
         }
-
-        .el-tabs__content {
-          padding: 0 20px;
-        }
-
-        .work_item {
-          width: 20%;
-          text-align: left;
-          padding-left: 10px;
-          border-bottom: 1px dashed #ddd;
-          float: left;
-          line-height: 40px;
-
-          a {
-            display: block;
-            width: 100%;
-
-            i {
-              color: skyblue;
-            }
-
-            font-size: $font14;
-          }
-        }
+      }
     }
 
     .problembox {
@@ -493,8 +510,9 @@
           .news_item {
             line-height: 40px;
           }
-          .pad_card_content{
-            height:236px;
+
+          .pad_card_content {
+            height: 236px;
           }
         }
       }
