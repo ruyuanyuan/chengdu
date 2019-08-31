@@ -10,47 +10,16 @@
   <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
-  <div class='banner'>
-    <div class='banner_content'>
-      <div class='banner_text'>
-        <div class='banner_title'>四川省产业园区平台</div>
-        <div class='banner_doc'>用数据服务决策，让服务深入园区，搭建政企互动平台，推助“5+1”现代化产业体系建设，
-        共助四川省产业园区高质量发展</div>
+  <div class='banner-swiper'>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+          <img src="https://obs-gysjypt.obs.cn-north-1.myhuaweicloud.com/cc-center/banner/2019/8/1564987631779_12.jpg" alt="">
       </div>
-      <div class='login_box'>
-        <div class='experience_box'>
-          <div class='experience_title'>登录即刻体验</div>
-          <div class='experience_grounp'>
-            <div class='experience_item'>
-              <img class='experience_img' src="./img/ctiy.png" alt="">
-              <div class='experience_item_title'>数智招商</div>  
-            </div>
-            <div class='experience_item'>
-              <img class='experience_img' src="./img/ctiy.png" alt="">
-              <div class='experience_item_title'>发展指数</div>  
-            </div>
-            <div class='experience_item'>
-                <img class='experience_img' src="./img/ctiy.png" alt="">
-                <div class='experience_item_title'>产业地图</div>  
-            </div>
-            <div class='experience_item'>
-                <img class='experience_img' src="./img/ctiy.png" alt="">
-                <div class='experience_item_title'>园区大数据</div>  
-            </div>
-            <div class='experience_item'>
-                <img class='experience_img' src="./img/ctiy.png" alt="">
-                <div class='experience_item_title'>智慧政策</div>  
-            </div>
-            <div class='experience_item'>
-                <img class='experience_img' src="./img/ctiy.png" alt="">
-                <div class='experience_item_title'>信贷融资</div>
-            </div>
-          </div>
-        </div>
-        <a class='login_btn'>立即登录</a>
-        <a class='register_a' href="javascript:;">现在注册</a>
+      <div class="swiper-slide">
+        <img src="https://obs-gysjypt.obs.cn-north-1.myhuaweicloud.com/cc-center/banner/2019/8/1564988545174_9ec23c2ae7d00df4f46f46667b3d72d.png" alt="">
       </div>
     </div>
+    <div class="swiper-pagination"></div> 
   </div>
   <div class='white_box'>
     <div class='card_title'>
@@ -65,18 +34,39 @@
     </div>
     <div class="focus_news">
       <div class='focus_img_doc'>
-        <div class='focus_img'>
-          <img src="./img/demo.jpg" alt="">
-        </div>
-        <div class='focus_news_box'>
-          <div class='focus_news_title'>
-            <div class='new_title'>【成都高新区】出台国有企业高质量</div>
-            <div class='new_date'>2019-08-28</div>
-          </div>
-          <div class='focus_news_doc'>
-              容错纠错机制为干部“立盾” 大英发出首份容错免责决定正权调研督导重点工程建设砂石资源经营管理体制改革、
-              防汛减灾代永波莅遂调研，大英发出首份容错免责决定正权调研督导重点工程建设。
-          </div>
+        <div class='new-swiper'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class='focus_img'>
+                      <img src="./img/demo.jpg" alt="">
+                    </div>
+                    <div class='focus_news_box'>
+                      <div class='focus_news_title'>
+                        <div class='new_title'>【成都高新区】出台国有企业高质量</div>
+                        <div class='new_date'>2019-08-28</div>
+                      </div>
+                      <div class='focus_news_doc'>
+                          容错纠错机制为干部“立盾” 大英发出首份容错免责决定正权调研督导重点工程建设砂石资源经营管理体制改革、
+                          防汛减灾代永波莅遂调研，大英发出首份容错免责决定正权调研督导重点工程建设。
+                      </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class='focus_img'>
+                      <img src="./img/demo.jpg" alt="">
+                    </div>
+                    <div class='focus_news_box'>
+                      <div class='focus_news_title'>
+                        <div class='new_title'>【成都高新区】出台国有企业高质量</div>
+                        <div class='new_date'>2019-08-28</div>
+                      </div>
+                      <div class='focus_news_doc'>
+                          容错纠错机制为干部“立盾” 大英发出首份容错免责决定正权调研督导重点工程建设砂石资源经营管理体制改革、
+                          防汛减灾代永波莅遂调研，大英发出首份容错免责决定正权调研督导重点工程建设。
+                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
       <div class='new_tab'>
@@ -415,20 +405,56 @@
       <div class='service'>
         <div class='service_info'>
           <div class='service_info_left'>
-            <img src="./img/demo.jpg" alt="">
-            <div class='service_info_left_content'>
-              <div class='l_content_content'>
-                <div class='service_info_head'>
-                  <img src="./img/ctiy.png" alt="">
-                  政策云服务
+            <div class='left_item is_active'>
+                <img src="./img/demo.jpg" alt="">
+                <div class='service_info_left_content'>
+                  <div class='l_content_content'>
+                    <div class='service_info_head'>
+                      <img src="./img/ctiy.png" alt="">
+                      政策云服务
+                    </div>
+                    <div class='span_line'></div>
+                    <div class='service_info_doc'>
+                      政策云服务通过虚拟现实、仿真建模等技术，在云平台上构建与实际工厂中物理环境政策云服务通过虚拟现实、
+                      仿真建模等技术，在云平台上构建与实际工厂中物理环境政策云服务通过虚拟现实
+                    </div>
+                    <a class='watch_more' href="javascript:;">查看详情</a>
+                  </div>
                 </div>
-                <div class='span_line'></div>
-                <div class='service_info_doc'>
-                  政策云服务通过虚拟现实、仿真建模等技术，在云平台上构建与实际工厂中物理环境政策云服务通过虚拟现实、
-                  仿真建模等技术，在云平台上构建与实际工厂中物理环境政策云服务通过虚拟现实
+            </div>
+            <div class='left_item'>
+                <img src="./img/demo.jpg" alt="">
+                <div class='service_info_left_content'>
+                  <div class='l_content_content'>
+                    <div class='service_info_head'>
+                      <img src="./img/ctiy.png" alt="">
+                      精准招商服务
+                    </div>
+                    <div class='span_line'></div>
+                    <div class='service_info_doc'>
+                      政策云服务通过虚拟现实、仿真建模等技术，在云平台上构建与实际工厂中物理环境政策云服务通过虚拟现实、
+                      仿真建模等技术，在云平台上构建与实际工厂中物理环境政策云服务通过虚拟现实
+                    </div>
+                    <a class='watch_more' href="javascript:;">查看详情</a>
+                  </div>
                 </div>
-                <a class='watch_more' href="javascript:;">查看详情</a>
-              </div>
+            </div>
+            <div class='left_item'>
+                <img src="./img/demo.jpg" alt="">
+                <div class='service_info_left_content'>
+                  <div class='l_content_content'>
+                    <div class='service_info_head'>
+                      <img src="./img/ctiy.png" alt="">
+                      金融服务
+                    </div>
+                    <div class='span_line'></div>
+                    <div class='service_info_doc'>
+                      政策云服务通过虚拟现实、仿真建模等技术，在云平台上构建与实际工厂中物理环境政策云服务通过虚拟现实、
+                      仿真建模等技术，在云平台上构建与实际工厂中物理环境政策云服务通过虚拟现实
+                    </div>
+                    <a class='watch_more' href="javascript:;">查看详情</a>
+                  </div>
+                </div>
             </div>
           </div>
           <div class='service_info_right'>
@@ -1021,16 +1047,27 @@
 <script src='./js/jquery-3.3.1.min.js'></script>
 <script>
     //轮播图
+   
+    var banner = new Swiper('.banner-swiper', {
+      autoplay: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
+     new Swiper('.new-swiper', {
+      autoplay: true,
+      loop: true,
+    });
+    
     var recommendSwiper = new Swiper('.swiper-content1', {
       slidesPerView: 4,
       spaceBetween: 30,
       slidesPerGroup:4,
       loop: true,
       loopFillGroupWithBlank: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+     
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -1042,10 +1079,7 @@
       slidesPerGroup:3,
       loop: true,
       loopFillGroupWithBlank: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+     
       navigation: {
         nextEl: '.swiper-button-next2',
         prevEl: '.swiper-button-prev2',
@@ -1054,10 +1088,7 @@
     var recommendSwiper2 = new Swiper('.swiper-content3', {
       loop: true,
       loopFillGroupWithBlank: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+     
       navigation: {
         nextEl: '.swiper-button-next3',
         prevEl: '.swiper-button-prev3',
@@ -1080,5 +1111,12 @@
       cont.removeClass('is_active')
       cont.eq(index).addClass('is_active')
     })
-    
+    $('.r_content_content').on('click','.service_info_item',function(){
+      let index=$(this).index()
+      let cont=$(this).parents('.service_info').find('.service_info_left').find('.left_item')
+      $('.service_info_item').removeClass('service_item_bule')
+      $(this).addClass('service_item_bule')
+      cont.removeClass('is_active')
+      cont.eq(index).addClass('is_active')
+    })
 </script>

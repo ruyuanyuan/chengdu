@@ -1,89 +1,14 @@
-.banner{
+.banner-swiper{
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+.banner-swiper img{
   width:100%;
-  height:480px;
-  background-image: url('../img/banner.webp');
-  background-size:100%;
-  background-repeat: no-repeat;
+  height:
 }
-.banner .banner_content{
-  width:1200px;
-  margin:0 auto;
-  padding:10px 0;
-  display: flex;
-  justify-content: space-between;
-}
-.banner .banner_content .banner_text{
-  width:558px;
-  height:460px;
-  line-height: 40px;
-  letter-spacing: 2px;
-}
-.banner .banner_content .banner_text .banner_title{
-  font-size:32px;
-  color:#fff;
-  margin-top:120px;
-}
-.banner .banner_content .banner_text .banner_doc{
-  font-size:20px;
-  color:#fff;
-  margin-top:40px;
-}
-
-.banner .banner_content .login_box{
-  background-color:#fff;
-  border-radius: 6px;
-  width:300px;
-  height:460px;
-  padding:30px 20px;
-}
-.banner .banner_content  .experience_box{
-  width:100%;
-  height:auto;
-  text-align: center;
-}
-.experience_title{
-  font-family: PingFangSC-Regular;
-  font-size: 18px;
-  color: #464646;
-  letter-spacing: 0;
-  margin-bottom: 40px;
-  cursor: default;
-}
-
-.banner .banner_content .experience_box .experience_grounp{
-  width:100%;
-  display: flex;
-  justify-content:space-around;
-  flex-flow: wrap;
-}
-.banner .banner_content  .experience_box .experience_grounp .experience_item{
-  width:33.33%;
-  text-align: center;
-  margin-bottom:30px;
-  font-family: PingFangSC-Regular;
-  font-size: 14px;
-  color: #787878;
-}
-.banner .banner_content .login_box .login_btn{
-  display: block;
-  width:180px;
-  border-radius: 20px;
-  margin:10px auto;
-  height:40px;
-  text-align: center;
-  line-height: 40px;
-  color:#fff;
-  background:#007EFF;
-  cursor: pointer;
-}
-.banner .banner_content .login_box .register_a{
-  display: block;
-  text-align: center;
-  font-size:12px;
-  cursor: pointer;
-  color:#007EFF;
-}
-
 .card_title{
   width: 100%;
   height: auto;
@@ -135,6 +60,15 @@
   height:400px;
   border-radius: 6px;
   overflow: hidden;
+}
+.new-swiper{
+  width:100%;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  
 }
 .focus_news .focus_img_doc .focus_img{
   width:100%;
@@ -383,13 +317,18 @@
   list-style: none;
   padding: 0;
   z-index: 1;
+  padding:10px;
 }
 .recommend_swiper_item{
   width:100%;
   height:auto;
   background: #fff;
   border-radius: 4px;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+.recommend_swiper_item:hover{
+  /* border:1px solid #007AFF; */
+  box-shadow: 0px 0px 8px rgb(150, 144, 144);
 }
 .swiper_item_img{
   width: 100%;
@@ -400,6 +339,7 @@
 }
 .swiper_item_img img{
   width:100%;
+  border-radius: 4px 4px 0 0;
 }
 .swiper_item_tag{
   width:100%;
@@ -459,7 +399,13 @@
   width:50%;
   position: relative;
 }
-.service_info_left>img{
+.left_item{
+  display: none;
+}
+.left_item.is_active{
+  display: block;
+}
+.left_item>img{
   display: block;
   width:100%;
   height:700px;
@@ -622,6 +568,9 @@
   padding:40px 50px 40px 64px;
   margin-right:20px;
 }
+.content_card:hover{
+  box-shadow: 0px 0px 8px rgb(150, 144, 144);
+}
 .content_card:nth-child(2n){
   margin-right:0;
 }
@@ -698,6 +647,10 @@
   height:330px;
   text-align: center;
   padding:75px 45px 50px;
+  border:1px solid #fff;
+}
+.cloud_card:hover{
+  border:1px solid #007EFF;
 }
 .cloud_card .cloud_card_title{
   font-family: PingFangSC-Medium;

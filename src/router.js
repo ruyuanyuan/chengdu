@@ -66,5 +66,12 @@ export default new Router({
       name: 'leader',
       component: () => import(/* webpackChunkName: "news" */ './views/Leader.vue'),
     },
+     //部门
+     {
+      path: '/department',
+      name: 'department',
+      component: () => import(/* webpackChunkName: "news" */ './views/Department.vue'),
+    },
+
   ],
 });
