@@ -7,7 +7,7 @@
 }
 .banner-swiper .swiper-slide img{
   width:100%;
-  height:520px;
+  height:auto;
 }
 
 .login_box{
@@ -18,7 +18,8 @@
   padding:30px 20px;
   position: absolute;
   right:12%;
-  top:20px;
+  top:50%;
+  transform: translate(0,-50%);
   z-index: 100000;
 }
 .experience_box{
