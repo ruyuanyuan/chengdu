@@ -5,10 +5,71 @@
   padding: 0;
   z-index: 1;
 }
-.banner-swiper img{
+.banner-swiper .swiper-slide img{
   width:100%;
-  height:
+  height:480px;
 }
+
+.login_box{
+  background-color:#fff;
+  border-radius: 6px;
+  width:300px;
+  height:420px;
+  padding:30px 20px;
+  position: absolute;
+  right:12%;
+  top:28px;
+  z-index: 100000;
+}
+.experience_box{
+  width:100%;
+  height:auto;
+  text-align: center;
+}
+.experience_title{
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #464646;
+  letter-spacing: 0;
+  margin-bottom: 40px;
+  cursor: default;
+}
+
+.experience_box .experience_grounp{
+  width:100%;
+  display: flex;
+  justify-content:space-around;
+  flex-flow: wrap;
+}
+.experience_box .experience_grounp .experience_item{
+  width:33.33%;
+  text-align: center;
+  margin-bottom:30px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #787878;
+}
+.login_box .login_btn{
+  display: block;
+  width:180px;
+  border-radius: 20px;
+  margin:10px auto;
+  height:40px;
+  text-align: center;
+  line-height: 40px;
+  color:#fff;
+  background:#007EFF;
+  cursor: pointer;
+}
+.login_box .register_a{
+  display: block;
+  text-align: center;
+  font-size:12px;
+  cursor: pointer;
+  color:#007EFF;
+}
+
+
 .card_title{
   width: 100%;
   height: auto;
