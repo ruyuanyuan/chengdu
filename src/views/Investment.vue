@@ -60,17 +60,18 @@
         <div class='pad_card_content'>
           <div class='park_contnet'>
             <div class='park_main_img'>
-              <a :href="parkDataList.mainPark.img_href">
-                <img :src="parkDataList.mainPark.img_url" alt="">
+              <a href="#">
+                <img :src="parkDataList.mainPark.picUrl" alt="">
               </a>
-              <div class='park_main_img_title'>{{parkDataList.mainPark.title}}</div>
+              <!--              <div class='park_main_img_title'>{{parkDataList.mainPark.title}}</div>-->
             </div>
             <div class='park_img_item_list'>
-              <div class='park_img_item' v-for="(item,index) in parkDataList.parklist" :key='index'>
-                <a :href="item.img_href">
-                  <img :src="item.img_url" alt="">
+              <div class='park_img_item' v-for="(item,index) in parkDataList.parklist" :key='index'
+                   v-if="index<5 && index>0">
+                <a href="#">
+                  <img :src="item.picUrl" alt="">
                 </a>
-                <div class='park_img_item_title'>{{item.title}}</div>
+                <!--                <div class='park_img_item_title'>{{item.title}}</div>-->
               </div>
             </div>
           </div>
@@ -86,7 +87,7 @@
         <div class='pad_card_content'>
           <div class='news_cont'>
             <div class='news_cont_img'>
-              <img src="http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1739.png" alt="">
+              <img src="https://obs-gysjypt.obs.cn-north-1.myhuaweicloud.com/park/fm/4.png" alt="">
             </div>
             <div class='news_cont_list'>
               <el-tabs v-model="newsActive">
@@ -128,10 +129,10 @@
             <img src="http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1818.png" alt="">
           </div>
           <div class='pack_bth'>
-            <a class='boder_bth' href="#">发展计划</a>
-            <a class='boder_bth' href="#">产业环境</a>
-            <a class='boder_bth' href="#">地貌特征</a>
-            <a class='boder_bth' href="#">园区产业</a>
+            <a class='boder_bth' @click="toNewsList(22,'发展计划')">发展计划</a>
+            <a class='boder_bth' @click="toNewsList(23,'产业环境')">产业环境</a>
+            <a class='boder_bth' @click="toNewsList(24,'地貌特征')">地貌特征</a>
+            <a class='boder_bth' @click="toNewsList(25,'园区产业')">园区产业</a>
           </div>
         </div>
       </div>
@@ -225,33 +226,8 @@
           }
         ],
         parkDataList: {
-          mainPark: {
-            img_url: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1723.jpg',
-            img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
-            title: '成都天府国际空港新城'
-          },
-          parklist: [
-            {
-              img_url: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1726.png',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
-              title: '成都天府国际生物城'
-            },
-            {
-              img_url: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1729.jpg',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
-              title: '新川创新科技园'
-            },
-            {
-              img_url: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1732.jpg',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
-              title: '成都高新孵化园'
-            },
-            {
-              img_url: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1735.jpg',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
-              title: '菁蓉汇'
-            }
-          ]
+          mainPark: {},
+          parklist: []
         },
       }
     },
@@ -261,8 +237,18 @@
       this.querylist(10, 12);
       this.querylist(10, 13);
       this.querylist(10, 14);
+
+      this.getPkPicsById();
     },
     methods: {
+      toNewsList(pkNewsTypeId,pkNewsType) {
+        let json = {
+          modelId: '11',
+          pkNewsTypeId: pkNewsTypeId,
+          pkNewsType:pkNewsType,
+        };
+        this.$router.push({name: 'newlist', query: json})
+      },
       getDetail(item) {
         let json = {
           id: item.id,
@@ -287,6 +273,16 @@
             if (pkNewsTypeId === 12) this.newsList2.investmentInfo = res.data.body.datas;
             if (pkNewsTypeId === 13) this.newsList2.investmentProject = res.data.body.datas;
             if (pkNewsTypeId === 14) this.newsList2.townshipNews = res.data.body.datas;
+          }
+        })
+      },
+
+      getPkPicsById() {
+        Axios.get(AjaxApi.getPkPicsById, {id: 238}).then(res => {
+          if (res.status === 200) {
+            console.log(res)
+            this.parkDataList.mainPark = res.data[0];
+            this.parkDataList.parklist = res.data;
           }
         })
       },

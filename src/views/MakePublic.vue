@@ -4,12 +4,13 @@
       <div class='card_box card_left'>
         <div class='head_card'>
           <div class='head_card_item head_card_item_left'>
-            <img src="http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2080.png" alt="">
-            领导之窗
+           <img src="http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2080.png" alt="">
+            <a href="/leader"> 领导之窗
+          </a>
           </div>
           <div class='head_card_item head_card_item_right'>
             <img src="http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2081.png" alt="">
-            机构职能
+            <a href="/department"> 机构职能</a>
           </div>
         </div>
         <div class='pack_bth'>
@@ -139,7 +140,7 @@
           {
             icon: 'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2044.png',
             title: '领导之窗',
-            href: '/newDetails'
+            href: '/leader'
           },
           {
             icon: 'http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2046.png',

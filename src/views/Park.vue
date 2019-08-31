@@ -8,14 +8,14 @@
         <div class='pad_card_content'>
           <div class='park_contnet'>
             <div class='park_main_img'>
-              <a :href="parkDataList.mainPark.img_href">
-                <img :src="parkDataList.mainPark.img_url" alt="">
+              <a href="#">
+                <img :src="parkDataList.mainPark.picUrl" alt="">
               </a>
             </div>
             <div class='park_img_item_list'>
-              <div class='park_img_item' v-for="(item,index) in parkDataList.parklist" :key='index'>
-                <a :href="item.img_href">
-                  <img :src="item.img_url" alt="">
+              <div class='park_img_item' v-for="(item,index) in parkDataList.parklist" :key='index'  v-if="index<5 && index>0">
+                <a href="#">
+                  <img :src="item.picUrl" alt="">
                 </a>
               </div>
             </div>
@@ -46,13 +46,14 @@
             </div>
             <div class='park_introduce'>
               <div class='park_doc'>
-                {{parkIntroduce.introduce}}
+<!--                v-html="parkIntroduce.introduce"-->
+                {{parkIntroduce.introduce?ToText(parkIntroduce.introduce).substring(1, 498)+'...':''}}
               </div>
               <div class='pack_bth'>
-                <a class='boder_bth' href="#">发展计划</a>
-                <a class='boder_bth' href="#">产业环境</a>
-                <a class='boder_bth' href="#">地貌特征</a>
-                <a class='boder_bth' href="#">园区产业</a>
+                <a class='boder_bth' @click="toNewsList(22,'发展计划')">发展计划</a>
+                <a class='boder_bth' @click="toNewsList(23,'产业环境')">产业环境</a>
+                <a class='boder_bth' @click="toNewsList(24,'地貌特征')">地貌特征</a>
+                <a class='boder_bth' @click="toNewsList(25,'园区产业')">园区产业</a>
               </div>
             </div>
           </div>
@@ -63,7 +64,6 @@
 </template>
 <script>
   import Axios from '@/utils/axiosWrap'
-  import DateFormat from '@/utils/momentWrap'
   import AjaxApi from '@/service/ajaxApi'
 
   export default {
@@ -81,16 +81,45 @@
           introduce: '大英县经济开发区成立于2001年12月，规划面积13.1平方公里，其中建设用地面积5.41平方公里，建成区5.41平方公里，常住人口1.2万，下辖红旗社区居委会。近年来，大英县经济开发区按照“工业经济园区化、园区发展专业化”的要求，规划建设化工产业区、纺织产业区、机电产业区三大功能区，已成功引进盛马石化、久大盐化、东煜光电、聚能科技、四川飞亚等规模以上工业企业78家，初步形成以石化、纺织、机电为主导的产业体系。目前，大英县经济开发区先后获得四川省新型工业化产业示范基地、四川省承接产业转移重点推荐 特色产业工业园、四川省招商引资承接产业转移优秀园区、 四川省知识产权试点园区、四川省小企业创业基地、四川省“园保贷”试点园区、四川省模范劳动关系和谐工业园区等 荣誉称号。2013年7月，园区被省政府纳入“51025”产业园区发展计划的“500亿园区”重点培育。2016年，全区完成工业总产值211.53亿元，主营业务收入203.16亿元，税收5.17亿元，实际利用外资212 万美元。'
         }
       }
-    }, created() {
-      this.querylist();
+    },
+    created() {
+      this.getpkPark();
+      this.getPkPicsById();
     },
     methods: {
-      querylist() {
+      toNewsList(pkNewsTypeId,pkNewsType) {
         let json = {
-          id: 238,
-        }
-        Axios.get(AjaxApi.getPkPicsById, json).then(res => {
+          modelId: '11',
+          pkNewsTypeId: pkNewsTypeId,
+          pkNewsType:pkNewsType,
+        };
+        this.$router.push({name: 'newlist', query: json})
+      },
+      ToText(HTML) {
+        var input = HTML;
+        return input
+          .replace(/<(style|script|iframe)[^>]*?>[\s\S]+?<\/\1\s*>/gi, '')
+          .replace(/<[^>]+?>/g, '')
+          .replace(/\s+/g, ' ')
+          .replace(/ /g, ' ')
+          .replace(/>/g, ' ')
+          .replace(/\s/g, '')
+          .replace(/[ ]|[&nbsp;]/g, '')
+      },
+      getpkPark() {
+        Axios.get(AjaxApi.getpkPark + '/238').then(res => {
           if (res.status === 200) {
+            console.log(res)
+            this.parkIntroduce.mapUrl = res.data.body.areaConditionPic;
+            this.parkIntroduce.introduce = res.data.body.textSummary
+          }
+        })
+      },
+      getPkPicsById() {
+        Axios.get(AjaxApi.getPkPicsById, {id: 238}).then(res => {
+          if (res.status === 200) {
+            console.log(res)
+            this.parkDataList.mainPark = res.data[0];
             this.parkDataList.parklist = res.data;
           }
         })
