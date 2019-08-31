@@ -24,7 +24,7 @@
         <div class='card_block'>
           <div class='card_header'>
             <div class='card_name'>政府要闻</div>
-            <a href="/newlist" target="_blank" rel="noopener noreferrer">
+            <a @click="toNewsList(8,'政府要闻')"  target="_blank" rel="noopener noreferrer">
               <div class='card_more'>更多</div>
             </a>
           </div>
@@ -43,7 +43,7 @@
       <div class='card_block department_block'>
         <div class='card_header'>
           <div class='card_name'>部门动态</div>
-          <a href="/newlist" target="_blank" rel="noopener noreferrer">
+          <a  @click="toNewsList(15,'部门动态')" target="_blank" rel="noopener noreferrer">
             <div class='card_more'>更多</div>
           </a>
         </div>
@@ -66,7 +66,7 @@
       <div class='card_block township_block'>
         <div class='card_header'>
           <div class='card_name'>乡镇动态</div>
-          <a href="/newlist" target="_blank" rel="noopener noreferrer">
+          <a  @click="toNewsList(9,'乡镇动态')" target="_blank" rel="noopener noreferrer">
             <div class='card_more'>更多</div>
           </a>
         </div>
@@ -215,6 +215,14 @@
       this.querylist(8);
     },
     methods: {
+      toNewsList(pkNewsTypeId,pkNewsType) {
+        let json = {
+          modelId: '2',
+          pkNewsTypeId: pkNewsTypeId,
+          pkNewsType:pkNewsType,
+        };
+        this.$router.push({name: 'newlist', query: json})
+      },
       getDetail(item){
         let json = {
           id: item.id,
@@ -234,8 +242,8 @@
         }
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
-            if(pkNewsTypeId===9)this.newsList.zfywNews = res.data.body.datas;
-            if(pkNewsTypeId===8)this.newsList.xzdtNews = res.data.body.datas;
+            if(pkNewsTypeId===9)this.newsList.xzdtNews = res.data.body.datas;
+            if(pkNewsTypeId===8)this.newsList.zfywNews = res.data.body.datas;
             if(pkNewsTypeId===15)this.newsList.bmdtNews = res.data.body.datas;
           }
         })

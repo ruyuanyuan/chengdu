@@ -2,17 +2,11 @@
   <div class="system_home">
     <div class='content_item banner_img'>
       <swiper :options="swiperOption" ref="mySwiper" style="width:100%">
-        <swiper-slide>
-          <a href="http://www.xinhuanet.com/world/2019-08/26/c_1210255777.htm"><img
-            src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u342.png" alt=""></a>
-        </swiper-slide>
-        <swiper-slide>
-          <a href="https://3w.huanqiu.com/a/ec157d/7PtTAfAgQs8?agt=8"><img
-            src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u342.png" alt=""></a>
+        <swiper-slide v-for="(obj,index) in bannerList" :key="index" @click="tolink(obj.link)">
+          <img :src="obj.url" alt="">
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
-
     </div>
     <div class='content_item newsAndInfo'>
       <div class='w_tap'>
@@ -39,10 +33,10 @@
           <div class='title'>全链条、智慧化管控债务风险 成都高新区</div>
         </div>
         <div class='right_news'>
-          <div class='news_item' v-for="(item,index) in focusNews" :key='index'>
-            <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer">
+          <div class='news_item' v-for="(item,index) in newsList.snxwNews" :key='index'>
+            <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
               <div class='new_title'>{{item.title}}</div>
-              <div class='new_date'>{{item.date}}</div>
+              <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
             </a>
           </div>
         </div>
@@ -53,10 +47,10 @@
           <div class='title'>全链条、智慧化管风险 成都高新区</div>
         </div>
         <div class='right_news'>
-          <div class='news_item' v-for="(item,index) in focusNews" :key='index'>
-            <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer">
+          <div class='news_item' v-for="(item,index) in newsList.tzggNews" :key='index'>
+            <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
               <div class='new_title'>{{item.title}}</div>
-              <div class='new_date'>{{item.date}}</div>
+              <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
             </a>
           </div>
         </div>
@@ -67,10 +61,10 @@
           <div class='title'>全链条、智慧化管险 成都高新区</div>
         </div>
         <div class='right_news'>
-          <div class='news_item' v-for="(item,index) in focusNews" :key='index'>
-            <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer">
+          <div class='news_item' v-for="(item,index) in newsList.ssxwNews" :key='index'>
+            <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
               <div class='new_title'>{{item.title}}</div>
-              <div class='new_date'>{{item.date}}</div>
+              <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
             </a>
           </div>
         </div>
@@ -81,10 +75,10 @@
           <div class='title'>全链条、智慧化管控债务风区</div>
         </div>
         <div class='right_news'>
-          <div class='news_item' v-for="(item,index) in focusNews" :key='index'>
-            <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer">
+          <div class='news_item' v-for="(item,index) in newsList.gwyxwNews" :key='index'>
+            <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
               <div class='new_title'>{{item.title}}</div>
-              <div class='new_date'>{{item.date}}</div>
+              <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
             </a>
           </div>
         </div>
@@ -122,18 +116,18 @@
             <div class='love_right'>
               <el-tabs v-model="newsActive">
                 <el-tab-pane label="部门动态" name="focusNews">
-                  <div class='news_item' v-for="(item,index) in newsList.focusNews" :key='index'>
-                    <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer">
+                  <div class='news_item' v-for="(item,index) in newsList.bmNews" :key='index'>
+                    <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
                       <div class='new_title'>{{item.title}}</div>
-                      <div class='new_date'>{{item.date}}</div>
+                      <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
                     </a>
                   </div>
                 </el-tab-pane>
                 <el-tab-pane label="街道动态" name="departmentNews">
-                  <div class='news_item' v-for="(item,index) in newsList.departmentNews" :key='index'>
-                    <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer">
+                  <div class='news_item' v-for="(item,index) in newsList.jdNews" :key='index'>
+                    <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
                       <div class='new_title'>{{item.title}}</div>
-                      <div class='new_date'>{{item.date}}</div>
+                      <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
                     </a>
                   </div>
                 </el-tab-pane>
@@ -176,24 +170,24 @@
                       <span class='pad_name'>民意征集</span>
                     </div>
                     <div class='pad_card_content'>
-                      <div class='news_item' v-for="(item,index) in focusNews" :key='index'>
-                        <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer">
+                      <div class='news_item' v-for="(item,index) in newsList.myzjNews" :key='index'>
+                        <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
                           <div class='new_title'>{{item.title}}</div>
-                          <div class='new_date'>{{item.date}}</div>
+                          <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
-            </div>
+              </div>
             </div>
             <div class='love_right'>
               <el-tabs v-model="newsActive">
                 <el-tab-pane label="常见问题" name="focusNews">
-                  <div class='news_item' v-for="(item,index) in newsList.focusNews" :key='index'>
-                    <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer">
+                  <div class='news_item' v-for="(item,index) in newsList.cjwtNews" :key='index'>
+                    <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
                       <div class='new_title'>{{item.title}}</div>
-                      <div class='new_date'>{{item.date}}</div>
+                      <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
                     </a>
                   </div>
                 </el-tab-pane>
@@ -224,6 +218,10 @@
 
   import {swiper, swiperSlide} from 'vue-awesome-swiper'
 
+  import Axios from '@/utils/axiosWrap'
+  import DateFormat from '@/utils/momentWrap'
+  import AjaxApi from '@/service/ajaxApi'
+
   export default {
     components: {
       swiper,
@@ -233,23 +231,6 @@
       return {
         newsActive: 'focusNews',
         activeTap: 'policy',
-        focusNews: [
-          {
-            title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-            date: '2019-08-07',
-            url: '/newDetails'
-          },
-          {
-            title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
-            date: '2019-08-01',
-            url: '/newDetails'
-          },
-          {
-            title: '大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
-            date: '2019-08-04',
-            url: '/newDetails'
-          }
-        ],
         swiperOption: {
           autoplay: true,
           centeredSlides: true,
@@ -261,22 +242,22 @@
         },
         guidelist: [
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1744.png',
             title: '领导之窗'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1745.png',
             title: '机构设置'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1746.png',
             title: '专题专栏'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1747.png',
             title: '五公开'
           },
@@ -284,98 +265,73 @@
 
         guidelistawz: [
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1744.png',
             title: '我要写信'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1745.png',
             title: '在线访谈'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1746.png',
             title: '常见问题'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1747.png',
             title: '舆情回应'
           },
         ],
         platformlist: [
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             title: '财政资金'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             title: '安全生产'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             title: '保障住房'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             title: '食品药品'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             title: '公共服务'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             title: '重大项目'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             title: '督察审计'
           },
           {
-            href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
+            href: '#',
             title: '环境保护'
           },
 
         ],
         noticeActive1: 'publicinfo',
         newsList: {
-          focusNews: [
-            {
-              title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-              date: '2019-08-07',
-              url: '/newDetails'
-            },
-            {
-              title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开',
-              date: '2019-08-01',
-              url: '/newDetails'
-            },
-            {
-              title: '大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲',
-              date: '2019-08-04',
-              url: '/newDetails'
-            }
-          ],
-          departmentNews: [
-            {
-              title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-              date: '2019-08-07',
-              url: '/newDetails'
-            },
-            {
-              title: '大英县召开落实“两纲”全面达标会暨“两纲大英县召开',
-              date: '2019-08-01',
-              url: '/newDetails'
-            },
-            {
-              title: '大英县召开落实“两纲”全面达标攻“两纲”全面达标攻坚推进会暨两纲推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-              date: '2019-08-04',
-              url: '/newDetails'
-            }
-          ]
+          snxwNews: [],
+          tzggNews: [],
+          ssxwNews: [],
+          gwyxwNews: [],
+          bmNews: [],
+          jdNews: [],
+          cjwtNews: [],
+          myzjNews: [],
         },
+        bannerList: [],
       }
     },
     computed: {
@@ -386,10 +342,65 @@
     mounted() {
       this.swiper.slideTo(1, 1000, false)
     },
+    created() {
+      this.getPkParkWebsiteBanner();
+
+      this.querylist(2);
+      this.querylist(3);
+      this.querylist(4);
+      this.querylist(5);
+      this.querylist(6);
+      this.querylist(7);
+      this.querylist(27);
+      this.querylist(28);
+    },
     methods: {
+      getDetail(item) {
+        let json = {
+          id: item.id,
+          mark: item.pkNewsTypeId,
+        };
+        this.$router.push({name: 'newDetails', query: json})
+      },
+      dateFormat_YMD(val) {
+        return DateFormat.dateFormat_YMD(val)
+      },
+      querylist(pkNewsTypeId) {
+        let json = {
+          size: 5,
+          pkId: 238,
+          pkModelId: 1,
+          pkNewsTypeId: pkNewsTypeId,
+        }
+        Axios.get(AjaxApi.querylist, json).then(res => {
+          if (res.status === 200) {
+            if (pkNewsTypeId === 2) this.newsList.snxwNews = res.data.body.datas;
+            if (pkNewsTypeId === 3) this.newsList.tzggNews = res.data.body.datas;
+            if (pkNewsTypeId === 4) this.newsList.ssxwNews = res.data.body.datas;
+            if (pkNewsTypeId === 5) this.newsList.gwyxwNews = res.data.body.datas;
+            if (pkNewsTypeId === 6) this.newsList.bmNews = res.data.body.datas;
+            if (pkNewsTypeId === 7) this.newsList.jdNews = res.data.body.datas;
+            if (pkNewsTypeId === 27) this.newsList.cjwtNews = res.data.body.datas;
+            if (pkNewsTypeId === 28) this.newsList.myzjNews = res.data.body.datas;
+          }
+        })
+      },
+      tolink: function (url) {
+        if (url != '' && url != null) {
+          window.open(url);
+        }
+      },
       selecedTab(name) {
         this.activeTap = name
-      }
+      },
+      getPkParkWebsiteBanner() {
+        Axios.get('/website/pkParkWebsiteBanner/238/list').then(res => {
+          if (res.status === 200) {
+            let resData = res.data.body;
+            this.bannerList = resData;
+          }
+        })
+      },
     }
   }
 </script>
@@ -406,6 +417,7 @@
 
       img {
         width: 100%;
+        max-height: 420px;
       }
     }
 
