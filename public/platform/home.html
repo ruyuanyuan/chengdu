@@ -75,7 +75,7 @@
                     </div>
                     <div class='focus_news_box'>
                       <div class='focus_news_title'>
-                        <div class='new_title'>【成都高新区】出台国有企业高质量</div>
+                        <div class='new_title'>【成都高新区】出台国有企业高质量出台国有企业高质量出台国有企业高质量出台国有企业高质量</div>
                         <div class='new_date'>2019-08-28</div>
                       </div>
                     </div>
@@ -1090,7 +1090,7 @@
         loop: true,
       });
       
-       new Swiper('.swiper-content1', {
+       var swiperContent1=new Swiper('.swiper-content1', {
         slidesPerView: 4,
         spaceBetween: 30,
         slidesPerGroup:4,
@@ -1101,6 +1101,13 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper 
+        observeParents:false,//修改swiper的父元素时，自动初始化swiper 
+        onSlideChangeEnd: function(swiper){ 
+        　　　swiper.update();  
+              swiperContent1.startAutoplay();
+          　　swiperContent1.reLoop();  
+        }
       });
       new Swiper('.swiper-content2', {
         slidesPerView: 3,

@@ -166,6 +166,7 @@
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
+  max-width:400px;
 }
 .focus_news .focus_img_doc .focus_news_box .new_date{
   font-family: PingFangSC-Regular;
