@@ -47,21 +47,21 @@
       </el-tabs>
     </div>
     <div class='content_item'>
-      <a class='mewant_item item_green' href="https://baidu.com">
-        <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2337.png" alt="">
+      <a class='mewant_item item_green' href="#">
+        <img src="@/assets/img/u2337.png" alt="">
         我要看
       </a>
-      <a class='mewant_item item_hgreen' href="https://baidu.com">
-        <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2338.png" alt="">
+      <a class='mewant_item item_hgreen' href="#">
+        <img src="@/assets/img/u2338.png" alt="">
         我要查</a>
-      <a class='mewant_item item_hblue' href="https://baidu.com">
-        <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2339.png" alt="">
+      <a class='mewant_item item_hblue' href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
+        <img src="@/assets/img/u2339.png" alt="">
         我要问</a>
-      <a class='mewant_item item_blue' href="https://baidu.com">
-        <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2340.png" alt="">
+      <a class='mewant_item item_blue' href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
+        <img src="@/assets/img/u2340.png" alt="">
         我要办</a>
-      <a class='mewant_item item_dblue' href="https://baidu.com">
-        <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2341.png" alt="">
+      <a class='mewant_item item_dblue' href="#">
+        <img src="@/assets/img/u2341.png" alt="">
         我要评</a>
     </div>
     <div class='content_item problembox'>

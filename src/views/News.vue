@@ -91,9 +91,9 @@
       <div class='card_block'>
         <div class='card_header'>
           <div class='card_name'>图集</div>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <div class='card_more'>更多</div>
-          </a>
+<!--          <a href="#" target="_blank" rel="noopener noreferrer">-->
+<!--            <div class='card_more'>更多</div>-->
+<!--          </a>-->
         </div>
         <div class='card_content'>
           <swiper :options="swiperOption" ref="mySwiper" style="width:100%">
@@ -210,9 +210,9 @@
       this.swiper.slideTo(1, 1000, false)
     },
     created() {
-      this.querylist(9);
-      this.querylist(15);
-      this.querylist(8);
+      this.querylist(7,9);
+      this.querylist(7,15);
+      this.querylist(9,8);
     },
     methods: {
       toNewsList(pkNewsTypeId,pkNewsType) {
@@ -233,9 +233,9 @@
       dateFormat_YMD(val) {
         return DateFormat.dateFormat_YMD(val)
       },
-      querylist(pkNewsTypeId) {
+      querylist(size,pkNewsTypeId) {
         let json = {
-          size: 5,
+          size: size,
           pkId: 238,
           pkModelId: 2,
           pkNewsTypeId: pkNewsTypeId,

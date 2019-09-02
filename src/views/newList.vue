@@ -42,7 +42,7 @@
     props: {
       modelId: String,
       pkNewsTypeId: String,
-      pkNewsType:String,
+      pkNewsType: String,
     },
     data() {
       return {
@@ -50,100 +50,19 @@
         shownewsType: '',
         showName: '',
         seachName: '',
-        newsDataJson: {
-          1: [
-            {
-              title: '总投资近100亿 中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-27'
-            },
-            {
-              title: '成都高新区公布生活垃圾考核评分细则',
-              date: '2019-08-26'
-            },
-            {
-              title: '中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-23'
-            }
-          ],
-          2: [
-            {
-              title: '总投资近100亿 中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-27'
-            },
-            {
-              title: '成都高新区公布生活垃圾考核评分细则',
-              date: '2019-08-26'
-            },
-            {
-              title: '中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-23'
-            }
-          ],
-          3: [
-            {
-              title: '总投资近100亿 中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-27'
-            },
-            {
-              title: '成都高新区公布生活垃圾考核评分细则',
-              date: '2019-08-26'
-            },
-            {
-              title: '中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-23'
-            }
-          ],
-          4: [
-            {
-              title: '总投资近100亿 中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-27'
-            },
-            {
-              title: '成都高新区公布生活垃圾考核评分细则',
-              date: '2019-08-26'
-            },
-            {
-              title: '中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-23'
-            }
-          ],
-          5: [
-            {
-              title: '总投资近100亿 中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-27'
-            },
-            {
-              title: '成都高新区公布生活垃圾考核评分细则',
-              date: '2019-08-26'
-            },
-            {
-              title: '中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-23'
-            }
-          ],
-          6: [
-            {
-              title: '总投资近100亿 中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-27'
-            },
-            {
-              title: '成都高新区公布生活垃圾考核评分细则',
-              date: '2019-08-26'
-            },
-            {
-              title: '中软国际等软件产业总部项目落户成都高新区',
-              date: '2019-08-23'
-            }
-          ]
-        },
-        newsData: []
+        newsData: [],
+        setPkNewsTypeId: null,
+      }
+    },
+    computed: {
+      pkNewsTypeIdShow() {
+        if (this.setPkNewsTypeId) return this.setPkNewsTypeId;
+        return Number(this.pkNewsTypeId)
       }
     },
     created() {
-
-      this.shownewsType = this.pkNewsTypeId;
+      this.shownewsType = this.pkNewsTypeIdShow;
       this.showName = this.pkNewsType;
-      // this.newsData = this.newsDataJson[1];
       this.getPkParkWebsiteNewsTypeList();
     },
     methods: {
@@ -160,8 +79,7 @@
       changNewType(type, name) {
         this.shownewsType = type;
         this.showName = name;
-        // this.newsData = this.newsDataJson[type]
-        this.pkNewsTypeId = type;
+        this.setPkNewsTypeId = type;
         this.querylist();
       },
       getPkParkWebsiteNewsTypeList() {
@@ -178,7 +96,7 @@
           size: 6,
           pkId: 238,
           pkModelId: this.modelId,
-          pkNewsTypeId: this.pkNewsTypeId,
+          pkNewsTypeId: this.pkNewsTypeIdShow,
         };
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {

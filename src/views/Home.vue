@@ -109,7 +109,6 @@
                       <i class='el-icon-arrow-right'></i>
                     </a>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -123,7 +122,7 @@
                     </a>
                   </div>
                 </el-tab-pane>
-                <el-tab-pane label="街道动态" name="departmentNews">
+                <el-tab-pane label="乡镇动态" name="departmentNews">
                   <div class='news_item' v-for="(item,index) in newsList.jdNews" :key='index'>
                     <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
                       <div class='new_title'>{{item.title}}</div>
@@ -133,21 +132,6 @@
                 </el-tab-pane>
               </el-tabs>
             </div>
-          </div>
-          <div class='bottom_five'>
-            <a class='mewant_item item_green' href="https://baidu.com">
-              <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2337.png" alt="">
-              领导之窗
-            </a>
-            <a class='mewant_item item_hgreen' href="https://baidu.com">
-              <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2338.png" alt="">
-              机构设置</a>
-            <a class='mewant_item item_hblue' href="https://baidu.com">
-              <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2339.png" alt="">
-              专题专栏</a>
-            <a class='mewant_item item_blue' href="https://baidu.com">
-              <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2340.png" alt="">
-              五公开</a>
           </div>
         </el-tab-pane>
         <el-tab-pane label="爱问政" name="scene">
@@ -194,21 +178,6 @@
               </el-tabs>
             </div>
           </div>
-          <div class='bottom_five'>
-            <a class='mewant_item item_green' href="https://baidu.com">
-              <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2337.png" alt="">
-              领导之窗
-            </a>
-            <a class='mewant_item item_hgreen' href="https://baidu.com">
-              <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2338.png" alt="">
-              机构设置</a>
-            <a class='mewant_item item_hblue' href="https://baidu.com">
-              <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2339.png" alt="">
-              专题专栏</a>
-            <a class='mewant_item item_blue' href="https://baidu.com">
-              <img src="http://114.116.31.126/daying/images/%E5%8A%9E%E4%BA%8B%E6%9C%8D%E5%8A%A1/u2340.png" alt="">
-              五公开</a>
-          </div>
         </el-tab-pane>
       </el-tabs>
     </div>
@@ -242,18 +211,18 @@
         },
         guidelist: [
           {
-            href: '#',
-            icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1744.png',
+            href: 'http://www.daying.gov.cn/leader/index.html',
+            icon: require('../assets/img/u2044.png'),
             title: '领导之窗'
           },
           {
             href: '#',
-            icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1745.png',
+            icon: require('../assets/img/u1745.png'),
             title: '机构设置'
           },
           {
             href: '#',
-            icon: 'http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1746.png',
+            icon: require('../assets/img/u1746.png'),
             title: '专题专栏'
           },
           {
@@ -345,14 +314,14 @@
     created() {
       this.getPkParkWebsiteBanner();
 
-      this.querylist(2);
-      this.querylist(3);
-      this.querylist(4);
-      this.querylist(5);
-      this.querylist(6);
-      this.querylist(7);
-      this.querylist(27);
-      this.querylist(28);
+      this.querylist(8,2,1);
+      this.querylist(8,3,1);
+      this.querylist(8,4,1);
+      this.querylist(8,5,1);
+      this.querylist(8,15,2);
+      this.querylist(8,8,2);
+      this.querylist(5,27,1);
+      this.querylist(5,28,1);
     },
     methods: {
       getDetail(item) {
@@ -365,11 +334,11 @@
       dateFormat_YMD(val) {
         return DateFormat.dateFormat_YMD(val)
       },
-      querylist(pkNewsTypeId) {
+      querylist(size,pkNewsTypeId,pkModelId) {
         let json = {
-          size: 5,
+          size: size,
           pkId: 238,
-          pkModelId: 1,
+          pkModelId: pkModelId,
           pkNewsTypeId: pkNewsTypeId,
         }
         Axios.get(AjaxApi.querylist, json).then(res => {
@@ -377,9 +346,9 @@
             if (pkNewsTypeId === 2) this.newsList.snxwNews = res.data.body.datas;
             if (pkNewsTypeId === 3) this.newsList.tzggNews = res.data.body.datas;
             if (pkNewsTypeId === 4) this.newsList.ssxwNews = res.data.body.datas;
-            if (pkNewsTypeId === 5) this.newsList.gwyxwNews = res.data.body.datas;
-            if (pkNewsTypeId === 6) this.newsList.bmNews = res.data.body.datas;
-            if (pkNewsTypeId === 7) this.newsList.jdNews = res.data.body.datas;
+            if (pkNewsTypeId === 8) this.newsList.gwyxwNews = res.data.body.datas;
+            if (pkNewsTypeId === 15) this.newsList.bmNews = res.data.body.datas;
+            if (pkNewsTypeId === 8) this.newsList.jdNews = res.data.body.datas;
             if (pkNewsTypeId === 27) this.newsList.cjwtNews = res.data.body.datas;
             if (pkNewsTypeId === 28) this.newsList.myzjNews = res.data.body.datas;
           }
