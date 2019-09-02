@@ -677,6 +677,236 @@
     color: #FFFFFF;
 }
 
+
+/* 5+1现代话 */
+.system-box{
+  width:1200px;
+  margin:0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.system_info{
+  width:475px;
+  margin-right:20px;
+  margin-top:20px;
+}
+.system_info:nth-child(3n){
+  margin-right:0;
+}
+.system_title{
+  width:100%;
+  color: #2259D8;
+  border-bottom: 1px solid #2259D8;
+  background: url('https://home.dkngit.com:5110/parkPro/page/img/systemtitbg.png') no-repeat;
+  line-height: 47px;
+  font-size: 16px;
+  padding-left: 21px;
+  opacity: 0.4;
+}
+
+.system_content{
+  display: flex;
+  border:1px solid #E3E4EE;
+}
+.system_card{
+  display: block;
+  text-align: center;
+  width:120px;
+  height:80px;
+  background-size:40px;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  /* border:1px solid #E3E4EE; */
+  padding-top:45px;
+  font-size:12px;
+  color:#666;
+  opacity: 0.6;
+}
+.system_info.first_info{
+  width:200px;
+}
+
+.first_info .system_card{
+  width:100%;
+  background-size:60px;
+  background-position: center 50%;
+}
+.system_card.card1{
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group1.png');
+}
+.system_card.card2{
+  background-size:36px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group2.png');
+}
+.system_card.card3{
+  background-size:34px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group3.png');
+}
+.system_card.card4{
+  background-size:24px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group4.png');
+}
+.system_card.card5{
+  background-size:36px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group5.png');
+}
+.system_card.card6{
+  background-size:24px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group6.png');
+}
+.system_card.card7{
+  background-size:24px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group7.png');
+}
+.system_card.card8{
+  background-size:20px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group8.png');
+}
+.first_info .system_card.card9{
+  background-size:36px auto;
+  background-position: center 20%;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group9.png');
+}
+.system_card.card10{
+  background-size:24px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group10.png');
+}
+.system_card.card11{
+  background-size:24px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group11.png');
+}
+.system_card.card12{
+  background-size:24px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group12.png');
+}
+.system_card.card13{
+  background-size:26px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group13.png');
+}
+.system_card.card14{
+  background-size:24px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group14.png');
+}
+.system_card.card15{
+  background-size:24px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group15.png');
+}
+.system_card.card16{
+  background-size:24px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group16.png');
+}
+.system_card.card17{
+  background-size:12px auto;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group17.png');
+}
+
+.system_card.card1:hover{
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group1_hover.png');
+}
+.system_card.card2:hover{
+  background-size:36px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group2_hover.png');
+}
+.system_card.card3:hover{
+  background-size:34px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group3_hover.png');
+}
+.system_card.card4:hover{
+  background-size:24px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group4_hover.png');
+}
+.system_card.card5:hover{
+  background-size:36px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group5_hover.png');
+}
+.system_card.card6:hover{
+  background-size:24px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group6_hover.png');
+}
+.system_card.card7:hover{
+  background-size:24px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group7_hover.png');
+}
+.system_card.card8:hover{
+  background-size:20px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group8_hover.png');
+}
+.first_info .system_card.card9:hover{
+  background-size:36px auto;
+  background-position: center 20%;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group9_hover.png');
+}
+.system_card.card10:hover{
+  background-size:24px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group10_hover.png');
+}
+.system_card.card11:hover{
+  background-size:24px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group11_hover.png');
+}
+.system_card.card12:hover{
+  background-size:24px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group12_hover.png');
+}
+.system_card.card13:hover{
+  background-size:26px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group13_hover.png');
+}
+.system_card.card14:hover{
+  background-size:24px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group14_hover.png');
+}
+.system_card.card15:hover{
+  background-size:24px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group15_hover.png');
+}
+.system_card.card16:hover{
+  background-size:24px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group16_hover.png');
+}
+.system_card.card17:hover{
+  background-size:12px auto;
+  color:#fff;
+  background-color:#2259D8;
+  background-image: url('https://home.dkngit.com:5110/parkPro/page/img/group17_hover.png');
+}
+
+/* 5+1现代话 */
+
+
+
 .swiper-content2{
     position: relative;
     overflow: hidden;
