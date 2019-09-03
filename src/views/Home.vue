@@ -350,7 +350,7 @@
           pkModelId: pkModelId,
           pkNewsTypeId: pkNewsTypeId,
         };
-        if (mark) json.showtop = mark;
+        if (mark) json.showtop = 1;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
             if (pkNewsTypeId === 2){
