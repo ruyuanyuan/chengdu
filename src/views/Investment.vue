@@ -4,10 +4,10 @@
       <div class='focus_news_img'>
         <el-carousel height="350px">
           <el-carousel-item v-for="(item,index) in imggroup" :key="index" loop='true' arrow='never'>
-            <a :href="item.imghref" target="_blank" rel="noopener noreferrer">
-              <img :src="item.imgurl" alt="">
+            <a @click="getDetail(item)" target="_blank" rel="noopener noreferrer">
+              <img :src="item.logoUrl" alt="">
             </a>
-            <div class="imgtitle">{{item.imgtitle}}</div>
+            <div class="imgtitle">{{item.title}}</div>
           </el-carousel-item>
         </el-carousel>
       </div>
@@ -63,15 +63,12 @@
               <a href="#">
                 <img :src="parkDataList.mainPark.picUrl" alt="">
               </a>
-              <!--              <div class='park_main_img_title'>{{parkDataList.mainPark.title}}</div>-->
             </div>
             <div class='park_img_item_list'>
-              <div class='park_img_item' v-for="(item,index) in parkDataList.parklist" :key='index'
-                   v-if="index<5 && index>0">
+              <div class='park_img_item' v-for="(item,index) in parkDataList.parklist" :key='index' v-if="index<4">
                 <a href="#">
                   <img :src="item.picUrl" alt="">
                 </a>
-                <!--                <div class='park_img_item_title'>{{item.title}}</div>-->
               </div>
             </div>
           </div>
@@ -80,10 +77,6 @@
     </div>
     <div class='content_item'>
       <div class='pad_card daying_block'>
-        <!-- <div class='pad_card_title'>
-          <div class='pad_name'>大英电子报</div>
-          <a href="http://www.baidu.com" target="_blank" rel="noopener noreferrer"><div class='card_more'>更多</div></a>
-        </div> -->
         <div class='pad_card_content'>
           <div class='news_cont'>
             <div class='news_cont_img'>
@@ -148,40 +141,12 @@
   export default {
     data() {
       return {
-        imggroup: [
-          {
-            imgurl: 'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-            imghref: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
-            imgtitle: '胡道军带队赴成都开展招商考察'
-          },
-          {
-            imgurl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1461836175,2413247160&fm=26&gp=0.jpg',
-            imghref: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
-            imgtitle: '胡道军督导项目建设和运行情况'
-          }
-
-        ],
+        imggroup: [],
         newsActive: 'investmentInfo',
         newsList: {
           investmentInfo: [],
           investmentProject: [],
-          townshipNews: [
-            {
-              title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-              date: '2019-08-07',
-              url: '/newDetails'
-            },
-            {
-              title: '大英县召开落实“两纲”全面达标攻坚推进会暨“两纲大英县召开推进会暨“两纲大英县召开落实“两纲”全面达标攻坚推进会暨“两纲',
-              date: '2019-08-01',
-              url: '/newDetails'
-            },
-            {
-              title: '大英县召开落推进会暨两纲',
-              date: '2019-08-04',
-              url: '/newDetails'
-            }
-          ]
+          townshipNews: []
         },
         newsList2: {
           investmentInfo: [],
@@ -229,9 +194,13 @@
           mainPark: {},
           parklist: []
         },
+        investmentTopInfo: null,
       }
     },
     created() {
+      //顶置带图的新闻
+      this.querylist(10, 10, 'top');
+
       this.querylist(10, 10);
       this.querylist(10, 11);
       this.querylist(10, 12);
@@ -241,11 +210,11 @@
       this.getPkPicsById();
     },
     methods: {
-      toNewsList(pkNewsTypeId,pkNewsType) {
+      toNewsList(pkNewsTypeId, pkNewsType) {
         let json = {
           modelId: '11',
           pkNewsTypeId: pkNewsTypeId,
-          pkNewsType:pkNewsType,
+          pkNewsType: pkNewsType,
         };
         this.$router.push({name: 'newlist', query: json})
       },
@@ -259,16 +228,20 @@
       dateFormat_YMD(val) {
         return DateFormat.dateFormat_YMD(val)
       },
-      querylist(size, pkNewsTypeId) {
+      querylist(size, pkNewsTypeId, mark) {
         let json = {
           size: size,
           pkId: 238,
           pkModelId: 4,
           pkNewsTypeId: pkNewsTypeId,
         }
+        if (mark) json.showtop = 1;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
-            if (pkNewsTypeId === 10) this.newsList.investmentInfo = res.data.body.datas;
+            if (pkNewsTypeId === 10) {
+              this.imggroup = res.data.body.datas;
+              this.newsList.investmentInfo = res.data.body.datas;
+            }
             if (pkNewsTypeId === 11) this.newsList.investmentProject = res.data.body.datas;
             if (pkNewsTypeId === 12) this.newsList2.investmentInfo = res.data.body.datas;
             if (pkNewsTypeId === 13) this.newsList2.investmentProject = res.data.body.datas;

@@ -16,7 +16,7 @@
             <div class='new_type_name'>{{showName}}</div>
             <div class='new_seach'>
               <el-input placeholder="请输入关键字" v-model="seachName" class="input-with-select">
-                <el-button slot="append">查询</el-button>
+                <el-button slot="append" @click="OnSearch">查询</el-button>
               </el-input>
             </div>
           </div>
@@ -66,6 +66,9 @@
       this.getPkParkWebsiteNewsTypeList();
     },
     methods: {
+      OnSearch(){
+        this.querylist();
+      },
       getDetail(item) {
         let json = {
           id: item.id,
@@ -98,6 +101,7 @@
           pkModelId: this.modelId,
           pkNewsTypeId: this.pkNewsTypeIdShow,
         };
+        if(this.seachName)json.title = this.seachName;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
             this.newsData = res.data.body.datas;

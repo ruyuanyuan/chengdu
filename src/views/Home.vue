@@ -12,19 +12,19 @@
       <div class='w_tap'>
         <div class='w_tap_item' name='policy' :class='{"is_active":activeTap==="policy"}'
              @mouseover="selecedTab('policy')">
-          <a href="javascript:;">市内要闻</a>
+          <a href="javascript:">市内要闻</a>
         </div>
         <div class='w_tap_item' name='enterprise' :class='{"is_active":activeTap==="enterprise"}'
              @mouseover="selecedTab('enterprise')">
-          <a href="javascript:;">通知公告</a>
+          <a href="javascript:">通知公告</a>
         </div>
         <div class='w_tap_item' name='government' :class='{"is_active":activeTap==="government"}'
              @mouseover="selecedTab('government')">
-          <a href="javascript:;">省市新闻</a>
+          <a href="javascript:">省市新闻</a>
         </div>
         <div class='w_tap_item' name='policyNeed' :class='{"is_active":activeTap==="policyNeed"}'
              @mouseover="selecedTab('policyNeed')">
-          <a href="javascript:;">国务院新闻</a>
+          <a href="javascript:">国务院新闻</a>
         </div>
       </div>
       <div class='tap_content' v-if='activeTap==="policy"'>
@@ -231,7 +231,6 @@
             title: '五公开'
           },
         ],
-
         guidelistawz: [
           {
             href: '#',
@@ -300,6 +299,10 @@
           cjwtNews: [],
           myzjNews: [],
         },
+        snxwTopNews: null,
+        tzggTopNews: null,
+        ssxwTopNews: null,
+        gwyxwTopNews: null,
         bannerList: [],
       }
     },
@@ -313,15 +316,21 @@
     },
     created() {
       this.getPkParkWebsiteBanner();
+      //顶置带图的新闻
+      this.querylist(8, 2, 1, 'top');
+      this.querylist(8, 3, 1, 'top');
+      this.querylist(8, 4, 1, 'top');
+      this.querylist(8, 5, 1, 'top');
 
-      this.querylist(8,2,1);
-      this.querylist(8,3,1);
-      this.querylist(8,4,1);
-      this.querylist(8,5,1);
-      this.querylist(8,15,2);
-      this.querylist(8,8,2);
-      this.querylist(5,27,1);
-      this.querylist(5,28,1);
+      this.querylist(8, 2, 1);
+      this.querylist(8, 3, 1);
+      this.querylist(8, 4, 1);
+      this.querylist(8, 5, 1);
+
+      this.querylist(8, 15, 2);
+      this.querylist(8, 8, 2);
+      this.querylist(5, 27, 1);
+      this.querylist(5, 28, 1);
     },
     methods: {
       getDetail(item) {
@@ -334,19 +343,28 @@
       dateFormat_YMD(val) {
         return DateFormat.dateFormat_YMD(val)
       },
-      querylist(size,pkNewsTypeId,pkModelId) {
+      querylist(size, pkNewsTypeId, pkModelId, mark) {
         let json = {
           size: size,
           pkId: 238,
           pkModelId: pkModelId,
           pkNewsTypeId: pkNewsTypeId,
-        }
+        };
+        if (mark) json.showtop = mark;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
-            if (pkNewsTypeId === 2) this.newsList.snxwNews = res.data.body.datas;
-            if (pkNewsTypeId === 3) this.newsList.tzggNews = res.data.body.datas;
-            if (pkNewsTypeId === 4) this.newsList.ssxwNews = res.data.body.datas;
-            if (pkNewsTypeId === 8) this.newsList.gwyxwNews = res.data.body.datas;
+            if (pkNewsTypeId === 2){
+              this.newsList.snxwNews = res.data.body.datas;
+            }
+            if (pkNewsTypeId === 3) {
+              this.newsList.tzggNews = res.data.body.datas;
+            }
+            if (pkNewsTypeId === 4) {
+              this.newsList.ssxwNews = res.data.body.datas;
+            }
+            if (pkNewsTypeId === 5) {
+              this.newsList.gwyxwNews = res.data.body.datas;
+            }
             if (pkNewsTypeId === 15) this.newsList.bmNews = res.data.body.datas;
             if (pkNewsTypeId === 8) this.newsList.jdNews = res.data.body.datas;
             if (pkNewsTypeId === 27) this.newsList.cjwtNews = res.data.body.datas;

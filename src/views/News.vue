@@ -24,7 +24,7 @@
         <div class='card_block'>
           <div class='card_header'>
             <div class='card_name'>政府要闻</div>
-            <a @click="toNewsList(8,'政府要闻')"  target="_blank" rel="noopener noreferrer">
+            <a @click="toNewsList(8,'政府要闻')" target="_blank" rel="noopener noreferrer">
               <div class='card_more'>更多</div>
             </a>
           </div>
@@ -43,7 +43,7 @@
       <div class='card_block department_block'>
         <div class='card_header'>
           <div class='card_name'>部门动态</div>
-          <a  @click="toNewsList(15,'部门动态')" target="_blank" rel="noopener noreferrer">
+          <a @click="toNewsList(15,'部门动态')" target="_blank" rel="noopener noreferrer">
             <div class='card_more'>更多</div>
           </a>
         </div>
@@ -54,7 +54,8 @@
             </div>
             <div class='news_cont_list'>
               <div class='news_item' v-for="(item,index) in newsList.bmdtNews" :key='index'>
-                <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"  @click="getDetail(item)">
+                <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"
+                   @click="getDetail(item)">
                   <div class='new_title'>{{item.title}}</div>
                   <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
                 </a>
@@ -66,7 +67,7 @@
       <div class='card_block township_block'>
         <div class='card_header'>
           <div class='card_name'>乡镇动态</div>
-          <a  @click="toNewsList(9,'乡镇动态')" target="_blank" rel="noopener noreferrer">
+          <a @click="toNewsList(9,'乡镇动态')" target="_blank" rel="noopener noreferrer">
             <div class='card_more'>更多</div>
           </a>
         </div>
@@ -77,7 +78,8 @@
             </div>
             <div class='news_cont_list'>
               <div class='news_item' v-for="(item,index) in newsList.xzdtNews" :key='index'>
-                <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
+                <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"
+                   @click="getDetail(item)">
                   <div class='new_title'>{{item.title}}</div>
                   <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
                 </a>
@@ -91,9 +93,9 @@
       <div class='card_block'>
         <div class='card_header'>
           <div class='card_name'>图集</div>
-<!--          <a href="#" target="_blank" rel="noopener noreferrer">-->
-<!--            <div class='card_more'>更多</div>-->
-<!--          </a>-->
+          <!--          <a href="#" target="_blank" rel="noopener noreferrer">-->
+          <!--            <div class='card_more'>更多</div>-->
+          <!--          </a>-->
         </div>
         <div class='card_content'>
           <swiper :options="swiperOption" ref="mySwiper" style="width:100%">
@@ -101,29 +103,13 @@
               <div class='tv_contnet'>
                 <div class='tv_main_img'>
                   <a href="#">
-                    <img :src="tvDataList.mainTv.img_url" alt="">
+                    <img :src="tvDataList.mainTv.picUrl" alt="">
                   </a>
                 </div>
                 <div class='tv_img_item_list'>
                   <div class='tv_img_item' v-for="(item,index) in tvDataList.tvlist" :key='index'>
                     <a href="#">
-                      <img :src="item.img_url" alt="">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class='tv_contnet'>
-                <div class='tv_main_img'>
-                  <a href="#">
-                    <img :src="tvDataList.mainTv.img_url" alt="">
-                  </a>
-                </div>
-                <div class='tv_img_item_list'>
-                  <div class='tv_img_item' v-for="(item,index) in tvDataList.tvlist" :key='index'>
-                    <a href="#">
-                      <img :src="item.img_url" alt="">
+                      <img :src="item.picUrl" alt="">
                     </a>
                   </div>
                 </div>
@@ -159,41 +145,13 @@
           xzdtNews: [],
         },
         tvDataList: {
-          mainTv: {
-            img_url: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1461836175,2413247160&fm=26&gp=0.jpg',
-            img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-          },
-          tvlist: [
-            {
-              img_url: 'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-            },
-            {
-              img_url: 'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-            },
-            {
-              img_url: 'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-            },
-            {
-              img_url: 'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-            },
-            {
-              img_url: 'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-            },
-            {
-              img_url: 'http://s2.sinaimg.cn/bmiddle/61d8244fzx6CYBs56I9c1&690',
-              img_href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml'
-            }
-          ]
+          mainTv: {},
+          tvlist: []
         },
         swiperOption: {
           autoplay: true,
           centeredSlides: true,
-          loop: true,
+          // loop: true,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -210,20 +168,31 @@
       this.swiper.slideTo(1, 1000, false)
     },
     created() {
-      this.querylist(7,9);
-      this.querylist(7,15);
-      this.querylist(9,8);
+      //政府要闻-图片顶置
+      this.querylist(9, 8,'top');
+      this.querylist(7, 9);
+      this.querylist(7, 15);
+      this.querylist(9, 8);
+      this.getPkPicsById();
     },
     methods: {
-      toNewsList(pkNewsTypeId,pkNewsType) {
+      getPkPicsById() {
+        Axios.get(AjaxApi.getPkPicsById, {id: 238}).then(res => {
+          if (res.status === 200) {
+            this.tvDataList.mainTv = res.data[0];
+            this.tvDataList.tvlist = res.data;
+          }
+        })
+      },
+      toNewsList(pkNewsTypeId, pkNewsType) {
         let json = {
           modelId: '2',
           pkNewsTypeId: pkNewsTypeId,
-          pkNewsType:pkNewsType,
+          pkNewsType: pkNewsType,
         };
         this.$router.push({name: 'newlist', query: json})
       },
-      getDetail(item){
+      getDetail(item) {
         let json = {
           id: item.id,
           mark: item.pkNewsTypeId,
@@ -233,18 +202,22 @@
       dateFormat_YMD(val) {
         return DateFormat.dateFormat_YMD(val)
       },
-      querylist(size,pkNewsTypeId) {
+      querylist(size, pkNewsTypeId,mark) {
         let json = {
           size: size,
           pkId: 238,
           pkModelId: 2,
           pkNewsTypeId: pkNewsTypeId,
-        }
+        };
+        if(mark)json.showtop = 1;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
-            if(pkNewsTypeId===9)this.newsList.xzdtNews = res.data.body.datas;
-            if(pkNewsTypeId===8)this.newsList.zfywNews = res.data.body.datas;
-            if(pkNewsTypeId===15)this.newsList.bmdtNews = res.data.body.datas;
+            if (pkNewsTypeId === 9) this.newsList.xzdtNews = res.data.body.datas;
+            if (pkNewsTypeId === 8) {
+
+              this.newsList.zfywNews = res.data.body.datas;
+            }
+            if (pkNewsTypeId === 15) this.newsList.bmdtNews = res.data.body.datas;
           }
         })
       },

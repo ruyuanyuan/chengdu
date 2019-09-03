@@ -46,7 +46,7 @@
 
   export default {
     props: {
-      id: String,
+      id: Number,
     },
     data() {
       return {
