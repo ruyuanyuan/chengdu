@@ -18,7 +18,17 @@
     </div>
     <div class='focus_news'>
       <div class='focus_news_img'>
-        <img src="@/assets/img/dome.jpg" alt="">
+        <swiper :options="swiperOption" ref="mySwiper1" style="width:100%">
+            <swiper-slide>
+              <img src="@/assets/img/dome.jpg" alt="">
+            </swiper-slide>
+             <swiper-slide>
+              <img src="@/assets/img/dome.jpg" alt="">
+            </swiper-slide>
+             <swiper-slide>
+              <img src="@/assets/img/dome.jpg" alt="">
+            </swiper-slide>
+        </swiper>
       </div>
       <div class='focus_news_tab'>
         <div class='card_block'>
@@ -50,7 +60,17 @@
         <div class='card_content'>
           <div class='news_cont'>
             <div class='news_cont_img'>
-              <img src="@/assets/img/dome.jpg" alt="">
+              <swiper :options="swiperOption" ref="mySwiper2" style="width:100%">
+                  <swiper-slide>
+                    <img src="@/assets/img/dome.jpg" alt="">
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="@/assets/img/dome.jpg" alt="">
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="@/assets/img/dome.jpg" alt="">
+                  </swiper-slide>
+              </swiper>
             </div>
             <div class='news_cont_list'>
               <div class='news_item' v-for="(item,index) in newsList.bmdtNews" :key='index'>
@@ -74,7 +94,17 @@
         <div class='card_content'>
           <div class='news_cont'>
             <div class='news_cont_img'>
-              <img src="@/assets/img/dome.jpg" alt="">
+              <swiper :options="swiperOption" ref="mySwiper3" style="width:100%">
+                  <swiper-slide>
+                    <img src="@/assets/img/dome.jpg" alt="">
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="@/assets/img/dome.jpg" alt="">
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="@/assets/img/dome.jpg" alt="">
+                  </swiper-slide>
+              </swiper>
             </div>
             <div class='news_cont_list'>
               <div class='news_item' v-for="(item,index) in newsList.xzdtNews" :key='index'>
@@ -151,7 +181,7 @@
         swiperOption: {
           autoplay: true,
           centeredSlides: true,
-          // loop: true,
+          loop: true,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -160,12 +190,10 @@
       }
     },
     computed: {
-      swiper() {
-        return this.$refs.mySwiper.swiper
-      }
+      
     },
     mounted() {
-      this.swiper.slideTo(1, 1000, false)
+      
     },
     created() {
       //政府要闻-图片顶置
