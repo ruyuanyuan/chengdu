@@ -29,8 +29,20 @@
       </div>
       <div class='tap_content' v-if='activeTap==="policy"'>
         <div class='left_img'>
-          <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-          <div class='title'>全链条、智慧化管控债务风险 成都高新区</div>
+          <swiper :options="swiperOption" ref="mySwiper1" style="width:100%">
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区1</div>
+              </swiper-slide>
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区2</div>
+              </swiper-slide>
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区3</div>
+              </swiper-slide>
+          </swiper>
         </div>
         <div class='right_news'>
           <div class='news_item' v-for="(item,index) in newsList.snxwNews" :key='index'>
@@ -43,8 +55,20 @@
       </div>
       <div class='tap_content' v-if='activeTap==="enterprise"'>
         <div class='left_img'>
-          <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-          <div class='title'>全链条、智慧化管风险 成都高新区</div>
+          <swiper :options="swiperOption" ref="mySwiper2" style="width:100%">
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区1</div>
+              </swiper-slide>
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区2</div>
+              </swiper-slide>
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区3</div>
+              </swiper-slide>
+          </swiper>
         </div>
         <div class='right_news'>
           <div class='news_item' v-for="(item,index) in newsList.tzggNews" :key='index'>
@@ -57,8 +81,20 @@
       </div>
       <div class='tap_content' v-if='activeTap==="government"'>
         <div class='left_img'>
-          <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-          <div class='title'>全链条、智慧化管险 成都高新区</div>
+          <swiper :options="swiperOption" ref="mySwiper3" style="width:100%">
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区1</div>
+              </swiper-slide>
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区2</div>
+              </swiper-slide>
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区3</div>
+              </swiper-slide>
+          </swiper>
         </div>
         <div class='right_news'>
           <div class='news_item' v-for="(item,index) in newsList.ssxwNews" :key='index'>
@@ -71,8 +107,20 @@
       </div>
       <div class='tap_content' v-if='activeTap==="policyNeed"'>
         <div class='left_img'>
-          <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-          <div class='title'>全链条、智慧化管控债务风区</div>
+         <swiper :options="swiperOption" ref="mySwiper4" style="width:100%">
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区1</div>
+              </swiper-slide>
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区2</div>
+              </swiper-slide>
+              <swiper-slide>
+                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+                 <div class='title'>全链条、智慧化管险 成都高新区3</div>
+              </swiper-slide>
+          </swiper>
         </div>
         <div class='right_news'>
           <div class='news_item' v-for="(item,index) in newsList.gwyxwNews" :key='index'>

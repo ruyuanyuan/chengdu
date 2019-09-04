@@ -13,7 +13,7 @@
       <el-menu-item index="/makepblic">政府公开</el-menu-item>
       <el-menu-item index="/service">办事服务</el-menu-item>
       <el-menu-item index="/company">企服通</el-menu-item>
-      <el-menu-item index='7'>党群党建</el-menu-item>
+      <el-menu-item index='/party'>党群党建</el-menu-item>
     </el-menu>
   </div>
 </template>
