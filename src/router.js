@@ -61,6 +61,12 @@ export default new Router({
       name: 'company',
       component: () => import(/* webpackChunkName: "news" */ './views/company/Company.vue'),
     },
+    //党群党建
+    {
+      path: '/party',
+      name: 'party',
+      component: () => import(/* webpackChunkName: "news" */ './views/Party.vue'),
+    },
     //部门领导照片
     {
       path: '/leader',
