@@ -5,20 +5,19 @@ module.exports = {
   productionSourceMap: false,
   devServer: {
     open: true,
-    host: '127.0.0.1',
+    host: '0.0.0.0',
     port: 3000,
     https: false,
     hotOnly: false,
     proxy: {
-      '/websit': {
+      '/website': {
         // target: 'http://192.168.0.105:8081',   //代理接口
         // target: 'http://192.168.5.19:8081',   //代理接口
         target: 'http://scyqcloud.amazingday.cn/',   //代理接口
-        changeOrigin: true,
         // 如果要代理 websockets
         ws: true,
         // 将主机标头的原点更改为目标URL
-        changeOrigin: true
+        changeOrigin: true,
       }
     },
     before: (app) => {
