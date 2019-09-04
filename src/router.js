@@ -73,6 +73,11 @@ export default new Router({
       name: 'department',
       component: () => import(/* webpackChunkName: "news" */ './views/Department.vue'),
     },
-
+    //反馈内容
+    {
+      path: '/feedback',
+      name: 'feedback',
+      component: () => import(/* webpackChunkName: "news" */ './views/Feedback.vue'),
+    },
   ],
 });
