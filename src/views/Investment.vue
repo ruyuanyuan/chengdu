@@ -245,7 +245,7 @@
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
             if (pkNewsTypeId === 10) {
-              this.imggroup = res.data.body.datas;
+              if (mark) this.imggroup = res.data.body.datas;
               this.newsList.investmentInfo = res.data.body.datas;
             }
             if (pkNewsTypeId === 11) this.newsList.investmentProject = res.data.body.datas;

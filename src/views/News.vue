@@ -18,16 +18,10 @@
     </div>
     <div class='focus_news'>
       <div class='focus_news_img'>
-        <swiper :options="swiperOption" ref="mySwiper1" style="width:100%">
-            <swiper-slide>
-              <img src="@/assets/img/dome.jpg" alt="">
-            </swiper-slide>
-             <swiper-slide>
-              <img src="@/assets/img/dome.jpg" alt="">
-            </swiper-slide>
-             <swiper-slide>
-              <img src="@/assets/img/dome.jpg" alt="">
-            </swiper-slide>
+        <swiper v-if="zfywTopNews" :options="swiperOption" ref="mySwiper1" style="width:100%">
+          <swiper-slide v-for="(top,index) in zfywTopNews" :key="index">
+            <img :src="top.logoUrl" alt="">
+          </swiper-slide>
         </swiper>
       </div>
       <div class='focus_news_tab'>
@@ -60,15 +54,9 @@
         <div class='card_content'>
           <div class='news_cont'>
             <div class='news_cont_img'>
-              <swiper :options="swiperOption" ref="mySwiper2" style="width:100%">
-                  <swiper-slide>
-                    <img src="@/assets/img/dome.jpg" alt="">
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="@/assets/img/dome.jpg" alt="">
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="@/assets/img/dome.jpg" alt="">
+              <swiper v-if="bmdtTopNews"  :options="swiperOption" ref="mySwiper2" style="width:100%">
+                  <swiper-slide v-for="(top,index) in bmdtTopNews" :key="index">
+                    <img :src="top.logoUrl" alt="">
                   </swiper-slide>
               </swiper>
             </div>
@@ -95,15 +83,18 @@
           <div class='news_cont'>
             <div class='news_cont_img'>
               <swiper :options="swiperOption" ref="mySwiper3" style="width:100%">
-                  <swiper-slide>
-                    <img src="@/assets/img/dome.jpg" alt="">
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="@/assets/img/dome.jpg" alt="">
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="@/assets/img/dome.jpg" alt="">
-                  </swiper-slide>
+                <swiper-slide v-for="(top,index) in xzdtTopNews" :key="index">
+                  <img :src="top.logoUrl" alt="">
+                </swiper-slide>
+<!--                  <swiper-slide>-->
+<!--                    <img src="@/assets/img/dome.jpg" alt="">-->
+<!--                  </swiper-slide>-->
+<!--                  <swiper-slide>-->
+<!--                    <img src="@/assets/img/dome.jpg" alt="">-->
+<!--                  </swiper-slide>-->
+<!--                  <swiper-slide>-->
+<!--                    <img src="@/assets/img/dome.jpg" alt="">-->
+<!--                  </swiper-slide>-->
               </swiper>
             </div>
             <div class='news_cont_list'>
@@ -174,6 +165,9 @@
           bmdtNews: [],
           xzdtNews: [],
         },
+        zfywTopNews:[],
+        bmdtTopNews:[],
+        xzdtTopNews:[],
         tvDataList: {
           mainTv: {},
           tvlist: []
@@ -181,7 +175,7 @@
         swiperOption: {
           autoplay: true,
           centeredSlides: true,
-          loop: true,
+          // loop: true,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -197,10 +191,12 @@
     },
     created() {
       //政府要闻-图片顶置
-      this.querylist(9, 8,'top');
+      this.querylist(7, 8,'top');
+      this.querylist(7, 9,'top');
+      this.querylist(7, 15,'top');
+      this.querylist(7, 8);
       this.querylist(7, 9);
       this.querylist(7, 15);
-      this.querylist(9, 8);
       this.getPkPicsById();
     },
     methods: {
@@ -240,12 +236,18 @@
         if(mark)json.showtop = 1;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
-            if (pkNewsTypeId === 9) this.newsList.xzdtNews = res.data.body.datas;
             if (pkNewsTypeId === 8) {
-
+              if(mark)this.zfywTopNews = res.data.body.datas;
               this.newsList.zfywNews = res.data.body.datas;
             }
-            if (pkNewsTypeId === 15) this.newsList.bmdtNews = res.data.body.datas;
+            if (pkNewsTypeId === 9) {
+              if(mark)this.xzdtTopNews = res.data.body.datas;
+              this.newsList.xzdtNews = res.data.body.datas;
+            }
+            if (pkNewsTypeId === 15) {
+              if(mark)this.bmdtTopNews = res.data.body.datas;
+              this.newsList.bmdtNews = res.data.body.datas;
+            }
           }
         })
       },
