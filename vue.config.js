@@ -11,7 +11,9 @@ module.exports = {
     hotOnly: false,
     proxy: {
       '/websit': {
-        target: 'http://192.168.0.105:8081',   //代理接口
+        // target: 'http://192.168.0.105:8081',   //代理接口
+        // target: 'http://192.168.5.19:8081',   //代理接口
+        target: 'http://scyqcloud.amazingday.cn/',   //代理接口
         changeOrigin: true,
         // 如果要代理 websockets
         ws: true,
