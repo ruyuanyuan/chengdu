@@ -33,10 +33,10 @@
       </div>
     </div>
     <div class='content_item'>
-      <a class='mewant_item item_green' href="javascript:;">我有投资意向</a>
-      <a class='mewant_item item_hgreen' href="javascript:;">我想入区</a>
-      <a class='mewant_item item_hblue' href="javascript:;">我想咨询</a>
-      <a class='mewant_item item_blue' href="javascript:;">成为合作伙伴</a>
+      <a class='mewant_item item_green' href="javascript:;" @click="handleFeedback('我有投资意向')">我有投资意向</a>
+      <a class='mewant_item item_hgreen' href="javascript:;" @click="handleFeedback('我想入区')">我想入区</a>
+      <a class='mewant_item item_hblue' href="javascript:;" @click="handleFeedback('我想咨询')">我想咨询</a>
+      <a class='mewant_item item_blue' href="javascript:;" @click="handleFeedback('成为合作伙伴')">成为合作伙伴</a>
     </div>
     <div class='content_item'>
       <div class='guide_box'>
@@ -210,6 +210,12 @@
       this.getPkPicsById();
     },
     methods: {
+      handleFeedback(item){
+        let json = {
+          mark: item,
+        };
+        this.$router.push({name: 'feedback', query: json})
+      },
       toNewsList(pkNewsTypeId, pkNewsType) {
         let json = {
           modelId: '11',

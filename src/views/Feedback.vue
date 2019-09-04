@@ -1,7 +1,7 @@
 <template>
   <div class='feedback_template'>
     <div class='head_img'>
-      <img src="https://home.dkngit.com:5110/parkPro/page/img/feedbackbanner.png" alt="">
+      <img src="@/assets/img/feedbackbanner.png" alt="">
     </div>
     <div class='feedback_content'>
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="feedbackForm">

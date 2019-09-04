@@ -47,20 +47,20 @@
       </el-tabs>
     </div>
     <div class='content_item'>
-      <a class='mewant_item item_green' href="#">
+      <a class='mewant_item item_green' href="#"  @click="handleFeedback('我要看')">
         <img src="@/assets/img/u2337.png" alt="">
         我要看
       </a>
-      <a class='mewant_item item_hgreen' href="#">
+      <a class='mewant_item item_hgreen' href="#" @click="handleFeedback('我要查')">
         <img src="@/assets/img/u2338.png" alt="">
         我要查</a>
-      <a class='mewant_item item_hblue' href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
+      <a class='mewant_item item_hblue' target="_blank" href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
         <img src="@/assets/img/u2339.png" alt="">
         我要问</a>
-      <a class='mewant_item item_blue' href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
+      <a class='mewant_item item_blue' target="_blank" href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
         <img src="@/assets/img/u2340.png" alt="">
         我要办</a>
-      <a class='mewant_item item_dblue' href="#">
+      <a class='mewant_item item_dblue' href="#" @click="handleFeedback('我要评')">
         <img src="@/assets/img/u2341.png" alt="">
         我要评</a>
     </div>
@@ -409,6 +409,12 @@
       this.querylist(16);
     },
     methods: {
+      handleFeedback(item){
+        let json = {
+          mark: item,
+        };
+        this.$router.push({name: 'feedback', query: json})
+      },
       getDetail(item) {
         let json = {
           id: item.id,

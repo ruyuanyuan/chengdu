@@ -140,7 +140,7 @@
               <div class='love_card'>
                 <div class='love_card_content'>
                   <a :href="item.href" v-for='(item,index) in guidelistawz' :key='index'>
-                    <div class='love_item'>
+                    <div class='love_item' @click="handleFeedback(item.title)">
                       <img :src="item.icon" alt="">
                       <div class='title'>{{item.title}}</div>
                     </div>
@@ -333,6 +333,12 @@
       this.querylist(5, 28, 1);
     },
     methods: {
+      handleFeedback(item){
+        let json = {
+          mark: item,
+        };
+        this.$router.push({name: 'feedback', query: json})
+      },
       getDetail(item) {
         let json = {
           id: item.id,
