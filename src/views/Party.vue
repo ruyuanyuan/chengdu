@@ -2,24 +2,19 @@
   <div class='party_template'>
     <div class='content_item party_news'>
       <div class='party_news_img'>
-        <swiper :options="swiperOption" ref="mySwiper1" style="width:100%">
-            <swiper-slide>
-              <img src="@/assets/img/dome.jpg" alt="">
-            </swiper-slide>
-             <swiper-slide>
-              <img src="@/assets/img/dome.jpg" alt="">
-            </swiper-slide>
-             <swiper-slide>
-              <img src="@/assets/img/dome.jpg" alt="">
-            </swiper-slide>
+        <swiper v-if="topNews"  :options="swiperOption" ref="mySwiper1" style="width:100%">
+          <swiper-slide v-for="(top,index) in topNews" :key="index">
+            <img :src="top.logoUrl" alt="">
+          </swiper-slide>
         </swiper>
       </div>
       <div class='party_news_list'>
         <div class='card_block'>
           <div class='card_content'>
-            <div class='party_item' v-for="(item,index) in partyList" :key='index'>
-              <a class='party_href' target="_blank" rel="noopener noreferrer">
-                <div class='party_title'>{{item.title}}</div>
+            <div class='news_item' v-for="(item,index) in newsList.topNews" :key='index'>
+              <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
+                <div class='new_title'>{{item.title}}</div>
+                <div class='new_date'>{{dateFormat_YMD(item.newsDate)}}</div>
               </a>
             </div>
           </div>
@@ -30,28 +25,22 @@
       <div class='card_block group_worker'>
         <div class='card_header'>
           <div class='card_name'>组工动态</div>
-          <a target="_blank" rel="noopener noreferrer">
+          <a @click="toNewsList(20,'组工动态')" target="_blank" rel="noopener noreferrer">
             <div class='card_more'>更多</div>
           </a>
         </div>
         <div class='card_content'>
           <div class='news_cont'>
             <div class='news_cont_img'>
-              <swiper :options="swiperOption" ref="mySwiper2" style="width:100%">
-                  <swiper-slide>
-                    <img src="@/assets/img/dome.jpg" alt="">
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="@/assets/img/dome.jpg" alt="">
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="@/assets/img/dome.jpg" alt="">
+              <swiper v-if="zgdtTopNews" :options="swiperOption" ref="mySwiper2" style="width:100%">
+                  <swiper-slide v-for="(top,index) in zgdtTopNews" :key="index">
+                    <img :src="top.logoUrl" alt="">
                   </swiper-slide>
               </swiper>
             </div>
             <div class='news_cont_list'>
-              <div class='news_item' v-for="(item,index) in partyList" :key='index'>
-                <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"
+              <div class='news_item' v-for="(item,index) in newsList.zgdtNews" :key='index'>
+                <a class='news_href' target="_blank" rel="noopener noreferrer"
                    @click="getDetail(item)">
                   <div class='new_title'>{{item.title}}</div>
                 </a>
@@ -63,15 +52,15 @@
       <div class='card_block removal'>
         <div class='card_header'>
           <div class='card_name'>任免动态</div>
-          <a target="_blank" rel="noopener noreferrer">
+          <a @click="toNewsList(30,'任免动态')" target="_blank" rel="noopener noreferrer">
             <div class='card_more'>更多</div>
           </a>
         </div>
         <div class='card_content'>
           <div class='news_cont'>
             <div class='news_cont_list'>
-              <div class='news_item' v-for="(item,index) in partyList" :key='index'>
-                <a class='news_href' :href="item.url" target="_blank" rel="noopener noreferrer"
+              <div class='news_item' v-for="(item,index) in newsList.rmdtNews" :key='index'>
+                <a class='news_href' target="_blank" rel="noopener noreferrer"
                    @click="getDetail(item)">
                   <div class='new_title'>{{item.title}}</div>
                 </a>
@@ -87,8 +76,9 @@
           基层党建
         </div>
         <div class='party_card_conetnt'>
-          <div class='party_item' v-for="(item,index) in partyList" :key='index'>
-              <a class='party_href' target="_blank" rel="noopener noreferrer">
+          <div class='party_item' v-for="(item,index) in newsList.jcdjNews" :key='index'>
+              <a class='party_href' target="_blank" rel="noopener noreferrer"
+                 @click="getDetail(item)">
                 <div class='party_title'>{{item.title}}</div>
               </a>
           </div>
@@ -99,8 +89,9 @@
           干部工作
         </div>
         <div class='party_card_conetnt'>
-          <div class='party_item' v-for="(item,index) in partyList" :key='index'>
-              <a class='party_href' target="_blank" rel="noopener noreferrer">
+          <div class='party_item' v-for="(item,index) in newsList.gbgzNews" :key='index'>
+              <a class='party_href' target="_blank" rel="noopener noreferrer"
+                 @click="getDetail(item)">
                 <div class='party_title'>{{item.title}}</div>
               </a>
           </div>
@@ -111,8 +102,9 @@
           人才工作
         </div>
         <div class='party_card_conetnt'>
-          <div class='party_item' v-for="(item,index) in partyList" :key='index'>
-              <a class='party_href' target="_blank" rel="noopener noreferrer">
+          <div class='party_item' v-for="(item,index) in newsList.rcgzNews" :key='index'>
+              <a class='party_href' target="_blank" rel="noopener noreferrer"
+                 @click="getDetail(item)">
                 <div class='party_title'>{{item.title}}</div>
               </a>
           </div>
@@ -123,8 +115,9 @@
           公务员管理
         </div>
         <div class='party_card_conetnt'>
-          <div class='party_item' v-for="(item,index) in partyList" :key='index'>
-              <a class='party_href' target="_blank" rel="noopener noreferrer">
+          <div class='party_item' v-for="(item,index) in newsList.gwyglNews" :key='index'>
+              <a class='party_href' target="_blank" rel="noopener noreferrer"
+                 @click="getDetail(item)">
                 <div class='party_title'>{{item.title}}</div>
               </a>
           </div>
@@ -135,8 +128,9 @@
           党员干部教育
         </div>
         <div class='party_card_conetnt'>
-          <div class='party_item' v-for="(item,index) in partyList" :key='index'>
-              <a class='party_href' target="_blank" rel="noopener noreferrer">
+          <div class='party_item' v-for="(item,index) in newsList.dygbjyNews" :key='index'>
+              <a class='party_href' target="_blank" rel="noopener noreferrer"
+                 @click="getDetail(item)">
                 <div class='party_title'>{{item.title}}</div>
               </a>
           </div>
@@ -147,8 +141,9 @@
           红士先锋
         </div>
         <div class='party_card_conetnt'>
-          <div class='party_item' v-for="(item,index) in partyList" :key='index'>
-              <a class='party_href' target="_blank" rel="noopener noreferrer">
+          <div class='party_item' v-for="(item,index) in newsList.hsxfNews" :key='index'>
+              <a class='party_href' target="_blank" rel="noopener noreferrer"
+                 @click="getDetail(item)">
                 <div class='party_title'>{{item.title}}</div>
               </a>
           </div>
@@ -169,6 +164,9 @@
 </template>
 <script>
 import {swiper, swiperSlide} from 'vue-awesome-swiper'
+import Axios from '@/utils/axiosWrap'
+import DateFormat from '@/utils/momentWrap'
+import AjaxApi from '@/service/ajaxApi'
 export default {
   components: {
       swiper,
@@ -176,24 +174,24 @@ export default {
   },
   data(){
     return {
-      partyList:[
-        {
-          title:'习近平在中青年干部培训班开班式上发表重要讲话',
-          herf:'/newDetails'
-        },
-        {
-          title:'习近平在中青年干部培训班开班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话',
-          herf:'/newDetails'
-        },
-        {
-          title:'习近平在中青年干部培训班开班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话',
-          herf:'/newDetails'
-        },
-        {
-          title:'习近平在中青年干部培训班开班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话',
-          herf:'/newDetails'
-        }
-      ],
+      // partyList:[
+      //   {
+      //     title:'习近平在中青年干部培训班开班式上发表重要讲话',
+      //     herf:'/newDetails'
+      //   },
+      //   {
+      //     title:'习近平在中青年干部培训班开班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话',
+      //     herf:'/newDetails'
+      //   },
+      //   {
+      //     title:'习近平在中青年干部培训班开班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话',
+      //     herf:'/newDetails'
+      //   },
+      //   {
+      //     title:'习近平在中青年干部培训班开班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话',
+      //     herf:'/newDetails'
+      //   }
+      // ],
       swiperOption: {
           autoplay: true,
           centeredSlides: true,
@@ -206,23 +204,23 @@ export default {
       studyList:[
         {
           title:'共产党员网',
-          href:'javascript:;'
+          href:'http://www.12371.cn/'
         },
         {
           title:'人民日报',
-          href:'javascript:;'
+          href:'http://paper.people.com.cn/rmrb/html/2019-09/05/nbs.D110000renmrb_01.htm'
         },
         {
           title:'光明日报',
-          href:'javascript:;'
+          href:'http://epaper.gmw.cn/gmrb/html/2019-09/05/nbs.D110000gmrb_01.htm'
         },
         {
           title:'四川日报',
-          href:'javascript:;'
+          href:'http://epaper.scdaily.cn/index.shtml'
         },
         {
           title:'四川组工网',
-          href:'javascript:;'
+          href:'http://www.gcdr.gov.cn/'
         },
         {
           title:'天府先锋',
@@ -230,11 +228,11 @@ export default {
         },
         {
           title:'四川人才工作网',
-          href:'javascript:;'
+          href:'http://www.scrcgz.com/'
         },
         {
           title:'四川干教网',
-          href:'javascript:;'
+          href:'http://www.scgb.gov.cn/WebSite/index.htm#page1'
         },
         {
           title:'党课党建研究',
@@ -242,42 +240,120 @@ export default {
         },
         {
           title:'中国遂宁',
-          href:'javascript:;'
+          href:'http://www.suining.gov.cn/welcome'
         },
         {
           title:'四川日报',
           href:'javascript:;'
         },
         {
-          title:'四川组工网',
-          href:'javascript:;'
+          title:'遂宁新闻网',
+          href:'http://www.snxw.com/'
         },
-        {
-          title:'天府先锋',
-          href:'javascript:;'
-        },
-        {
-          title:'四川人才工作网',
-          href:'javascript:;'
-        },
-        {
-          title:'四川干教网',
-          href:'javascript:;'
-        },
-        {
-          title:'党课党建研究',
-          href:'javascript:;'
-        },
-        {
-          title:'中国遂宁',
-          href:'javascript:;'
-        },
-        {
-          title:'四川干教网',
-          href:'javascript:;'
-        },
-      ]
+        // {
+        //   title:'天府先锋',
+        //   href:'javascript:;'
+        // },
+        // {
+        //   title:'四川人才工作网',
+        //   href:'javascript:;'
+        // },
+        // {
+        //   title:'四川干教网',
+        //   href:'javascript:;'
+        // },
+        // {
+        //   title:'党课党建研究',
+        //   href:'javascript:;'
+        // },
+        // {
+        //   title:'中国遂宁',
+        //   href:'javascript:;'
+        // },
+        // {
+        //   title:'四川干教网',
+        //   href:'javascript:;'
+        // },
+      ],
+
+      newsList: {
+        topNews: [],
+        zgdtNews: [],
+        rmdtNews: [],
+        jcdjNews: [],
+        gbgzNews: [],
+        rcgzNews: [],
+        gwyglNews: [],
+        dygbjyNews: [],
+        hsxfNews: [],
+      },
+      topNews:[],
+      zgdtTopNews:[],
+
     }
+  },
+  created() {
+    //政府要闻-图片顶置
+    this.querylist(7, 28,'top');
+    this.querylist(7, 29,'top');
+
+    this.querylist(7, 28);
+    this.querylist(7, 29);
+    this.querylist(7, 30);
+    this.querylist(7, 31);
+    this.querylist(7, 32);
+    this.querylist(7, 33);
+    this.querylist(7, 34);
+    this.querylist(7, 35);
+    this.querylist(7, 36);
+  },
+  methods: {
+    toNewsList(pkNewsTypeId, pkNewsType) {
+      let json = {
+        modelId: '2',
+        pkNewsTypeId: pkNewsTypeId,
+        pkNewsType: pkNewsType,
+      };
+      this.$router.push({name: 'newlist', query: json})
+    },
+    getDetail(item) {
+      let json = {
+        id: item.id,
+        mark: item.pkNewsTypeId,
+      };
+      this.$router.push({name: 'newDetails', query: json})
+    },
+    dateFormat_YMD(val) {
+      return DateFormat.dateFormat_YMD(val)
+    },
+    querylist(size, pkNewsTypeId,mark) {
+      let json = {
+        size: size,
+        pkId: 238,
+        pkModelId: 8,
+        pkNewsTypeId: pkNewsTypeId,
+      };
+      if(mark)json.showtop = 1;
+      Axios.get(AjaxApi.querylist, json).then(res => {
+        if (res.status === 200) {
+          if (pkNewsTypeId === 28) {
+            if(mark)this.topNews = res.data.body.datas;
+            this.newsList.topNews = res.data.body.datas;
+          }
+          if (pkNewsTypeId === 29) {
+            if(mark)this.zgdtTopNews = res.data.body.datas;
+            this.newsList.zgdtNews = res.data.body.datas;
+          }
+          if (pkNewsTypeId === 30) this.newsList.rmdtNews = res.data.body.datas;
+          if (pkNewsTypeId === 31) this.newsList.jcdjNews = res.data.body.datas;
+          if (pkNewsTypeId === 32) this.newsList.gbgzNews = res.data.body.datas;
+          if (pkNewsTypeId === 33) this.newsList.rcgzNews = res.data.body.datas;
+          if (pkNewsTypeId === 34) this.newsList.gwyglNews = res.data.body.datas;
+          if (pkNewsTypeId === 35) this.newsList.dygbjyNews = res.data.body.datas;
+          if (pkNewsTypeId === 36) this.newsList.hsxfNews = res.data.body.datas;
+        }
+      })
+    },
   }
 }
 </script>
