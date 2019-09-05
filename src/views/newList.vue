@@ -2,7 +2,7 @@
   <div class='newdetails_template'>
     <div class='content_item'>
       <div class='newdetails_heade'>
-        当前位置： 网站首页 > 新闻中心 > 高新要闻
+        {{modelId==='8'?'当前位置： 网站首页 > 党群党建':'当前位置： 网站首页 > 新闻中心 > 高新要闻'}}
       </div>
       <div class='new_list'>
         <div class='new_list_nav'>
@@ -73,6 +73,7 @@
         let json = {
           id: item.id,
           mark: item.pkNewsTypeId,
+          modelId:this.modelId,
         };
         this.$router.push({name: 'newDetails', query: json})
       },

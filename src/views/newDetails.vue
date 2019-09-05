@@ -2,7 +2,7 @@
   <div class='newdetails_template'>
     <div class='content_item'>
       <div class='newdetails_heade'>
-        当前位置： 网站首页 > 新闻中心
+        {{modelId==='8'?'当前位置： 网站首页 > 党群党建':'当前位置： 网站首页 > 新闻中心'}}
       </div>
       <div class='newsbox'>
         <div class='news_detail'>
@@ -47,6 +47,7 @@
   export default {
     props: {
       id: Number,
+      modelId: String,
     },
     data() {
       return {

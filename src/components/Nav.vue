@@ -26,8 +26,12 @@
     },
     watch: {
       $route() {
+        console.log("route=====",this.$route.query);
         let ai = this.$route.path;
-        if (this.$route.path === '/newlist' || this.$route.path === '/newDetails') ai = '/news';
+        if (this.$route.path === '/newlist' || this.$route.path === '/newDetails'){
+          ai = '/news';
+          if(this.$route.query.modelId==='8') ai = '/party';
+        }
         this.activeIndex = ai;
       }
     }

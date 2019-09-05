@@ -25,7 +25,7 @@
       <div class='card_block group_worker'>
         <div class='card_header'>
           <div class='card_name'>组工动态</div>
-          <a @click="toNewsList(20,'组工动态')" target="_blank" rel="noopener noreferrer">
+          <a @click="toNewsList(29,'组工动态')" target="_blank" rel="noopener noreferrer">
             <div class='card_more'>更多</div>
           </a>
         </div>
@@ -310,7 +310,7 @@ export default {
   methods: {
     toNewsList(pkNewsTypeId, pkNewsType) {
       let json = {
-        modelId: '2',
+        modelId: '8',
         pkNewsTypeId: pkNewsTypeId,
         pkNewsType: pkNewsType,
       };
