@@ -2,33 +2,28 @@
   <div class='newdetails_template'>
     <div class='content_item'>
       <div class='newdetails_heade'>
-        当前位置： 网站首页 > 新闻中心
+        当前位置： 网站首页 > 政府公开 > 领导之窗
       </div>
       <div class='newsbox'>
-        <div class='news_detail'>
+        <div class='news_detail' v-if="leaderData">
           <h4 class='news_title'>
-            {{newsdata.title}}
+            {{leaderData.title}}
           </h4>
           <div class='newsTag'>
-            <span class='news_date'>{{dateFormat_YMD(newsdata.newsDate)}}</span>
-            <!--            <span class='news_source'>来源{{newsdata.source}}</span>-->
-            <span class='news_view'>浏览量：{{newsdata.views?newsdata.views:0}}次</span>
+            <span class='news_date'>{{dateFormat_YMD(leaderData.createTime)}}</span>
+            <span class='news_view'>浏览量：{{leaderData.views?leaderData.views:0}}次</span>
           </div>
           <div class='news_content'>
             <div class='leader_img'>
-              <img src="http://www.cdht.gov.cn/cdhtz/qjldgxq/2019-07/26/35458521ab004576a4825d1164ab2234/images/0e83fdab7f3f48ce86d7ad740d602779.jpg" alt="">
+              <img :src="leaderData.photo" alt="">
             </div>
             <div class='leader_info'>
-              <label >领导职务：</label>
-              <p>党工委书记</p>
+              <label>领导职务：</label>
+              <p>{{leaderData.job}}</p>
             </div>
             <div class='leader_info'>
-              <label >领导分工：</label>
-              <p>负责高新区全面工作。</p>
-            </div>
-             <div class='leader_info'>
-              <label >领导简历：</label>
-              <p>男，汉族，1976年3月生，安徽寿县人，1998年4月加入中国共产党，2004年7月参加工作，清华大学计算机科学与技术专业毕业，博士研究生学历，工学博士，副教授。</p>
+              <label>领导简历：</label>
+              <p v-html="leaderData.description"></p>
             </div>
           </div>
         </div>
@@ -60,12 +55,10 @@
   import AjaxApi from '@/service/ajaxApi'
 
   export default {
-    props: {
-      id: Number,
-    },
+    props: ['id'],
     data() {
       return {
-        newsdata: {},
+        leaderData: {},
         newsTop: [
           {
             href: 'http://www.cdht.gov.cn/cdhtz/c142982/xwzx_list.shtml',
@@ -94,10 +87,9 @@
         return DateFormat.dateFormat_YMD(val)
       },
       querydetail() {
-        Axios.get(AjaxApi.querydetail + '/' + this.id).then(res => {
+        Axios.get(AjaxApi.getLeader + '/' + this.id).then(res => {
           if (res.status === 200) {
-            console.log("querydetail========", res)
-            this.newsdata = res.data.body;
+            this.leaderData = res.data.body;
           }
         })
       },
@@ -146,14 +138,14 @@
 
         .news_content {
           padding: 20px;
-          .leader_img{
-            img{
-              width:200px;
+          .leader_img {
+            img {
+              width: 260px;
             }
-            margin-bottom:10px;
+            margin-bottom: 10px;
           }
-          .leader_info{
-            label{
+          .leader_info {
+            label {
               display: inline-block;
               text-indent: 2em;
               line-height: 2;
@@ -161,10 +153,10 @@
               font-size: 12pt;
               text-indent: 2em;
               font-weight: bold;
-              font-size:$font14;
+              font-size: $font14;
             }
-            p{
-              font-size:$font14;
+            p {
+              font-size: $font14;
               text-indent: 2em;
               line-height: 2;
               font-family: 宋体;

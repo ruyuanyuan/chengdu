@@ -5,8 +5,8 @@
          当前位置： 网站首页 / 政务公开 / 基本信息公开 / 领导之窗 / 部门 / 两委办公室
         </div>
         <div class='leader_level'>
-          <div class='leader_level_item' :class='{"active":item.level===selectLevel}' 
-          v-for='item in leaderLevel'  
+          <div class='leader_level_item' :class='{"active":item.level===selectLevel}'
+          v-for='item in leaderLevel'
           :key='item.level'
           @click='changeLevel(item.level)'
           >
@@ -29,7 +29,7 @@
               <p class='leader_postion'>{{item.postion}}</p>
               </a>
             </div>
-           
+
           </div>
         </div>
     </div>
@@ -271,7 +271,7 @@ export default {
                   name:'冉光俊',
                   postion:'成都高新区党工委管委会办公室主任'
                 },
-               
+
                 {
                   imgurl:'http://www.cdht.gov.cn/cdhtz/c143437q//2019-07/04/1ac0e49bc4414be28d6e5d1a04528fc8/images/4d40fbd1fc65432f953df276e002d9ba.jpg',
                   name:'曾珏',
@@ -524,10 +524,10 @@ export default {
               border:1px solid $mainHOPColor;
             }
           }
-          
+
         }
       }
-     
+
     }
   }
 </style>

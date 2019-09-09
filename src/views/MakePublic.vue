@@ -5,24 +5,25 @@
         <div class='head_card'>
           <div class='head_card_item head_card_item_left'>
            <img src="http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2080.png" alt="">
-            <a href="/leader"> 领导之窗
-          </a>
+<!--            <a href="/leader"> 领导之窗</a>-->
+            <a href="javascript:;" @click="handleToDetail('leader')"> 领导之窗</a>
           </div>
           <div class='head_card_item head_card_item_right'>
             <img src="http://114.116.31.126/daying/images/%E6%94%BF%E5%8A%A1%E5%85%AC%E5%BC%80/u2081.png" alt="">
-            <a href="/department"> 机构职能</a>
+<!--            <a href="/departmentDetails"> 机构职能</a>-->
+            <a href="javascript:;" @click="handleToDetail('departmentDetails')"> 机构职能</a>
           </div>
         </div>
-        <div class='pack_bth'>
-          <a class='boder_bth' href="#"><i
+        <div class='pack_bth' @click="handleOpen">
+          <a class='boder_bth' href="javascript:;"><i
             class='el-icon-arrow-right'></i>政府信息公开目录</a>
-          <a class='boder_bth' href="#"><i
+          <a class='boder_bth' href="javascript:;"><i
             class='el-icon-arrow-right'></i>政府信息公开指南</a>
-          <a class='boder_bth' href="#"><i
+          <a class='boder_bth' href="javascript:;"><i
             class='el-icon-arrow-right'></i>政府信息公开年报</a>
-          <a class='boder_bth' href="#"><i
+          <a class='boder_bth' href="javascript:;"><i
             class='el-icon-arrow-right'></i>政府信息依申请公开</a>
-          <a class='boder_bth' href="#"><i
+          <a class='boder_bth' href="javascript:;"><i
             class='el-icon-arrow-right'></i>政府信息公开意见箱</a>
         </div>
       </div>
@@ -249,6 +250,12 @@
       this.querylist(7, 21);
     },
     methods: {
+      handleOpen(){
+        window.open('http://www.suining.gov.cn/web/guest/zwgk')
+      },
+      handleToDetail(mark){
+        this.$router.push({name: 'departmentDetails', query: {mark:mark}})
+      },
       getDetail(item) {
         let json = {
           id: item.id,

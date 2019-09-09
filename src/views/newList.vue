@@ -2,7 +2,7 @@
   <div class='newdetails_template'>
     <div class='content_item'>
       <div class='newdetails_heade'>
-        {{modelId==='8'?'当前位置： 网站首页 > 党群党建':'当前位置： 网站首页 > 新闻中心 > 高新要闻'}}
+        {{modelId==='8'?'当前位置： 网站首页 > 党群党建':'当前位置： 网站首页 > 新闻中心'}}
       </div>
       <div class='new_list'>
         <div class='new_list_nav'>
@@ -87,7 +87,7 @@
         this.querylist();
       },
       getPkParkWebsiteNewsTypeList() {
-        Axios.get('/website/pkParkWebsiteNewsType/' + this.modelId + '/list').then(res => {
+        Axios.get(AjaxApi.getPkParkWebsiteNewsTypeList +'/'+ this.modelId).then(res => {
           if (res.status === 200) {
             let resData = res.data.body;
             this.listNav = resData;

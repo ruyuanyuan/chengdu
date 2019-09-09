@@ -30,18 +30,18 @@
       <div class='tap_content' v-if='activeTap==="policy"'>
         <div class='left_img'>
           <swiper :options="swiperOption" ref="mySwiper1" style="width:100%">
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区1</div>
-              </swiper-slide>
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区2</div>
-              </swiper-slide>
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区3</div>
-              </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区1</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区2</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区3</div>
+            </swiper-slide>
           </swiper>
         </div>
         <div class='right_news'>
@@ -56,18 +56,18 @@
       <div class='tap_content' v-if='activeTap==="enterprise"'>
         <div class='left_img'>
           <swiper :options="swiperOption" ref="mySwiper2" style="width:100%">
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区1</div>
-              </swiper-slide>
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区2</div>
-              </swiper-slide>
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区3</div>
-              </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区1</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区2</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区3</div>
+            </swiper-slide>
           </swiper>
         </div>
         <div class='right_news'>
@@ -82,18 +82,18 @@
       <div class='tap_content' v-if='activeTap==="government"'>
         <div class='left_img'>
           <swiper :options="swiperOption" ref="mySwiper3" style="width:100%">
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区1</div>
-              </swiper-slide>
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区2</div>
-              </swiper-slide>
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区3</div>
-              </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区1</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区2</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区3</div>
+            </swiper-slide>
           </swiper>
         </div>
         <div class='right_news'>
@@ -107,19 +107,19 @@
       </div>
       <div class='tap_content' v-if='activeTap==="policyNeed"'>
         <div class='left_img'>
-         <swiper :options="swiperOption" ref="mySwiper4" style="width:100%">
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区1</div>
-              </swiper-slide>
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区2</div>
-              </swiper-slide>
-              <swiper-slide>
-                 <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-                 <div class='title'>全链条、智慧化管险 成都高新区3</div>
-              </swiper-slide>
+          <swiper :options="swiperOption" ref="mySwiper4" style="width:100%">
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区1</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区2</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
+              <div class='title'>全链条、智慧化管险 成都高新区3</div>
+            </swiper-slide>
           </swiper>
         </div>
         <div class='right_news'>
@@ -139,8 +139,16 @@
             <div class='love_left'>
               <div class='love_card'>
                 <div class='love_card_content'>
-                  <a :href="item.href" v-for='(item,index) in guidelist' :key='index' target="_blank">
-                    <div class='love_item'>
+                  <a v-for='(item,index) in guidelist' :key='index' style="cursor: pointer;">
+                    <div class='love_item' v-if="item.title==='领导之窗'" @click="handleToDetail('leader')">
+                      <img :src="item.icon" alt="">
+                      <div class='title'>{{item.title}}</div>
+                    </div>
+                    <div class='love_item' v-else-if="item.title==='机构设置'" @click="handleToDetail('departmentDetails')">
+                      <img :src="item.icon" alt="">
+                      <div class='title'>{{item.title}}</div>
+                    </div>
+                    <div class='love_item' v-else>
                       <img :src="item.icon" alt="">
                       <div class='title'>{{item.title}}</div>
                     </div>
@@ -378,10 +386,16 @@
       this.querylist(8, 15, 2);
       this.querylist(8, 8, 2);
       this.querylist(5, 27, 1);
-      this.querylist(5, 28, 1);
+      // this.querylist(5, 28, 1);
+
+      this.querylist(9, 16, 6);
+
     },
     methods: {
-      handleFeedback(item){
+      handleToDetail(mark){
+        this.$router.push({name: 'departmentDetails', query: {mark:mark}})
+      },
+      handleFeedback(item) {
         let json = {
           mark: item,
         };
@@ -407,22 +421,14 @@
         if (mark) json.showtop = 1;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
-            if (pkNewsTypeId === 2){
-              this.newsList.snxwNews = res.data.body.datas;
-            }
-            if (pkNewsTypeId === 3) {
-              this.newsList.tzggNews = res.data.body.datas;
-            }
-            if (pkNewsTypeId === 4) {
-              this.newsList.ssxwNews = res.data.body.datas;
-            }
-            if (pkNewsTypeId === 5) {
-              this.newsList.gwyxwNews = res.data.body.datas;
-            }
+            if (pkNewsTypeId === 2) this.newsList.snxwNews = res.data.body.datas;
+            if (pkNewsTypeId === 3) this.newsList.tzggNews = res.data.body.datas;
+            if (pkNewsTypeId === 4) this.newsList.ssxwNews = res.data.body.datas;
+            if (pkNewsTypeId === 5) this.newsList.gwyxwNews = res.data.body.datas;
             if (pkNewsTypeId === 15) this.newsList.bmNews = res.data.body.datas;
             if (pkNewsTypeId === 8) this.newsList.jdNews = res.data.body.datas;
-            if (pkNewsTypeId === 27) this.newsList.cjwtNews = res.data.body.datas;
-            if (pkNewsTypeId === 28) this.newsList.myzjNews = res.data.body.datas;
+            if (pkNewsTypeId === 16) this.newsList.cjwtNews = res.data.body.datas;
+            if (pkNewsTypeId === 27) this.newsList.myzjNews = res.data.body.datas;
           }
         })
       },

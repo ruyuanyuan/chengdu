@@ -7,8 +7,8 @@
           今日关注
         </div>
         <div class='tody_item tody_date'>
-          <p>农历七月初七</p>
-          <p>2019年8月7日 星期三</p>
+          <p>农历八月初七</p>
+          <p>2019年9月6日 星期五</p>
         </div>
       </div>
       <div class='hold_new'>

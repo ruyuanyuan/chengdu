@@ -26,11 +26,13 @@
     },
     watch: {
       $route() {
-        console.log("route=====",this.$route.query);
+        console.log("route=====", this.$route.query);
         let ai = this.$route.path;
-        if (this.$route.path === '/newlist' || this.$route.path === '/newDetails'){
+        if (ai === '/newlist' || ai === '/newDetails') {
           ai = '/news';
-          if(this.$route.query.modelId==='8') ai = '/party';
+          if (this.$route.query.modelId === '8') ai = '/party';
+        } else if (ai === '/departmentDetails' || ai === '/leader' || ai === '/leaderDetails') {
+          ai = '/makepblic';
         }
         this.activeIndex = ai;
       }
