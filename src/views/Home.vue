@@ -242,10 +242,11 @@
 <script>
 
   import {swiper, swiperSlide} from 'vue-awesome-swiper'
-
+  
   import Axios from '@/utils/axiosWrap'
   import DateFormat from '@/utils/momentWrap'
   import AjaxApi from '@/service/ajaxApi'
+import { setTimeout } from 'timers';
 
   export default {
     components: {
@@ -369,6 +370,10 @@
     },
     mounted() {
       this.swiper.slideTo(1, 1000, false)
+      this.openload()
+      setTimeout(()=>{
+        this.closeload()
+      },3000)
     },
     created() {
       this.getPkParkWebsiteBanner();
