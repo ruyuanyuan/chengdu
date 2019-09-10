@@ -27,6 +27,16 @@
                 <p>日期：{{dateFormat_YMD(item.newsDate)}}</p>
               </a>
             </div>
+            <div class='pagination'>
+              <el-pagination
+                background
+                @current-change="handleCurrentChange"
+                :current-page.sync="pageJson.pageIndex"
+                :page-size="pageJson.pageSize"
+                layout="total, prev, pager, next"
+                :total="pageJson.total">
+              </el-pagination>
+            </div>
           </div>
         </div>
       </div>
@@ -52,6 +62,11 @@
         seachName: '',
         newsData: [],
         setPkNewsTypeId: null,
+        pageJson:{
+          pageIndex:1,
+          pageSize:10,
+          total:100
+        }
       }
     },
     computed: {
@@ -69,6 +84,7 @@
       OnSearch(){
         this.querylist();
       },
+      
       getDetail(item) {
         let json = {
           id: item.id,
@@ -108,6 +124,10 @@
             this.newsData = res.data.body.datas;
           }
         })
+      },
+      //跳转至第几页
+      handleCurrentChange(val) {
+        console.log(`当前页: ${val}`);
       },
     },
   }

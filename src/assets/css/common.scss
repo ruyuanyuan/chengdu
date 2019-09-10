@@ -155,3 +155,20 @@ a{
     margin-right:10px;
   }
 }
+
+.pagination{
+  padding:30px;
+  display: flex;
+  justify-content:flex-end;
+  .el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li{
+    margin:0;
+    width:40px;
+    height:40px;
+    background:#fff;
+    border:1px solid #ddd;
+    line-height: 40px;
+  }
+  .el-pagination button, .el-pagination span:not([class*=suffix]){
+    line-height: 40px;
+  }
+}
