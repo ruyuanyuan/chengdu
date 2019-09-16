@@ -243,6 +243,12 @@
         ],
       }
     },
+    mounted() {
+      this.openload();
+      setTimeout(()=>{
+        this.closeload()
+      },3000)
+    },
     created() {
       this.querylist(8, 18);
       this.querylist(8, 19);

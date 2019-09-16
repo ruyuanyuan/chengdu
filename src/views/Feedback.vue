@@ -12,7 +12,7 @@
           <el-input v-model="ruleForm.phone" maxlength="11"></el-input>
         </el-form-item>
         <el-form-item label="反馈内容" prop="content">
-          <el-input type="textarea" :rows="4" v-model="ruleForm.content"></el-input>
+          <el-input type="textarea" :rows="4" v-model="ruleForm.description"></el-input>
         </el-form-item>
         <el-form-item class='btnbox'>
           <el-button type="primary" @click="submitForm('ruleForm')">提交反馈</el-button>
@@ -22,63 +22,84 @@
   </div>
 </template>
 <script>
-export default {
-  data(){
-    return {
-      ruleForm:{
-        name:'',
-        phone:'',
-        content:''
-      },
-      rules: {
+
+  import Axios from '@/utils/axiosWrap'
+  // import DateFormat from '@/utils/momentWrap'
+  import AjaxApi from '@/service/ajaxApi'
+
+  export default {
+    props: ['mark'],
+    data() {
+      return {
+        ruleForm: {
+          name: '',
+          phone: '',
+          description: ''
+        },
+        rules: {
           name: [
-            { required: true, message: '请输入你的姓名', trigger: 'blur' },
+            {required: true, message: '请输入你的姓名', trigger: 'blur'},
           ],
           phone: [
-            { required: true, message: '请输入手机号码', trigger: 'blur' },
-            { pattern: /^1[345678]\d{9}$/, message: '手机号码格式不正确' }
+            {required: true, message: '请输入手机号码', trigger: 'blur'},
+            {pattern: /^1[345678]\d{9}$/, message: '手机号码格式不正确'}
           ],
-          content: [
-            { required: true, message: '请输入反馈内容', trigger: 'blur' },
+          description: [
+            {required: true, message: '请输入反馈内容', trigger: 'blur'},
           ],
-      }
-    }
-  },
-  methods:{
-    submitForm(formName){
-       this.$refs[formName].validate((valid) => {
-        if (valid) {
-          console.log('submit=======',this.ruleForm);
-        } else {
-          console.log('error submit!!');
-          return false;
         }
-      });
+      }
+    },
+    created() {
+      this.ruleForm.type = this.mark;
+    },
+    methods: {
+      submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+            console.log('submit=======', this.ruleForm);
+            Axios.post(AjaxApi.feedbackSave,this.ruleForm).then((res) => {
+              let value = res.data;
+              console.log(value);
+              alert("保存成功！")
+            }).catch((error) => {
+              console.log(error)
+            })
+          } else {
+            console.log('error submit!!');
+            return false;
+          }
+        });
+      }
     }
   }
-}
 </script>
 <style lang="scss" scoped>
-  .feedback_template{
-    width:100%;
-    .head_img{
-      width:100%;
-      img{
-        width:100%;
+  .feedback_template {
+    width: 100%;
+
+    .head_img {
+      width: 100%;
+
+      img {
+        width: 100%;
       }
     }
-    .feedback_content{
-      padding:20px 20px;
+
+    .feedback_content {
+      padding: 20px 20px;
       background: #fafafa;
-      .feedbackForm{
+
+      .feedbackForm {
         width: 1200px;
         height: auto;
         margin: 40px auto;
-        background:#fff;
-        box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.08);
-        padding:40px 140px;
+        background: #fff;
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.08);
+        padding: 40px 140px;
       }
-      .btnbox{
+
+      .btnbox {
         text-align: center;
       }
     }

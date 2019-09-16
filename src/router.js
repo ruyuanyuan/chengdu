@@ -96,6 +96,7 @@ export default new Router({
       path: '/feedback',
       name: 'feedback',
       component: () => import(/* webpackChunkName: "news" */ './views/Feedback.vue'),
+      props: (route) => (route.query)
     },
   ],
 });

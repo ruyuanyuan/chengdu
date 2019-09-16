@@ -82,6 +82,12 @@
         }
       }
     },
+    mounted() {
+      this.openload();
+      setTimeout(()=>{
+        this.closeload()
+      },3000)
+    },
     created() {
       this.getpkPark();
       this.getPkPicsById();

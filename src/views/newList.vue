@@ -62,10 +62,10 @@
         seachName: '',
         newsData: [],
         setPkNewsTypeId: null,
-        pageJson:{
-          pageIndex:1,
-          pageSize:10,
-          total:100
+        pageJson: {
+          pageIndex: 1,
+          pageSize: 10,
+          total: 100
         }
       }
     },
@@ -73,7 +73,13 @@
       pkNewsTypeIdShow() {
         if (this.setPkNewsTypeId) return this.setPkNewsTypeId;
         return Number(this.pkNewsTypeId)
-      }
+      },
+    },
+    mounted() {
+      this.openload();
+      setTimeout(() => {
+        this.closeload()
+      }, 3000)
     },
     created() {
       this.shownewsType = this.pkNewsTypeIdShow;
@@ -81,15 +87,15 @@
       this.getPkParkWebsiteNewsTypeList();
     },
     methods: {
-      OnSearch(){
+      OnSearch() {
         this.querylist();
       },
-      
+
       getDetail(item) {
         let json = {
           id: item.id,
           mark: item.pkNewsTypeId,
-          modelId:this.modelId,
+          modelId: this.modelId,
         };
         this.$router.push({name: 'newDetails', query: json})
       },
@@ -103,7 +109,7 @@
         this.querylist();
       },
       getPkParkWebsiteNewsTypeList() {
-        Axios.get(AjaxApi.getPkParkWebsiteNewsTypeList +'/'+ this.modelId).then(res => {
+        Axios.get(AjaxApi.getPkParkWebsiteNewsTypeList + '/' + this.modelId).then(res => {
           if (res.status === 200) {
             let resData = res.data.body;
             this.listNav = resData;
@@ -118,7 +124,7 @@
           pkModelId: this.modelId,
           pkNewsTypeId: this.pkNewsTypeIdShow,
         };
-        if(this.seachName)json.title = this.seachName;
+        if (this.seachName) json.title = this.seachName;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
             this.newsData = res.data.body.datas;

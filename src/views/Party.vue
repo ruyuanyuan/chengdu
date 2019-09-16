@@ -174,24 +174,6 @@ export default {
   },
   data(){
     return {
-      // partyList:[
-      //   {
-      //     title:'习近平在中青年干部培训班开班式上发表重要讲话',
-      //     herf:'/newDetails'
-      //   },
-      //   {
-      //     title:'习近平在中青年干部培训班开班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话',
-      //     herf:'/newDetails'
-      //   },
-      //   {
-      //     title:'习近平在中青年干部培训班开班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话',
-      //     herf:'/newDetails'
-      //   },
-      //   {
-      //     title:'习近平在中青年干部培训班开班式上发表重要讲话班式上发表重要讲话班式上发表重要讲话',
-      //     herf:'/newDetails'
-      //   }
-      // ],
       swiperOption: {
           autoplay: true,
           centeredSlides: true,
@@ -250,30 +232,6 @@ export default {
           title:'遂宁新闻网',
           href:'http://www.snxw.com/'
         },
-        // {
-        //   title:'天府先锋',
-        //   href:'javascript:;'
-        // },
-        // {
-        //   title:'四川人才工作网',
-        //   href:'javascript:;'
-        // },
-        // {
-        //   title:'四川干教网',
-        //   href:'javascript:;'
-        // },
-        // {
-        //   title:'党课党建研究',
-        //   href:'javascript:;'
-        // },
-        // {
-        //   title:'中国遂宁',
-        //   href:'javascript:;'
-        // },
-        // {
-        //   title:'四川干教网',
-        //   href:'javascript:;'
-        // },
       ],
 
       newsList: {
@@ -292,13 +250,19 @@ export default {
 
     }
   },
+  mounted() {
+    this.openload();
+    setTimeout(()=>{
+      this.closeload()
+    },3000)
+  },
   created() {
     //政府要闻-图片顶置
     this.querylist(7, 28,'top');
-    this.querylist(7, 29,'top');
-
     this.querylist(7, 28);
+    this.querylist(7, 29,'top');
     this.querylist(7, 29);
+
     this.querylist(7, 30);
     this.querylist(7, 31);
     this.querylist(7, 32);

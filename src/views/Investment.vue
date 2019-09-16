@@ -197,17 +197,22 @@
         investmentTopInfo: null,
       }
     },
+    mounted() {
+      this.openload();
+      setTimeout(()=>{
+        this.closeload()
+      },3000)
+    },
     created() {
+      this.getPkPicsById();
       //顶置带图的新闻
       this.querylist(10, 10, 'top');
-
       this.querylist(10, 10);
+
       this.querylist(10, 11);
       this.querylist(10, 12);
       this.querylist(10, 13);
       this.querylist(10, 14);
-
-      this.getPkPicsById();
     },
     methods: {
       handleFeedback(item){

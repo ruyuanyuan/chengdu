@@ -187,7 +187,10 @@
       
     },
     mounted() {
-      
+      this.openload();
+      setTimeout(()=>{
+        this.closeload()
+      },3000)
     },
     created() {
       //政府要闻-图片顶置

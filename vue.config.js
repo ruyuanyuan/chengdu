@@ -5,14 +5,14 @@ module.exports = {
   productionSourceMap: false,
   devServer: {
     open: true,
-    host: '0.0.0.0',
+    // host: '0.0.0.0',
+    host: '192.168.0.105',
     port: 3000,
     https: false,
     hotOnly: false,
     proxy: {
       '/website': {
         target: 'http://192.168.0.105:8081',   //代理接口
-        // target: 'http://192.168.5.19:8081',   //代理接口
         // target: 'http://scyqcloud.amazingday.cn/',   //代理接口
         // 如果要代理 websockets
         ws: true,

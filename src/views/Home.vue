@@ -369,8 +369,8 @@ import { setTimeout } from 'timers';
       }
     },
     mounted() {
-      this.swiper.slideTo(1, 1000, false)
-      this.openload()
+      this.swiper.slideTo(1, 1000, false);
+      this.openload();
       setTimeout(()=>{
         this.closeload()
       },3000)
@@ -379,22 +379,18 @@ import { setTimeout } from 'timers';
       this.getPkParkWebsiteBanner();
       //顶置带图的新闻
       this.querylist(8, 2, 1, 'top');
-      this.querylist(8, 3, 1, 'top');
-      this.querylist(8, 4, 1, 'top');
-      this.querylist(8, 5, 1, 'top');
-
       this.querylist(8, 2, 1);
+      this.querylist(8, 3, 1, 'top');
       this.querylist(8, 3, 1);
+      this.querylist(8, 4, 1, 'top');
       this.querylist(8, 4, 1);
+      this.querylist(8, 5, 1, 'top');
       this.querylist(8, 5, 1);
 
       this.querylist(8, 15, 2);
       this.querylist(8, 8, 2);
       this.querylist(5, 27, 1);
-      // this.querylist(5, 28, 1);
-
       this.querylist(9, 16, 6);
-
     },
     methods: {
       handleToDetail(mark){

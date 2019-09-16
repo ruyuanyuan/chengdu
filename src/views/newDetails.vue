@@ -72,6 +72,12 @@
         ]
       }
     },
+    mounted() {
+      this.openload();
+      setTimeout(()=>{
+        this.closeload()
+      },3000)
+    },
     created() {
       this.querydetail();
     },
