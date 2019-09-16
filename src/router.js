@@ -98,5 +98,12 @@ export default new Router({
       component: () => import(/* webpackChunkName: "news" */ './views/Feedback.vue'),
       props: (route) => (route.query)
     },
+    //搜索列表
+    {
+      path: '/seachList',
+      name: 'seachList',
+      component: () => import(/* webpackChunkName: "news" */ './views/SeachList.vue'),
+      props: (route) => (route.query)
+    },
   ],
 });
