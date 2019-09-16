@@ -252,8 +252,8 @@
     created() {
       this.querylist(8, 18);
       this.querylist(8, 19);
-      this.querylist(8, 20);
       this.querylist(7, 21);
+      this.querylist(8, 20);
     },
     methods: {
       handleOpen(){
