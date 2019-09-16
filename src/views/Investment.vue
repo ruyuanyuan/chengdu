@@ -201,7 +201,7 @@
       this.openload();
       setTimeout(()=>{
         this.closeload()
-      },3000)
+      },2000)
     },
     created() {
       this.getPkPicsById();
