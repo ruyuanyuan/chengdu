@@ -2,19 +2,20 @@
   <div class='seach_list_template'>
     <div class='seach_list_head'>
       <div class='page_postion'>
-        当前位置：首页 > 搜索结果 > 园区要闻
+        当前位置：首页 > 搜索结果 > 新闻中心
       </div>
       <div class="search-box1">
-        <input v-model="seachName" id="searchLabel" type="text"> 
-        <div class="search-btn" @click='searchResult'><img src="http://scyqcloud.amazingday.cn/parkPro/page/img/searchInfo.png"></div>
+        <input id="searchLabel" type="text"  v-model="setSearchName">
+        <div class="search-btn" @click='querylist'>
+          <img src="@/assets/img/searchInfo.png"></div>
       </div>
     </div>
     <div id="hasdata" class="search-result">
       <div class="news-content">
         <ul class="news-list">
           <li v-for='(item,index) in searchData' :key='index'>
-            <a :href="item.herf" target="_blank">{{item.title}}</a>
-            <span>{{item.date}}</span>
+            <a :href="item.herf" target="_blank" @click="getDetail(item)">{{item.title}}</a>
+            <span>{{dateFormat_YMD(item.newsDate)}}</span>
           </li>
         </ul>
       </div>
@@ -22,50 +23,83 @@
         <el-pagination
           background
           @current-change="handleCurrentChange"
-          :current-page.sync="pageJson.pageIndex"
-          :page-size="pageJson.pageSize"
+          :current-page.sync="pageIndex"
+          :page-size="pageSize"
           layout="total, prev, pager, next"
-          :total="pageJson.total">
+          :total="total">
         </el-pagination>
       </div>
     </div>
   </div>
 </template>
 <script>
+  import Axios from '@/utils/axiosWrap'
+  import DateFormat from '@/utils/momentWrap'
+  import AjaxApi from '@/service/ajaxApi'
 export default {
+  props:{
+    searchName:String,
+  },
   data(){
     return {
-      seachName:'',
-      pageJson: {
-          pageIndex: 1,
-          pageSize: 10,
-          total: 100
-      },
-      searchData:[
-        {
-          herf:'http://scyqcloud.amazingday.cn/parkPro/page/newsDetails.html?id=747',
-          title:'【成都】上半年成都高新技术产业营收增长14.3%',
-          date:'2019-08-21'
-        },
-        {
-          herf:'http://scyqcloud.amazingday.cn/parkPro/page/newsDetails.html?id=747',
-          title:'【成都】上半年成都高新技术产业营收增长14.3%',
-          date:'2019-08-21'
-        },
-        {
-          herf:'http://scyqcloud.amazingday.cn/parkPro/page/newsDetails.html?id=747',
-          title:'【成都】上半年成都高新技术产业营收增长14.3%',
-          date:'2019-08-21'
-        }
-      ]
+      setSearchName:'',
+      pageIndex: 1,
+      pageSize: 10,
+      total: null,
+      searchData:[]
     }
   },
-  methods:{
-    searchResult(){
-
+  watch: {
+    setSearchName() {
+      this.querylist();
+    }
+  },
+  computed: {
+    searchVal() {
+      let str = '';
+      if (this.searchName)str=this.searchName;
+      if (this.setSearchName)str=this.setSearchName;
+      return str
     },
-    handleCurrentChange(){
-
+  },
+  mounted() {
+    this.openload();
+    setTimeout(()=>{
+      this.closeload()
+    },2000)
+  },
+  created() {
+    this.setSearchName = this.searchVal;
+  },
+  methods:{
+    getDetail(item) {
+      let json = {
+        id: item.id,
+        mark: item.pkNewsTypeId,
+      };
+      this.$router.push({name: 'newDetails', query: json})
+    },
+    dateFormat_YMD(val) {
+      return DateFormat.dateFormat_YMD(val)
+    },
+    querylist() {
+      let json = {
+        size: this.pageSize,
+        page: this.pageIndex,
+      };
+      if(this.setSearchName)json.title = this.setSearchName;
+      Axios.get(AjaxApi.querylist, json).then(res => {
+        if (res.status === 200) {
+          let resData = res.data.body;
+          this.searchData = resData.datas;
+          this.pageIndex = resData.current;
+          this.total = resData.total;
+        }
+      })
+    },
+    handleCurrentChange(currentPage){
+      this.pageIndex = currentPage;
+      this.querylist();
     }
   }
 }

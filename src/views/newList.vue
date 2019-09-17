@@ -31,10 +31,10 @@
               <el-pagination
                 background
                 @current-change="handleCurrentChange"
-                :current-page.sync="pageJson.pageIndex"
-                :page-size="pageJson.pageSize"
+                :current-page.sync="pageIndex"
+                :page-size="pageSize"
                 layout="total, prev, pager, next"
-                :total="pageJson.total">
+                :total="total">
               </el-pagination>
             </div>
           </div>
@@ -62,11 +62,9 @@
         seachName: '',
         newsData: [],
         setPkNewsTypeId: null,
-        pageJson: {
-          pageIndex: 1,
-          pageSize: 10,
-          total: 100
-        }
+        pageIndex: 1,
+        pageSize: 6,
+        total: null,
       }
     },
     computed: {
@@ -79,7 +77,7 @@
       this.openload();
       setTimeout(() => {
         this.closeload()
-      }, 3000)
+      }, 2000)
     },
     created() {
       this.shownewsType = this.pkNewsTypeIdShow;
@@ -90,7 +88,6 @@
       OnSearch() {
         this.querylist();
       },
-
       getDetail(item) {
         let json = {
           id: item.id,
@@ -103,6 +100,7 @@
         return DateFormat.dateFormat_YMD(val)
       },
       changNewType(type, name) {
+        this.pageIndex = 1;
         this.shownewsType = type;
         this.showName = name;
         this.setPkNewsTypeId = type;
@@ -119,7 +117,8 @@
       },
       querylist() {
         let json = {
-          size: 6,
+          size: this.pageSize,
+          page:this.pageIndex,
           pkId: 238,
           pkModelId: this.modelId,
           pkNewsTypeId: this.pkNewsTypeIdShow,
@@ -127,13 +126,17 @@
         if (this.seachName) json.title = this.seachName;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
-            this.newsData = res.data.body.datas;
+            let resData = res.data.body;
+            this.newsData = resData.datas;
+            this.pageIndex = resData.current;
+            this.total = resData.total;
           }
         })
       },
       //跳转至第几页
       handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
+        this.pageIndex = val;
+        this.querylist();
       },
     },
   }

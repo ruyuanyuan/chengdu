@@ -76,7 +76,7 @@
       this.openload();
       setTimeout(()=>{
         this.closeload()
-      },3000)
+      },1000)
     },
     created() {
       this.querydetail();

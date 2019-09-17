@@ -242,11 +242,11 @@
 <script>
 
   import {swiper, swiperSlide} from 'vue-awesome-swiper'
-  
+
   import Axios from '@/utils/axiosWrap'
   import DateFormat from '@/utils/momentWrap'
   import AjaxApi from '@/service/ajaxApi'
-import { setTimeout } from 'timers';
+  import {setTimeout} from 'timers';
 
   export default {
     components: {
@@ -371,9 +371,9 @@ import { setTimeout } from 'timers';
     mounted() {
       this.swiper.slideTo(1, 1000, false);
       this.openload();
-      setTimeout(()=>{
+      setTimeout(() => {
         this.closeload()
-      },3000)
+      }, 3000)
     },
     created() {
       this.getPkParkWebsiteBanner();
@@ -393,8 +393,8 @@ import { setTimeout } from 'timers';
       this.querylist(9, 16, 6);
     },
     methods: {
-      handleToDetail(mark){
-        this.$router.push({name: 'departmentDetails', query: {mark:mark}})
+      handleToDetail(mark) {
+        this.$router.push({name: 'departmentDetails', query: {mark: mark}})
       },
       handleFeedback(item) {
         let json = {

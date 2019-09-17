@@ -33,6 +33,8 @@
           if (this.$route.query.modelId === '8') ai = '/party';
         } else if (ai === '/departmentDetails' || ai === '/leader' || ai === '/leaderDetails') {
           ai = '/makepblic';
+        } else if (ai === '/seachList') {
+          ai = '/home';
         }
         this.activeIndex = ai;
       }
