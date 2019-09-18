@@ -428,7 +428,6 @@
       querylist(pkNewsTypeId) {
         let json = {
           size: 6,
-          pkId: 238,
           pkModelId: 6,
           pkNewsTypeId: pkNewsTypeId,
         }

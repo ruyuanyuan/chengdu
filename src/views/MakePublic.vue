@@ -247,7 +247,7 @@
       this.openload();
       setTimeout(()=>{
         this.closeload()
-      },3000)
+      },1000)
     },
     created() {
       this.querylist(8, 18);
@@ -275,13 +275,11 @@
       querylist(size, pkNewsTypeId) {
         let json = {
           size: size,
-          pkId: 238,
           pkModelId: 5,
           pkNewsTypeId: pkNewsTypeId,
         }
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
-            console.log(res.data.body.datas)
             if (pkNewsTypeId === 18) this.newsList.tzggNews = res.data.body.datas;
             if (pkNewsTypeId === 19) this.newsList.zcwjNews = res.data.body.datas;
             if (pkNewsTypeId === 20) this.newsList.wjjdNews = res.data.body.datas;

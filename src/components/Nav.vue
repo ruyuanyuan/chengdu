@@ -18,6 +18,7 @@
   </div>
 </template>
 <script>
+  import {mapMutations} from 'vuex'
   export default {
     data: function () {
       return {
@@ -26,11 +27,13 @@
     },
     watch: {
       $route() {
-        console.log("route=====", this.$route.query);
+        let setQuery = this.$route.query;
+        console.log("route=====",setQuery);
+        if(setQuery.parkId)this.setParkId(setQuery.parkId);
         let ai = this.$route.path;
         if (ai === '/newlist' || ai === '/newDetails') {
           ai = '/news';
-          if (this.$route.query.modelId === '8') ai = '/party';
+          if (setQuery.modelId === '8') ai = '/party';
         } else if (ai === '/departmentDetails' || ai === '/leader' || ai === '/leaderDetails') {
           ai = '/makepblic';
         } else if (ai === '/seachList') {
@@ -38,7 +41,10 @@
         }
         this.activeIndex = ai;
       }
-    }
+    },
+    methods: {
+      ...mapMutations(["setParkId"]),
+    },
   };
 </script>
 <style lang="scss">

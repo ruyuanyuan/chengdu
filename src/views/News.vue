@@ -190,7 +190,7 @@
       this.openload();
       setTimeout(()=>{
         this.closeload()
-      },3000)
+      },1000)
     },
     created() {
       //政府要闻-图片顶置
@@ -204,7 +204,7 @@
     },
     methods: {
       getPkPicsById() {
-        Axios.get(AjaxApi.getPkPicsById, {id: 238}).then(res => {
+        Axios.get(AjaxApi.getPkPicsByParkId).then(res => {
           if (res.status === 200) {
             this.tvDataList.mainTv = res.data[0];
             this.tvDataList.tvlist = res.data;
@@ -232,7 +232,6 @@
       querylist(size, pkNewsTypeId,mark) {
         let json = {
           size: size,
-          pkId: 238,
           pkModelId: 2,
           pkNewsTypeId: pkNewsTypeId,
         };

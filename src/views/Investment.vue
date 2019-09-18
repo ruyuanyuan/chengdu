@@ -201,7 +201,7 @@
       this.openload();
       setTimeout(()=>{
         this.closeload()
-      },2000)
+      },1000)
     },
     created() {
       this.getPkPicsById();
@@ -242,10 +242,9 @@
       querylist(size, pkNewsTypeId, mark) {
         let json = {
           size: size,
-          pkId: 238,
           pkModelId: 4,
           pkNewsTypeId: pkNewsTypeId,
-        }
+        };
         if (mark) json.showtop = 1;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
@@ -260,13 +259,13 @@
           }
         })
       },
-
       getPkPicsById() {
-        Axios.get(AjaxApi.getPkPicsById, {id: 238}).then(res => {
+        Axios.get(AjaxApi.getPkPicsByParkId).then(res => {
           if (res.status === 200) {
-            console.log(res)
-            this.parkDataList.mainPark = res.data[0];
-            this.parkDataList.parklist = res.data;
+            if(res.data) {
+              this.parkDataList.mainPark = res.data[0];
+              this.parkDataList.parklist = res.data;
+            }
           }
         })
       },

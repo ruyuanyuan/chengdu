@@ -74,10 +74,6 @@
       },
     },
     mounted() {
-      this.openload();
-      setTimeout(() => {
-        this.closeload()
-      }, 2000)
     },
     created() {
       this.shownewsType = this.pkNewsTypeIdShow;
@@ -107,6 +103,7 @@
         this.querylist();
       },
       getPkParkWebsiteNewsTypeList() {
+        this.openload();
         Axios.get(AjaxApi.getPkParkWebsiteNewsTypeList + '/' + this.modelId).then(res => {
           if (res.status === 200) {
             let resData = res.data.body;
@@ -119,7 +116,6 @@
         let json = {
           size: this.pageSize,
           page:this.pageIndex,
-          pkId: 238,
           pkModelId: this.modelId,
           pkNewsTypeId: this.pkNewsTypeIdShow,
         };
@@ -130,6 +126,7 @@
             this.newsData = resData.datas;
             this.pageIndex = resData.current;
             this.total = resData.total;
+            this.closeload()
           }
         })
       },

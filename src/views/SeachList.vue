@@ -63,10 +63,6 @@ export default {
     },
   },
   mounted() {
-    this.openload();
-    setTimeout(()=>{
-      this.closeload()
-    },2000)
   },
   created() {
     this.setSearchName = this.searchVal;
@@ -83,6 +79,7 @@ export default {
       return DateFormat.dateFormat_YMD(val)
     },
     querylist() {
+      this.openload();
       let json = {
         size: this.pageSize,
         page: this.pageIndex,
@@ -94,6 +91,7 @@ export default {
           this.searchData = resData.datas;
           this.pageIndex = resData.current;
           this.total = resData.total;
+          this.closeload()
         }
       })
     },

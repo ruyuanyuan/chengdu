@@ -34,7 +34,6 @@
 <script>
 
   import Axios from '@/utils/axiosWrap'
-  import DateFormat from '@/utils/momentWrap'
   import AjaxApi from '@/service/ajaxApi'
 
   export default {
@@ -124,16 +123,13 @@
       handleDetail(id) {
         let json = {
           id: id,
-          // dept: this.deptList,
         };
         this.$router.push({name: 'departmentDetails', query: json});
       },
       getPkParkWebsiteManagementDept() {
-        Axios.get(AjaxApi.getPkParkWebsiteManagementDept, {pkId: 238}).then(res => {
+        Axios.get(AjaxApi.getPkParkWebsiteManagementDept).then(res => {
           if (res.status === 200) {
-            // this.deptList = res.data.body.datas;
             let resData = res.data.body.datas;
-
             let keyContainer = {};
             resData.forEach(element => {
               keyContainer[element.levelName] = keyContainer[element.levelName] || [];

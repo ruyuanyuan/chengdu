@@ -373,7 +373,7 @@
       this.openload();
       setTimeout(() => {
         this.closeload()
-      }, 3000)
+      }, 1000)
     },
     created() {
       this.getPkParkWebsiteBanner();
@@ -415,7 +415,6 @@
       querylist(size, pkNewsTypeId, pkModelId, mark) {
         let json = {
           size: size,
-          pkId: 238,
           pkModelId: pkModelId,
           pkNewsTypeId: pkNewsTypeId,
         };

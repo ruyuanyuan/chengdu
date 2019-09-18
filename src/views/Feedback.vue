@@ -22,9 +22,7 @@
   </div>
 </template>
 <script>
-
   import Axios from '@/utils/axiosWrap'
-  // import DateFormat from '@/utils/momentWrap'
   import AjaxApi from '@/service/ajaxApi'
 
   export default {
@@ -57,7 +55,6 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            console.log('submit=======', this.ruleForm);
             Axios.post(AjaxApi.feedbackSave,this.ruleForm).then((res) => {
               let value = res.data;
               console.log(value);

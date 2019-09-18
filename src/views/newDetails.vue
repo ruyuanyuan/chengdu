@@ -73,10 +73,7 @@
       }
     },
     mounted() {
-      this.openload();
-      setTimeout(()=>{
-        this.closeload()
-      },1000)
+
     },
     created() {
       this.querydetail();
@@ -86,10 +83,11 @@
         return DateFormat.dateFormat_YMD(val)
       },
       querydetail() {
+        this.openload();
         Axios.get(AjaxApi.querydetail + '/' + this.id).then(res => {
           if (res.status === 200) {
-            console.log("querydetail========", res)
             this.newsdata = res.data.body;
+            this.closeload()
           }
         })
       },

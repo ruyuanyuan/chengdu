@@ -31,12 +31,14 @@
           </div>
         </div>
         <div class='leader_list_content' v-else>
-          <div class='leader_item' v-if="leaderList" v-for='(item,index) in leaderList' :key='index'>
-            <a class='leader_item_content' href="javascript:;" @click="handleLeaderDetail(item.id)">
-              <img class='leader_img' :src="item.photo" alt="">
-              <p class='leader_name'>{{item.name}}</p>
-              <p class='leader_postion'>{{item.job}}</p>
-            </a>
+          <div v-if="leaderList">
+            <div class='leader_item' v-for='(item,index) in leaderList' :key='index'>
+              <a class='leader_item_content' href="javascript:;" @click="handleLeaderDetail(item.id)">
+                <img class='leader_img' :src="item.photo" alt="">
+                <p class='leader_name'>{{item.name}}</p>
+                <p class='leader_postion'>{{item.job}}</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -95,10 +97,8 @@
       getLeader() {
         Axios.get(AjaxApi.getLeader, {deptId: this.selectLeader}).then(res => {
           if (res.status === 200) {
-            console.log(res.data)
             let resData = res.data.body.datas;
             this.leaderList = resData;
-            console.log("getLeader=====leaderList=====", resData)
           }
         })
       },
@@ -106,11 +106,10 @@
         this.selectLevel = levelId;
       },
       getPkParkWebsiteManagementDept() {
-        Axios.get(AjaxApi.getPkParkWebsiteManagementDept, {pkId: 238}).then(res => {
+        Axios.get(AjaxApi.getPkParkWebsiteManagementDept).then(res => {
           if (res.status === 200) {
             let arr = res.data.body.datas;
-            var map = {},
-              dest = [];
+            var map = {},dest = [];
             for (var i = 0; i < arr.length; i++) {
               var ai = arr[i];
               if (!map[ai.levelId]) {
@@ -132,7 +131,6 @@
             }
             this.leaderLevel = dest;
             this.selectLevel = dest[0].levelId;
-            console.log(dest);
           }
         })
       },
