@@ -63,15 +63,12 @@
   </div>
 </template>
 <script>
-  import store from '@/store'
   import Axios from '@/utils/axiosWrap'
   import AjaxApi from '@/service/ajaxApi'
 
   export default {
     data() {
       return {
-        storeState: store.state,
-        parkId: null,
         parkDataList: {
           mainPark: {
             img_url: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1461836175,2413247160&fm=26&gp=0.jpg',
@@ -92,8 +89,6 @@
       }, 1000)
     },
     created() {
-      this.parkId = this.storeState.parkId;
-      console.log("getpkPark====", this.storeState.parkId);
       this.getpkPark();
       this.getPkPicsById();
     },

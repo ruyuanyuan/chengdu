@@ -240,9 +240,7 @@
   </div>
 </template>
 <script>
-
   import {swiper, swiperSlide} from 'vue-awesome-swiper'
-
   import Axios from '@/utils/axiosWrap'
   import DateFormat from '@/utils/momentWrap'
   import AjaxApi from '@/service/ajaxApi'
@@ -441,7 +439,7 @@
         this.activeTap = name
       },
       getPkParkWebsiteBanner() {
-        Axios.get('/website/pkParkWebsiteBanner/238/list').then(res => {
+        Axios.get(AjaxApi.queryBannerlist).then(res => {
           if (res.status === 200) {
             let resData = res.data.body;
             this.bannerList = resData;

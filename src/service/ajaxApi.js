@@ -2,6 +2,8 @@
  * 所有的接口
  **/
 export default {
+  //获取园区banner
+  queryBannerlist: '/websiteaApi/website/pkParkWebsiteBanner/list',
   querylist: '/websiteaApi/website/pkParkWebsiteNews/list',
   querydetail: '/websiteaApi/website/pkParkWebsiteNews',
   //园区
@@ -12,7 +14,7 @@ export default {
   getPkParkById: '/websiteaApi/website/getPkParkById',
   //new-园区图片
   getPkPicsByParkId: '/websiteaApi/website/getPkPicsByParkId',
-  //
+  //获取新闻类型
   getPkParkWebsiteNewsTypeList:'/websiteaApi/website/pkParkWebsiteNewsType/list',
   //获取全部部门信息
   getPkParkWebsiteManagementDept:'/websiteaApi/website/pkParkWebsiteManagementDept',
@@ -23,7 +25,8 @@ export default {
   //大英意见反馈表
   feedbackSave:'/websiteaApi/website/pkParkWebsiteFeedback/save',
 
-
+  //获取园区banner
+  // queryBannerlist: '/website/pkParkWebsiteBanner/list',
   // querylist: '/website/pkParkWebsiteNews/list',
   // querydetail: '/website/pkParkWebsiteNews',
   // getPkParkWebsiteNewsTypeList:'/website/pkParkWebsiteNewsType/list',
