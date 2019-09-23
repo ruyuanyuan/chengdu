@@ -277,7 +277,7 @@
 
 .hot_news_doc {
     padding-top: 20px;
-    font-size: 14px;
+    font-size: 16px;
     color: #6B798D;
     line-height: 20px;
 }
@@ -308,7 +308,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     font-family: PingFangSC-Medium;
-    font-size: 14px;
+    font-size: 16px;
     color: #6B798D;
     letter-spacing: 0;
     max-width: 510px;
@@ -323,9 +323,9 @@
     margin-right: 10px;
 }
 
-.newslist .news_item .news_item_title .news_item_date {
+.newslist .news_item .news_item_date {
     font-family: PingFangSC-Medium;
-    font-size: 14px;
+    font-size: 16px;
     color: #6B798D;
     width: 102px;
 }
@@ -722,6 +722,7 @@
     text-align: center;
     line-height: 40px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .tab_nav_item.is_active {
@@ -1113,7 +1114,8 @@
     height: 300px;
     text-align: center;
     padding: 30px;
-    border: 1px solid #fff;
+    border: 1px solid #ddd;
+    margin:0 10px;
 }
 
 .cloud_card:hover {
