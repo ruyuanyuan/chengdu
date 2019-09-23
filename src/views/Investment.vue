@@ -61,7 +61,7 @@
           <div class='park_contnet'>
             <div class='park_main_img'>
               <a href="#">
-                <img :src="parkDataList.mainPark.picUrl" alt="">
+                <img v-if="parkDataList.mainPark" :src="parkDataList.mainPark.picUrl" alt="">
               </a>
             </div>
             <div class='park_img_item_list'>
@@ -79,9 +79,9 @@
       <div class='pad_card daying_block'>
         <div class='pad_card_content'>
           <div class='news_cont'>
-            <div class='news_cont_img'>
-              <img src="https://obs-gysjypt.obs.cn-north-1.myhuaweicloud.com/park/fm/4.png" alt="">
-            </div>
+<!--            <div class='news_cont_img'>-->
+<!--              <img src="https://obs-gysjypt.obs.cn-north-1.myhuaweicloud.com/park/fm/4.png" alt="">-->
+<!--            </div>-->
             <div class='news_cont_list'>
               <el-tabs v-model="newsActive">
                 <el-tab-pane label="投资指南" name="investmentInfo">
@@ -119,7 +119,7 @@
         </div>
         <div class='pad_card_content'>
           <div class='policy_img'>
-            <img src="http://114.116.31.126/daying/images/%E6%8A%95%E8%B5%84%E5%A4%A7%E8%8B%B1/u1818.png" alt="">
+            <img src="http://58.216.47.112:6690/__s3__rgw/parkinfo/video/%E8%BE%BE%E5%B7%9E%E9%80%9A%E5%B7%9D%E5%9B%AD%E5%8C%BA.png?AWSAccessKeyId=users01&Expires=2073810491&Signature=rnvut7YLqpGWoKxGp24%2Fod0fwiI%3D" alt="">
           </div>
           <div class='pack_bth'>
             <a class='boder_bth' @click="toNewsList(22,'发展计划')">发展计划</a>
@@ -460,8 +460,8 @@
           }
 
           .news_cont_list {
-            float: right;
-            width: 400px;
+            /*float: right;*/
+            /*width: 400px;*/
             height: 100%;
           }
         }
@@ -478,7 +478,7 @@
           text-align: center;
 
           img {
-            width: 60%;
+            width: 420px;
           }
         }
 

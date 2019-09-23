@@ -124,7 +124,7 @@
               <div class='tv_contnet'>
                 <div class='tv_main_img'>
                   <a href="#">
-                    <img :src="tvDataList.mainTv.picUrl" alt="">
+                    <img v-if="tvDataList.mainTv" :src="tvDataList.mainTv.picUrl" alt="">
                   </a>
                 </div>
                 <div class='tv_img_item_list'>
