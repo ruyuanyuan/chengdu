@@ -733,7 +733,7 @@
 }
 
 .service_tab_content {
-    width: 100%;
+    width: 99%;
 }
 
 .tab_content_item {
@@ -787,7 +787,7 @@
 
 /* 5+1现代话 */
 .system-box {
-    width: 1200px;
+    width: 1170px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -1199,7 +1199,7 @@
 }
 
 .cooperation {
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -1212,12 +1212,12 @@
     background: #D8D8D8;
     border: 1px solid #979797;
     margin-bottom: 20px;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 .cooperation_card img{
     width:100%;
     height: 100%;
 }
-.cooperation_card:nth-child(5n) {
+.cooperation_card:nth-child(6n) {
     margin-right: 0;
 }
