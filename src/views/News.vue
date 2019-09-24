@@ -7,8 +7,8 @@
           今日关注
         </div>
         <div class='tody_item tody_date'>
-          <p>农历八月初七</p>
-          <p>2019年9月6日 星期五</p>
+          <p>{{calendar.calendar}}</p>
+          <p>{{calendar.date}} {{calendar.week}}</p>
         </div>
       </div>
       <div class='hold_new'>
@@ -158,6 +158,11 @@
         holdNew: {
           title: '大英县代表遂宁市参加2019年四川省青少年射击锦标赛 获男子10米气手枪个人、团体金牌',
           doc: '7月31日，2019年四川省青少年射击锦标赛在四川省陆上遂宁、巴中等四川省十五个市州的450名10 - 19岁青少年选手参赛 ， 比赛分为男女50米步枪 、10米气步枪、飞碟多项等44个项目。本次比赛大英县代表遂宁市参加比赛，在男子10米气手枪比赛中，杨术强获得个人金牌...'
+        },
+        calendar:{
+          calendar:'农历八月初七',
+          date:'2019年9月6日',
+          week:'星期五'
         },
         newsActive: 'focusNews',
         newsList: {

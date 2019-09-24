@@ -1,0 +1,13 @@
+.finance{
+  width:1250px;
+}
+.finance .finance_title{
+  width:100%;
+  text-align: center;
+  font-family: PingFangSC-Semibold;
+  font-size: 32px;
+  color: #5F5F5F;
+  letter-spacing: 0;
+  padding:50px 0;
+  font-weight: 400px;
+}

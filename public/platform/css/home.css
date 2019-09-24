@@ -8,7 +8,6 @@
 
 .banner-swiper .swiper-slide img {
     width: 100%;
-    height: 480px;
 }
 
 .login_box {
@@ -19,7 +18,9 @@
     padding: 30px 20px;
     position: absolute;
     right: 12%;
-    top: 28px;
+    top: 0;
+    bottom:0;
+    margin:auto;
     z-index: 100000;
 }
 
