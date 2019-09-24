@@ -61,9 +61,9 @@
     }
 
     .el-menu-item {
-      width: 120px;
+      width: 179px;
       text-align: center;
-      font-size: 16px;
+      font-size: 20px;
       background: rgba(249, 249, 249, 1) !important;
       color: $mainColor;
 

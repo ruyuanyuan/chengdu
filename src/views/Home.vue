@@ -134,7 +134,7 @@
     </div>
     <div class='content_item loveScene'>
       <el-tabs v-model="noticeActive1" type="card">
-        <el-tab-pane label="看政务" name="publicinfo">
+        <el-tab-pane label="政务公开" name="publicinfo">
           <div class='tab_content'>
             <div class='love_left'>
               <div class='love_card'>
@@ -190,7 +190,7 @@
             </div>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="爱问政" name="scene">
+        <el-tab-pane label="常见问题" name="scene">
           <div class='tab_content'>
             <div class='love_left'>
               <div class='love_card'>
@@ -505,21 +505,22 @@
         width: 100%;
         overflow: hidden;
         margin-top: 20px;
-
+        padding-bottom:20px;
+        border-bottom:1px solid #ddd;  
         .left_img {
           position: relative;
           float: left;
           width: 400px;
-          min-height: 200px;
-
+          height: 240px;
           img {
             width: 100%;
+            height: 240px;
           }
 
           .title {
             width: 100%;
             position: absolute;
-            bottom: 0;
+            bottom:2px;
             padding: 10px;
             background: rgba(0, 0, 0, 0.3);
             color: #fff;
@@ -575,9 +576,7 @@
     }
 
     .loveScene {
-      margin-top: 40px;
-      background: rgba(249, 249, 249, 1);
-
+      // background: rgba(249, 249, 249, 1);
       .el-tabs__nav {
         width: 100%;
 

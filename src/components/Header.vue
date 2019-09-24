@@ -50,7 +50,7 @@
   .header_templater {
     width: 1250px;
     margin: 0 auto;
-    padding: 20px 30px;
+    padding: 20px 0;
     overflow: hidden;
 
     .header_logo {
