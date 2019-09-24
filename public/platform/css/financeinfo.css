@@ -1,0 +1,116 @@
+.financeinfo{
+  
+}
+.financeinfo_head{
+  background:#fff;
+  width:100%;
+  width:1250px;
+  margin:0 auto;
+}
+.financeinfo_title{
+  padding:50px 0;
+  text-align: center;
+  font-family: PingFangSC-Medium;
+  font-size: 36px;
+  color: #5F5F5F;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.finance_item_tags{
+  width:100%;
+  text-align: center;
+  margin-bottom:50px;
+}
+.finance_item_tags .item_tag{
+  display: inline-block;
+  line-height: 24px;
+  padding:0 10px;
+  border-radius: 12px;
+  border: 1px solid #0580FF;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #5F5F5F;
+  letter-spacing: 0;
+  margin-right:10px;
+}
+.finance_number{
+  background: #F9F9F9;
+  overflow: hidden;
+  padding:50px 0;
+}
+.finance_number_conent{
+  width:1250px;
+  margin:0 auto;
+}
+.max_number{
+  font-family: PingFangSC-Medium;
+  font-size: 24px;
+  color: #0580FF;
+  letter-spacing: 0;
+  padding-bottom:30px;
+  border-bottom: 1px solid #D6E4FC;
+  width:300px;
+  margin:0 auto;
+  text-align: center;
+}
+.bluefont{
+  color: #0580FF;
+}
+.finance_item_content{
+  width:100%;
+  overflow: hidden;
+}
+.content_item{
+  float: left;
+  width:297px;
+  margin-top:20px;
+  margin-right:20px;
+  background:#fff;
+  border-radius: 5px;
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #5F5F5F;
+  letter-spacing: 0;
+  padding:10px 0;
+  text-align: center;
+}
+.content_item:nth-child(4n){
+  margin-right:0;
+}
+.finance_footer{
+  text-align: center;
+  margin-top:80px;
+}
+.footer_btn{
+  display:inline-block;
+  width:120px;
+  height:36px;
+  line-height: 36px;
+  background: #0580FF;
+  border-radius: 5px;
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+}
+.needkown{
+  width:100%;
+  text-align: center;
+  background: #fff;
+  font-family: PingFangSC-Medium;
+  font-size: 36px;
+  color: #5F5F5F;
+  letter-spacing: 0;
+  padding:100px 0 50px;
+}
+.needkown_doc{
+  width:100%;
+  background: #F9F9F9;
+}
+.needkown_doc_content{
+  width: 1250px;
+  margin:0 auto;
+  min-height:300px;
+  padding:50px 20px;
+}
