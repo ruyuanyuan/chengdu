@@ -1,8 +1,8 @@
 <template>
   <div class="header_templater">
     <div class="header_logo">
-      <p class='header_name'>四川省大英经济开发区</p>
-      <p class='header_en'>SICHUAN DAYING ECONOMIC DEVELOPMENT ZONE </p>
+      <p class='header_name'>四川达州通川经济开发区</p>
+      <p class='header_en'>SICHUAN DAZHOU ECONOMIC DEVELOPMENT ZONE </p>
     </div>
     <div class='head_right'>
       <div class="header_seach">
@@ -26,14 +26,14 @@
         searchName: '',
         keywordList: ['化工', '汽车制造'],
         potalList: [
-          {
-            name: '遂宁新闻网',
-            href: 'http://www.snxw.com/'
-          },
-          {
-            name: '遂宁传媒网',
-            href: 'http://www.sngdw.com/'
-          }
+          // {
+          //   name: '达州新闻网',
+          //   href: 'http://www.snxw.com/'
+          // },
+          // {
+          //   name: '遂宁传媒网',
+          //   href: 'http://www.sngdw.com/'
+          // }
         ]
       };
     },

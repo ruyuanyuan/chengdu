@@ -32,14 +32,14 @@ export default {
     if (!data)
       data = {};
     //所有接口加parkId
-    data.pkId = this.storeState.parkId === null ? '238' : this.storeState.parkId;
+    data.pkId = this.storeState.parkId === null ? '66' : this.storeState.parkId;
     return axiosWrap.get(url, {params: data})
   },
   post(url, data) {
     if (!data)
       data = {};
     //所有接口加parkId
-    data.pkId = this.storeState.parkId === null ? '238' : this.storeState.parkId;
+    data.pkId = this.storeState.parkId === null ? '66' : this.storeState.parkId;
     return axiosWrap.post(url, data)
   }
 }

@@ -3,13 +3,13 @@
     <diV class='content_item'>
       <div class='pad_card park_left'>
         <div class='pad_card_title'>
-          <span class='pad_name'>大英风采</span>
+          <span class='pad_name'>园区风采</span>
         </div>
         <div class='pad_card_content'>
           <div class='park_contnet'>
             <div class='park_main_img'>
               <a href="#">
-                <img :src="parkDataList.mainPark.picUrl" alt="">
+                <img v-if="parkDataList.mainPark" :src="parkDataList.mainPark.picUrl" alt="">
               </a>
             </div>
             <div class='park_img_item_list'>
@@ -25,12 +25,14 @@
       </div>
       <div class='pad_card park_right'>
         <div class='pad_card_title'>
-          <span class='pad_name'>大英经开区宣传片</span>
+          <span class='pad_name'>园区宣传片</span>
         </div>
         <div class='pad_card_content'>
           <div class='park_contnet'>
+<!--            <video class='park_video' controls autoplay name="media"-->
+<!--                   src="http://114.116.31.126/daying/%E5%A4%A7%E8%8B%B1%E5%AE%A3%E4%BC%A0%E7%89%87.mp4"></video>-->
             <video class='park_video' controls autoplay name="media"
-                   src="http://114.116.31.126/daying/%E5%A4%A7%E8%8B%B1%E5%AE%A3%E4%BC%A0%E7%89%87.mp4"></video>
+                   src="http://58.216.47.112:6690/__s3__rgw/parkinfo/video/%E9%AD%8F%E8%92%B2%E4%BA%A7%E4%B8%9A%E6%96%B0%E5%9F%8E%2020190614.mp4?AWSAccessKeyId=users01&Expires=2042271489&Signature=P0dJQMsX7Wt6887TlHPVI658%2FZc%3D"></video>
           </div>
         </div>
       </div>
@@ -38,7 +40,7 @@
     <div class='content_item'>
       <div class='pad_card developArea'>
         <div class='pad_card_title'>
-          <span class='pad_name'>大英经开区概况</span>
+          <span class='pad_name'>园区概况</span>
         </div>
         <div class='pad_card_content'>
           <div class='park_contnet'>
