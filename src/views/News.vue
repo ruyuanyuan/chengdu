@@ -11,9 +11,10 @@
           <p>{{calendar.date}} {{calendar.week}}</p>
         </div>
       </div>
+<!--      {{holdNew}}-->
       <div class='hold_new'>
         <div class='hold_title'>{{holdNew.title}}</div>
-        <div class='hold_doc'>{{holdNew.doc}}</div>
+<!--        <div class='hold_doc'>{{holdNew.doc}}</div>-->
       </div>
     </div>
     <div class='focus_news'>
@@ -200,10 +201,10 @@
     created() {
       //政府要闻-图片顶置
       this.querylist(7, 8,'top');
-      this.querylist(7, 9,'top');
-      this.querylist(7, 15,'top');
       this.querylist(7, 8);
+      this.querylist(7, 9,'top');
       this.querylist(7, 9);
+      this.querylist(7, 15,'top');
       this.querylist(7, 15);
       this.getPkPicsById();
     },
@@ -246,6 +247,8 @@
             if (pkNewsTypeId === 8) {
               if(mark)this.zfywTopNews = res.data.body.datas;
               this.newsList.zfywNews = res.data.body.datas;
+
+              this.holdNew = res.data.body.datas[0]
             }
             if (pkNewsTypeId === 9) {
               if(mark)this.xzdtTopNews = res.data.body.datas;

@@ -27,24 +27,17 @@
           <a href="javascript:">国务院新闻</a>
         </div>
       </div>
-      <div class='tap_content' v-if='activeTap==="policy"'>
+
+      <div class='tap_content'>
         <div class='left_img'>
-          <swiper :options="swiperOption" ref="mySwiper1" style="width:100%">
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区1</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区2</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区3</div>
+          <swiper :options="swiperOption" ref="mySwiper4" style="width:100%">
+            <swiper-slide v-for="zfyw in zfywTopNews">
+              <img :src="zfyw.logoUrl">
+              <div class='title'>{{zfyw.title}}</div>
             </swiper-slide>
           </swiper>
         </div>
-        <div class='right_news'>
+        <div class='right_news' v-if='activeTap==="policy"'>
           <div class='news_item' v-for="(item,index) in newsList.snxwNews" :key='index'>
             <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
               <div class='new_title'>{{item.title}}</div>
@@ -52,25 +45,7 @@
             </a>
           </div>
         </div>
-      </div>
-      <div class='tap_content' v-if='activeTap==="enterprise"'>
-        <div class='left_img'>
-          <swiper :options="swiperOption" ref="mySwiper2" style="width:100%">
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区1</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区2</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区3</div>
-            </swiper-slide>
-          </swiper>
-        </div>
-        <div class='right_news'>
+        <div class='right_news' v-if='activeTap==="enterprise"'>
           <div class='news_item' v-for="(item,index) in newsList.tzggNews" :key='index'>
             <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
               <div class='new_title'>{{item.title}}</div>
@@ -78,25 +53,8 @@
             </a>
           </div>
         </div>
-      </div>
-      <div class='tap_content' v-if='activeTap==="government"'>
-        <div class='left_img'>
-          <swiper :options="swiperOption" ref="mySwiper3" style="width:100%">
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区1</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区2</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区3</div>
-            </swiper-slide>
-          </swiper>
-        </div>
-        <div class='right_news'>
+
+        <div class='right_news' v-if='activeTap==="government"'>
           <div class='news_item' v-for="(item,index) in newsList.ssxwNews" :key='index'>
             <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
               <div class='new_title'>{{item.title}}</div>
@@ -104,25 +62,7 @@
             </a>
           </div>
         </div>
-      </div>
-      <div class='tap_content' v-if='activeTap==="policyNeed"'>
-        <div class='left_img'>
-          <swiper :options="swiperOption" ref="mySwiper4" style="width:100%">
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区1</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区2</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="http://114.116.31.126/daying/images/%E9%A6%96%E9%A1%B5/u42.jpg" alt="">
-              <div class='title'>全链条、智慧化管险 成都高新区3</div>
-            </swiper-slide>
-          </swiper>
-        </div>
-        <div class='right_news'>
+        <div class='right_news' v-if='activeTap==="policyNeed"'>
           <div class='news_item' v-for="(item,index) in newsList.gwyxwNews" :key='index'>
             <a class='news_href' target="_blank" rel="noopener noreferrer" @click="getDetail(item)">
               <div class='new_title'>{{item.title}}</div>
@@ -354,6 +294,7 @@
           cjwtNews: [],
           myzjNews: [],
         },
+        zfywTopNews: null,
         snxwTopNews: null,
         tzggTopNews: null,
         ssxwTopNews: null,
@@ -376,13 +317,13 @@
     created() {
       this.getPkParkWebsiteBanner();
       //顶置带图的新闻
-      this.querylist(8, 2, 1, 'top');
+      this.querylist(8, null, 1, 'top');
       this.querylist(8, 2, 1);
-      this.querylist(8, 3, 1, 'top');
+      // this.querylist(8, 3, 1, 'top');
       this.querylist(8, 3, 1);
-      this.querylist(8, 4, 1, 'top');
+      // this.querylist(8, 4, 1, 'top');
       this.querylist(8, 4, 1);
-      this.querylist(8, 5, 1, 'top');
+      // this.querylist(8, 5, 1, 'top');
       this.querylist(8, 5, 1);
 
       this.querylist(8, 15, 2);
@@ -414,11 +355,13 @@
         let json = {
           size: size,
           pkModelId: pkModelId,
-          pkNewsTypeId: pkNewsTypeId,
+          // pkNewsTypeId: pkNewsTypeId,
         };
+        if(pkNewsTypeId)json.pkNewsTypeId = pkNewsTypeId;
         if (mark) json.showtop = 1;
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
+            if (mark) this.zfywTopNews = res.data.body.datas;
             if (pkNewsTypeId === 2) this.newsList.snxwNews = res.data.body.datas;
             if (pkNewsTypeId === 3) this.newsList.tzggNews = res.data.body.datas;
             if (pkNewsTypeId === 4) this.newsList.ssxwNews = res.data.body.datas;
@@ -505,13 +448,15 @@
         width: 100%;
         overflow: hidden;
         margin-top: 20px;
-        padding-bottom:20px;
-        border-bottom:1px solid #ddd;  
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+
         .left_img {
           position: relative;
           float: left;
           width: 400px;
           height: 240px;
+
           img {
             width: 100%;
             height: 240px;
@@ -520,7 +465,7 @@
           .title {
             width: 100%;
             position: absolute;
-            bottom:2px;
+            bottom: 2px;
             padding: 10px;
             background: rgba(0, 0, 0, 0.3);
             color: #fff;
