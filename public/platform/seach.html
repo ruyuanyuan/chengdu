@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>搜索</title>
+  <style>
+    .seachbox{
+      width:300px;
+      display: inline-block;
+      position: relative;
+      height:37px;
+      padding-right:80px;
+      box-sizing: border-box;
+      margin-right:30px;
+    }
+    .seachInput_box{
+      width:100%;
+      height:100%;
+      border: 2px solid #e41e35;
+      box-sizing: border-box;
+    }
+    .seachInput_box input{
+      display: inline-block;
+      width: 100%;
+      height:31px;
+      border: 0px;
+      color: #333;
+      line-height: 31px;
+      padding:6px 8px;
+      box-sizing: border-box;
+      border:none;
+      outline: none;
+    }
+    .searchBtn_box{
+      position: absolute;
+      right:0;
+      top:0;
+      width:80px;
+    }
+    .searchBtn_box img{
+      height:100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="seachbox">
+      <div class="seachInput_box">
+        <input name="searchReport" type="text" class="indexhom6" placeholder="企业名称">
+        <ul class="searchDropdown" id="searchDropdown">
+           
+        </ul>
+      </div>
+      <div class="searchBtn_box">
+        <a href="javascript:;" id="searchBtn">
+          <img src="./img/seach.png">
+        </a>
+      </div>
+        
+    </div>
+</body>
+</html>
+
+
