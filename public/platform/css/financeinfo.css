@@ -74,6 +74,9 @@
   padding:10px 0;
   text-align: center;
 }
+.content_item p{
+  line-height: 40px;
+}
 .content_item:nth-child(4n){
   margin-right:0;
 }
@@ -111,6 +114,8 @@
 .needkown_doc_content{
   width: 1250px;
   margin:0 auto;
+  word-wrap: break-word;
+  word-break:break-all;
   min-height:300px;
   padding:50px 20px;
 }
