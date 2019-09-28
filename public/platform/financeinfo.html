@@ -38,7 +38,7 @@
                 </div>
               </div>
               <div class='finance_footer'>
-                  <a class='footer_btn' href="javascript:;">立即申请</a>
+                  <a class='footer_btn' href="javascript:;" id='apply'>立即申请</a>
               </div>
         </div>
         
@@ -52,6 +52,84 @@
         </div>
       </div>
     </div>
+    <div class='dialog'>
+      
+      <div class='finance_form'>
+        <div class='finance_form_title'>
+          贷款申请
+        </div>
+        <div class='finance_form_content'>
+            <div class='finance_form_item'>
+                <label>企业名称</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>统一社会信用代码</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>申请金额(万元)</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>法定代表人</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>贷款用途</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>成立日期</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>注册资本(万元)</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>工商注册地</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>所属行业</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>专利个数</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>贷款联系人</label>
+                <input type="text">
+              </div>
+              <div class='finance_form_item'>
+                <label>联系电话(手机)</label>
+                <input type="text">
+              </div>
+        </div>
+        <div class='finance_form_footer'>
+            <a href="javascript:;" class='finance_btn redBtn' id='sure'>确定</a>
+            <a href="javascript:;" class='finance_btn' id='back'>取消</a>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
 <script src='./js/jquery-3.3.1.min.js'></script>
+<script>
+$(function(){
+  $('#apply').on('click',function(){
+    $('.dialog').show()
+    $('body').css({'overflow': 'hidden'})
+  })
+  $('#sure').on('click',function(){
+    $('.dialog').hide()
+    $('body').css({'overflow': 'auto'})
+  })
+  $('#back').on('click',function(){
+    $('.dialog').hide()
+    $('body').css({'overflow': 'auto'})
+  })
+})
+</script>
