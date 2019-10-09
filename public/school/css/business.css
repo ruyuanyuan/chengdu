@@ -1,0 +1,177 @@
+.business_title{
+  width:100%;
+  font-family: PingFangSC-Medium;
+  font-size: 36px;
+  color: #5F5F5F;
+  text-align: center;
+  padding:60px 0;
+}
+.business_content{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.business_item{
+  width:33.33%;
+  text-align: center;
+  padding:40px 0;
+}
+.business_item img{
+  width:60px;
+  margin-bottom:40px;
+}
+.business_item_title{
+  font-family: PingFangSC-Medium;
+  font-size: 24px;
+  color: #5F5F5F;
+  line-height: 50px;
+}
+.business_item_p{
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #007EFF;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+.business_item_p span{
+  padding:0 10px;
+}
+.business_item_p a{
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #007EFF;
+  letter-spacing: 0;
+}
+.business_three_title{
+  width:100%;
+  font-family: PingFangSC-Medium;
+  font-size: 36px;
+  color: #5F5F5F;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.business_three{
+  display: flex;
+}
+.business_three_item{
+  width:33.33%;
+  text-align: center;
+}
+.business_three_item img{
+  width:80px;
+  margin-bottom: 40px;
+}
+.business_three_item p{
+  font-family: PingFangSC-Medium;
+  font-size: 24px;
+  color: #5F5F5F;
+}
+.business_img{
+  display: block;
+  margin:0 auto 80px;
+}
+.business_p{
+  font-family: PingFangSC-Regular;
+  font-size: 20px;
+  color: #5F5F5F;
+  letter-spacing: 0;
+  text-align: justify;
+  line-height: 30px;
+}
+.bimg_items{
+  width:100%;
+  display: flex;
+}
+.bimg_items img{
+  width:33.33%;
+  margin-right:20px;
+}
+.bimg_items img:last-child{
+  margin-right:0;
+}
+
+.business_box{
+  width:100%;
+  display: flex;
+}
+.business_box_left{
+  width:50%;
+}
+.business_box_title{
+  font-family: PingFangSC-Regular;
+font-size: 24px;
+color: #0580FF;
+text-align: center;
+}
+
+
+.business_box_right{
+  width:50%;
+}
+.business_table{
+  width:100%;
+  background: #F9F9F9;
+  border-radius: 5px;
+  margin-top:40px;
+}
+.business_table_head{
+  font-family: PingFangSC-Regular;
+  font-size: 24px;
+  color: #5F5F5F;
+  border-bottom:1px solid #DDDDDD;
+  line-height: 72px;
+  text-align: center;
+}
+.business_table_body{
+  display: flex;
+}
+.business_table_td{
+  width:33.33%;
+  text-align: center;
+  line-height: 80px;
+}
+.business_table_td_p{
+  font-family: PingFangSC-Regular;
+  font-size: 24px;
+  color: #5F5F5F;
+}
+.business_table_td_a{
+  font-family: PingFangSC-Regular;
+  font-size: 24px;
+  color: #0580FF;
+}
+.business_table_footer{
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #A2A2A2;
+  text-align: center;
+  margin:20px 0;
+  height:60px;
+}
+.business_tags{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.business_tag{
+  display: block;
+  width:26.33%;
+  margin:20px;
+  background: #D6E4FC;
+  border-radius: 5px;
+  text-align: center;
+  height:48px;
+  line-height: 48px;
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #5A5A5A;
+  letter-spacing: 0;
+  margin-top:0;
+}
+.business_right_img{
+  text-align: center;
+}
+.business_right_img img{
+  width:200px;
+  margin-top:40px;
+}
