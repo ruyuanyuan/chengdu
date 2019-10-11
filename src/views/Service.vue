@@ -8,14 +8,9 @@
         <div class='pad_card_content'>
           <div class='park_contnet'>
             <div class='icon_title_item' v-for='(item,index) in infoOpenList' :key='index'>
-              <a v-if="item.type==='main'" :href="item.href" target="_blank">
-                <img :src="item.icon" alt="">
-                {{item.title}}</a>
-              <a v-else
-                 :href="'http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000&iframeUrlLo='+item.href+'?areaCode=510109000000'"
-                 target="_blank">
-                <img :src="item.icon" alt="">
-                {{item.title}}</a>
+              <a :href="item.link?item.link:'#'" target="_blank">
+                <img :src="item.logoUrl" alt="">
+                {{item.name}}</a>
             </div>
           </div>
         </div>
@@ -25,39 +20,44 @@
     <div class='content_item workbox'>
       <el-tabs v-model="workActive1">
         <el-tab-pane label="个人办事" name="publicinfo">
-          <div class='work_item' v-for='(item,index) in worklist.personal' :key='index'>
-            <a v-if="item.type==='main'" :href="item.href" target="_blank"><i class='el-icon-arrow-right'></i>
-              {{item.title}}</a>
-            <a v-else
-               :href="'http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000&iframeUrlLo='+item.href+'?areaCode=510109000000'"
-               target="_blank">
-              <i class='el-icon-arrow-right'></i> {{item.title}}</a>
+          <div v-if="worklist.personal.length>0">
+            <div class='work_item' v-for='(item,index) in worklist.personal'
+                 :key='index'>
+              <a :href="item.link?item.link:'#'" target="_blank"><i class='el-icon-arrow-right'></i>
+                {{item.name}}</a>
+            </div>
+          </div>
+          <div v-else class='work_item'>
+            暂无数据
           </div>
         </el-tab-pane>
         <el-tab-pane label="法人办事" name="scene">
-          <div class='work_item' v-for='(item,index) in worklist.legalperson' :key='index'>
-            <a v-if="item.type==='main'" :href="item.href" target="_blank"><i class='el-icon-arrow-right'></i>
-              {{item.title}}</a>
-            <a v-else
-               :href="'http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000&iframeUrlLo='+item.href+'?areaCode=510109000000'"
-               target="_blank">
-              <i class='el-icon-arrow-right'></i> {{item.title}}</a>
+          <div v-if="worklist.legalperson.length>0">
+            <div class='work_item' v-for='(item,index) in worklist.legalperson' :key='index'>
+              <a :href="item.link?item.link:'#'" target="_blank"><i class='el-icon-arrow-right'></i>
+                {{item.title}}</a>
+            </div>
+          </div>
+          <div v-else class='work_item'>
+            暂无数据
           </div>
         </el-tab-pane>
       </el-tabs>
     </div>
     <div class='content_item'>
-      <a class='mewant_item item_green' href="#"  @click="handleFeedback('我要看')">
+      <a class='mewant_item item_green' href="#" @click="handleFeedback('我要看')">
         <img src="@/assets/img/u2337.png" alt="">
         我要看
       </a>
       <a class='mewant_item item_hgreen' href="#" @click="handleFeedback('我要查')">
         <img src="@/assets/img/u2338.png" alt="">
         我要查</a>
-      <a class='mewant_item item_hblue' target="_blank" href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
+      <a class='mewant_item item_hblue' target="_blank"
+         href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
         <img src="@/assets/img/u2339.png" alt="">
         我要问</a>
-      <a class='mewant_item item_blue' target="_blank" href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
+      <a class='mewant_item item_blue' target="_blank"
+         href="http://sns.sczwfw.gov.cn/app/main?flag=2&areaCode=510900000000">
         <img src="@/assets/img/u2340.png" alt="">
         我要办</a>
       <a class='mewant_item item_dblue' href="#" @click="handleFeedback('我要评')">
@@ -85,13 +85,16 @@
           <div class='pad_card_title'>
             <span class='pad_name'>快捷查询</span>
           </div>
-          <div class='pad_card_content'>
+          <div class='pad_card_content' v-if="seachlist.length>0">
             <div class='seach_item' v-for='(item,index) in seachlist' :key='index'>
-              <a :href="item.href">
-                <img :src="item.icon" alt="">
-                {{item.title}}
+              <a :href="item.link?item.link:'#'">
+                <img :src="item.logoUrl" alt="">
+                {{item.name}}
               </a>
             </div>
+          </div>
+          <div v-else class='pad_card_content'>
+            暂无数据
           </div>
         </div>
       </div>
@@ -406,10 +409,15 @@
       }
     },
     created() {
+      this.queryPkWebsiteOffice('企业办事服务直通车');
+      this.queryPkWebsiteOffice('个人办事');
+      this.queryPkWebsiteOffice('法人办事');
+      this.queryPkWebsiteOffice('快捷查询');
       this.querylist(16);
+
     },
     methods: {
-      handleFeedback(item){
+      handleFeedback(item) {
         let json = {
           mark: item,
         };
@@ -434,6 +442,25 @@
         Axios.get(AjaxApi.querylist, json).then(res => {
           if (res.status === 200) {
             this.focusNews = res.data.body.datas;
+          }
+        })
+      },
+      queryPkWebsiteOffice(type) {
+        let json = {
+          type: type,
+        }
+        Axios.get(AjaxApi.getPkWebsiteOffice, json).then(res => {
+          if (res.status === 200) {
+            let resData = res.data.body.datas;
+            if (type === '企业办事服务直通车') {
+              this.infoOpenList = resData;
+            } else if (type === '个人办事') {
+              this.worklist.personal = resData;
+            } else if (type === '法人办事') {
+              this.worklist.legalperson = resData;
+            } else if (type === '快捷查询') {
+              this.seachlist = resData;
+            }
           }
         })
       },

@@ -46,5 +46,7 @@ export default {
   getLeader:'/website/pkParkWebsiteLeader',
   //大英意见反馈表
   feedbackSave:'/website/pkParkWebsiteFeedback/save',
+  //办事服务
+  getPkWebsiteOffice:'/website/pkParkWebsiteOffice',
 
 }
