@@ -48,5 +48,7 @@ export default {
   feedbackSave:'/website/pkParkWebsiteFeedback/save',
   //办事服务
   getPkWebsiteOffice:'/website/pkParkWebsiteOffice',
+  //底部导航
+  pkParkWebsiteNavigation:'/website/pkParkWebsiteNavigation',
 
 }

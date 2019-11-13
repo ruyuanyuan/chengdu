@@ -319,11 +319,8 @@
       //顶置带图的新闻
       this.querylist(8, null, 1, 'top');
       this.querylist(8, 2, 1);
-      // this.querylist(8, 3, 1, 'top');
       this.querylist(8, 3, 1);
-      // this.querylist(8, 4, 1, 'top');
       this.querylist(8, 4, 1);
-      // this.querylist(8, 5, 1, 'top');
       this.querylist(8, 5, 1);
 
       this.querylist(8, 15, 2);
